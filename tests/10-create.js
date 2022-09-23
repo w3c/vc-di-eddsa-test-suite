@@ -8,6 +8,7 @@ import {
 } from 'data-integrity-test-suite-assertion';
 import {endpoints} from 'vc-api-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
+import {createInitialVc} from './helpers.js';
 import {klona} from 'klona';
 
 const tag = 'eddsa-2022';
@@ -25,5 +26,22 @@ describe('eddsa-2022 (create)', function() {
     implemented: match,
     notImplemented: nonMatch,
     tag
+  });
+  describe('eddsa-2022 (issuer)', function() {
+    this.matrix = true;
+    this.report = true;
+    this.implemented = [...match.keys()];
+    this.notImplemented = [...nonMatch.keys()];
+    this.rowLabel = 'Test Name';
+    this.columnLabel = 'Implementation';
+    for(const [name, {endpoints, implementation}] of match) {
+      const [issuer] = endpoints;
+      const verifier = implementation.verifiers.find(
+        v => v.tags.has(tag));
+      let issuedVc;
+      before(async function() {
+        issuedVc = await createInitialVc({issuer});
+      });
+    }
   });
 });
