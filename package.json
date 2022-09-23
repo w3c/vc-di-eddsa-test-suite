@@ -25,6 +25,13 @@
     "@digitalbazaar/data-integrity-context": "^1.0.0",
     "@digitalbazaar/ed25519-multikey": "^1.0.0",
     "@digitalbazaar/mocha-w3c-interop-reporter": "^1.2.1",
-    "@digitalbazaar/multikey-context": "^1.0.0"
+    "@digitalbazaar/multikey-context": "^1.0.0",
+    "data-integrity-test-suite-assertion": "github:w3c-ccg/data-integrity-test-suite-assertion"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.1",
+    "eslint-config-digitalbazaar": "^4.1.0",
+    "eslint-plugin-jsdoc": "^39.3.6",
+    "eslint-plugin-unicorn": "^43.0.2"
   }
 }
