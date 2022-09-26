@@ -6,9 +6,9 @@ import chai from 'chai';
 import {
   checkDataIntegrityProofFormat
 } from 'data-integrity-test-suite-assertion';
+import {createInitialVc} from './helpers.js';
 import {endpoints} from 'vc-api-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
-import {createInitialVc} from './helpers.js';
 import {klona} from 'klona';
 
 const tag = 'eddsa-2022';
