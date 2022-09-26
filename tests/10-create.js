@@ -12,7 +12,10 @@ import {generateTestData} from './vc-generator/index.js';
 import {klona} from 'klona';
 
 const tag = 'eddsa-2022';
-const {match, nonMatch} = endpoints.filterByTag({tags: [tag], property: 'issuers'});
+const {match, nonMatch} = endpoints.filterByTag({
+  tags: [tag],
+  property: 'issuers'
+});
 const should = chai.should();
 const bs58 = /^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]+$/;
 
@@ -43,7 +46,7 @@ describe('eddsa-2022 (create)', function() {
       before(async function() {
         issuedVc = await createInitialVc({issuer, vc: validVc});
         proofs = Array.isArray(issuedVc?.proof) ?
-          issuedVc.proof : [issuedVc.proof];
+          issuedVc.proof : [issuedVc?.proof];
       });
       it('MUST have property "cryptosuite"', function() {
         this.test.cell = {columnId, rowId: this.test.title};
