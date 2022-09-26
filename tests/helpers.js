@@ -2,7 +2,7 @@
  * Copyright 2022 Digital Bazaar, Inc. All Rights Reserved
  */
 
-import klona from 'klona';
+import {klona} from 'klona';
 import {v4 as uuidv4} from 'uuid';
 
 export const createInitialVc = ({issuer, vc}) => {
