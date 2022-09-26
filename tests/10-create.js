@@ -34,13 +34,25 @@ describe('eddsa-2022 (create)', function() {
     this.notImplemented = [...nonMatch.keys()];
     this.rowLabel = 'Test Name';
     this.columnLabel = 'Implementation';
-    for(const [name, {endpoints, implementation}] of match) {
+    for(const [columnId, {endpoints, implementation}] of match) {
       const [issuer] = endpoints;
       const verifier = implementation.verifiers.find(
         v => v.tags.has(tag));
       let issuedVc;
+      let proofs;
       before(async function() {
-        issuedVc = await createInitialVc({issuer});
+        issuedVc = await createInitialVc({issuer, vc: validVc});
+        proofs = Array.isArray(issuedVc?.proof) ?
+          issuedVc.proof : [issuedVc.proof];
+      });
+      it('MUST have property "cryptosuite"', function() {
+        this.test.cell = {columnId, rowId: this.test.title};
+        proofs.some(
+          proof => typeof proof?.cryptosuite === 'string'
+        ).should.equal(
+          true,
+          'Expected at least one proof to have cryptosuite.'
+        );
       });
     }
   });
