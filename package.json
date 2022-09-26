@@ -26,7 +26,8 @@
     "@digitalbazaar/ed25519-multikey": "^1.0.0",
     "@digitalbazaar/mocha-w3c-interop-reporter": "^1.2.1",
     "@digitalbazaar/multikey-context": "^1.0.0",
-    "data-integrity-test-suite-assertion": "github:w3c-ccg/data-integrity-test-suite-assertion#use-endpoint-class"
+    "data-integrity-test-suite-assertion": "github:w3c-ccg/data-integrity-test-suite-assertion#use-endpoint-class",
+    "vc-api-test-suite-implementations": "github:w3c-ccg/vc-api-test-suite-implementations#filterByTag-returns-respective-endpoint"
   },
   "devDependencies": {
     "eslint": "^8.23.1",
