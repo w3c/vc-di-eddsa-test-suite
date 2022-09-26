@@ -28,6 +28,7 @@
     "@digitalbazaar/multikey-context": "^1.0.0",
     "data-integrity-test-suite-assertion": "github:w3c-ccg/data-integrity-test-suite-assertion#use-endpoint-class",
     "klona": "^2.0.5",
+    "varint": "^6.0.0",
     "vc-api-test-suite-implementations": "github:w3c-ccg/vc-api-test-suite-implementations#filterByTag-returns-respective-endpoint"
   },
   "devDependencies": {
