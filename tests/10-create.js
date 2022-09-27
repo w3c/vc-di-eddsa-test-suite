@@ -27,8 +27,7 @@ describe('eddsa-2022 (create)', function() {
   });
   checkDataIntegrityProofFormat({
     implemented: match,
-    notImplemented: nonMatch,
-    tag
+    notImplemented: nonMatch
   });
   describe('eddsa-2022 (issuer)', function() {
     this.matrix = true;

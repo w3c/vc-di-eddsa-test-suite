@@ -26,8 +26,10 @@
     "@digitalbazaar/ed25519-multikey": "^1.0.0",
     "@digitalbazaar/mocha-w3c-interop-reporter": "^1.2.1",
     "@digitalbazaar/multikey-context": "^1.0.0",
+    "chai": "^4.3.6",
     "data-integrity-test-suite-assertion": "github:w3c-ccg/data-integrity-test-suite-assertion#use-endpoint-class",
     "klona": "^2.0.5",
+    "mocha": "^10.0.0",
     "varint": "^6.0.0",
     "vc-api-test-suite-implementations": "github:w3c-ccg/vc-api-test-suite-implementations#filterByTag-returns-respective-endpoint"
   },
