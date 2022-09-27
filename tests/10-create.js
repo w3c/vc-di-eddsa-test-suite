@@ -88,7 +88,7 @@ describe('eddsa-2022 (create)', function() {
         const eddsa2022Proofs = proofs.filter(
           proof => proof?.cryptosuite === cryptosuite);
         eddsa2022Proofs.length.should.be.gte(1, 'Expected at least one ' +
-          'Ed25519 proof.');
+          'eddsa-2022 cryptosuite.');
         for(const proof of eddsa2022Proofs) {
           should.exist(proof.proofValue, 'Expected a proof value on ' +
             'the proof.');
