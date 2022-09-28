@@ -1,6 +1,7 @@
 /*!
  * Copyright 2022 Digital Bazaar, Inc. All Rights Reserved
  */
+import * as vc from '@digitalbazaar/vc';
 import {DataIntegrityProof} from '@digitalbazaar/data-integrity';
 import {documentLoader} from './documentLoader.js';
 import {
@@ -8,7 +9,6 @@ import {
 } from '@digitalbazaar/eddsa-2022-cryptosuite';
 import {klona} from 'klona';
 import {validVc} from './validVc.js';
-import vc from '@digitalbazaar/vc';
 
 // cache test data for a single run
 const vcCache = new Map([
