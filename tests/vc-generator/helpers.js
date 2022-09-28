@@ -9,6 +9,6 @@ export const getMultikey = async ({seedMultibase}) => {
   const seed = decodeSecretKeySeed({secretKeySeed: seedMultibase});
   const key = await Ed25519Multikey.generate({seed});
   const signer = key.signer();
-  signer.id = `did:key:${key.publicKeyMultibase}`;
+  signer.id = `did:key:${key.publicKeyMultibase}#${key.publicKeyMultibase}`;
   return signer;
 };

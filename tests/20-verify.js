@@ -32,14 +32,14 @@ describe('eddsa-2022 (verify)', function() {
     this.columnLabel = 'Verifier';
     this.implemented = [...match.keys()];
     this.notImplemented = [...nonMatch.keys()];
-    for(const [name, {endpoints}] of match) {
-      describe(name, function() {
+    for(const [columnId, {endpoints}] of match) {
+      describe(columnId, function() {
       // wrap the testApi config in an Implementation class
         const [verifier] = endpoints;
         it('If the "proof" field is missing or invalid, a MALFORMED error ' +
           'MUST be returned.', async function() {
           this.test.cell = {
-            columnId: name,
+            columnId,
             rowId: this.test.title
           };
           const credential = klona(issuedVc);
@@ -49,7 +49,7 @@ describe('eddsa-2022 (verify)', function() {
         it('If the "type" field is missing or invalid, a MALFORMED error ' +
           'MUST be returned.', async function() {
           this.test.cell = {
-            columnId: name,
+            columnId,
             rowId: this.test.title
           };
           const credential = klona(issuedVc);
@@ -59,7 +59,7 @@ describe('eddsa-2022 (verify)', function() {
         it('If the "created" field is missing or invalid, a MALFORMED error ' +
           'MUST be returned.', async function() {
           this.test.cell = {
-            columnId: name,
+            columnId,
             rowId: this.test.title
           };
           const credential = klona(issuedVc);
@@ -69,7 +69,7 @@ describe('eddsa-2022 (verify)', function() {
         it('If the "verificationMethod" field is missing or invalid, ' +
           'a MALFORMED error MUST be returned.', async function() {
           this.test.cell = {
-            columnId: name,
+            columnId,
             rowId: this.test.title
           };
           const credential = klona(issuedVc);
@@ -79,7 +79,7 @@ describe('eddsa-2022 (verify)', function() {
         it('If the "proofPurpose" field is missing or invalid, ' +
           'a MALFORMED error MUST be returned.', async function() {
           this.test.cell = {
-            columnId: name,
+            columnId,
             rowId: this.test.title
           };
           const credential = klona(issuedVc);
@@ -89,7 +89,7 @@ describe('eddsa-2022 (verify)', function() {
         it('If the "proofValue" field is missing or invalid, ' +
           'a MALFORMED error MUST be returned.', async function() {
           this.test.cell = {
-            columnId: name,
+            columnId,
             rowId: this.test.title
           };
           const credential = klona(issuedVc);
@@ -110,14 +110,14 @@ describe('eddsa-2022 (verify)', function() {
     this.implemented = [...match.keys()];
     this.notImplemented = [...nonMatch.keys()];
 
-    for(const [name, {endpoints}] of match) {
-      describe(name, function() {
+    for(const [columnId, {endpoints}] of match) {
+      describe(columnId, function() {
       // wrap the testApi config in an Implementation class
         const [verifier] = endpoints;
         it('MUST verify a valid VC with an eddsa-2022 proof',
           async function() {
             this.test.cell = {
-              columnId: name,
+              columnId,
               rowId: this.test.title
             };
             const credential = klona(issuedVc);
@@ -126,7 +126,7 @@ describe('eddsa-2022 (verify)', function() {
         it('If the "type" field is not the string "DataIntegrityProof", an ' +
           'UNKNOWN_CRYPTOSUITE_TYPE error MUST be returned.', async function() {
           this.test.cell = {
-            columnId: name,
+            columnId,
             rowId: this.test.title
           };
           const credential = klona(issuedVc);
@@ -137,7 +137,7 @@ describe('eddsa-2022 (verify)', function() {
           'value, an INVALID_PROOF_VALUE error MUST be returned.',
         async function() {
           this.test.cell = {
-            columnId: name,
+            columnId,
             rowId: this.test.title
           };
           const credential = klona(issuedVc);
@@ -150,7 +150,7 @@ describe('eddsa-2022 (verify)', function() {
           'in length, an INVALID_PROOF_LENGTH error MUST be returned.',
         async function() {
           this.test.cell = {
-            columnId: name,
+            columnId,
             rowId: this.test.title
           };
           const credential = klona(issuedVc);
@@ -164,7 +164,7 @@ describe('eddsa-2022 (verify)', function() {
         it('If a canonicalization algorithm other than URDNA2015 is used, ' +
           'a INVALID_PROOF_VALUE error MUST be returned.', async function() {
           this.test.cell = {
-            columnId: name,
+            columnId,
             rowId: this.test.title
           };
           const credential = klona(incorrectCannonization);
@@ -173,7 +173,7 @@ describe('eddsa-2022 (verify)', function() {
         it('If a canonicalization data hashing algorithm SHA-2-256 is used, ' +
           'a INVALID_PROOF_VALUE error MUST be returned.', async function() {
           this.test.cell = {
-            columnId: name,
+            columnId,
             rowId: this.test.title
           };
           const credential = klona(incorrectHash);
