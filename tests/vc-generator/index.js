@@ -8,6 +8,8 @@ import {documentLoader} from './documentLoader.js';
 import {
   cryptosuite as eddsa2022CryptoSuite
 } from '@digitalbazaar/eddsa-2022-cryptosuite';
+import {getMultikey} from './helpers.js';
+import {hashDigest} from './hashDigest.js';
 import {klona} from 'klona';
 import {validVc} from './validVc.js';
 
@@ -23,12 +25,15 @@ const vcGenerators = new Map([
 ]);
 
 export async function generateTestData() {
-  for(const [key, generator] of vcGenerators) {
-    if(vcCache.get(key)) {
+  const signer = await getMultikey({
+    seedMultibase: process.env.CLIENT_SECRET_DB
+  });
+  for(const [id, generator] of vcGenerators) {
+    if(vcCache.get(id)) {
       continue;
     }
-    const testData = await generator({key});
-    vcCache.set(key, testData);
+    const testData = await generator({signer});
+    vcCache.set(id, testData);
   }
   return vcCache;
 }
