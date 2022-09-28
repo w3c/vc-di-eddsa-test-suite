@@ -2,6 +2,7 @@
  * Copyright 2022 Digital Bazaar, Inc. All Rights Reserved
  */
 import * as vc from '@digitalbazaar/vc';
+import canonicalize from 'canonicalize';
 import {DataIntegrityProof} from '@digitalbazaar/data-integrity';
 import {documentLoader} from './documentLoader.js';
 import {
@@ -58,10 +59,9 @@ async function _incorrectCanonize({signer}) {
 }
 
 async function _incorrectDigest({signer}) {
-  const suite = new Ed25519Signature2020({
-    signer,
-    hash: hashDigest({algorithm: 'sha512'})
-  });
+  //FIXME replace the hash function
+  const suite = _createEddsa2022Suite({signer});
+  const hash = hashDigest({algorithm: 'sha512'});
   const signedVc = await vc.issue({
     credential: klona(validVc),
     suite,
