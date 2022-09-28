@@ -29,6 +29,7 @@
     "@digitalbazaar/multikey-context": "^1.0.0",
     "@digitalbazaar/vc": "^5.0.0",
     "@digitalcredentials/did-context": "^1.0.0",
+    "canonicalize": "^1.0.8",
     "chai": "^4.3.6",
     "data-integrity-test-suite-assertion": "github:w3c-ccg/data-integrity-test-suite-assertion#use-endpoint-class",
     "jsonld-document-loader": "^1.2.1",
