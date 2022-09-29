@@ -41,46 +41,72 @@ export function hashDigest({algorithm = 'sha256'} = {}) {
     crypto.createHash(algorithm).update(string).digest());
 }
 
-export async function createProofNoCreated({
-  document,
-  purpose,
-  documentLoader
+export function invalidCreateProof({
+  addCreated = true,
+  addVm = true,
+  addProofPurpose = true
 }) {
-  // build proof (currently known as `signature options` in spec)
-  let proof;
-  if(this.proof) {
-    // shallow copy
-    proof = {...this.proof};
-  } else {
-    // create proof JSON-LD document
-    proof = {};
-  }
-  // ensure proof type is set
-  proof.type = this.type;
+  return async function({
+    document,
+    purpose,
+    documentLoader
+  }) {
+    // build proof (currently known as `signature options` in spec)
+    let proof;
+    if(this.proof) {
+      // shallow copy
+      proof = {...this.proof};
+    } else {
+      // create proof JSON-LD document
+      proof = {};
+    }
+    // ensure proof type is set
+    proof.type = this.type;
 
-  proof.verificationMethod = this.verificationMethod;
-  proof.cryptosuite = this.cryptosuite;
-  // add any extensions to proof (mostly for legacy support)
-  proof = await this.updateProof({
-    document, proof, purpose, documentLoader
-  });
+    if(addCreated) {
+    // set default `now` date if not given in `proof` or `options`
+      let date = this.date;
+      if(proof.created === undefined && date === undefined) {
+        date = new Date();
+      }
+      // ensure date is in string format
+      if(date && (date instanceof Date)) {
+        // replace ms block with Z for seconds precision
+        date = date.toISOString().replace(/\.\d+Z$/, 'Z');
+      }
+      // add API overrides
+      if(date) {
+        proof.created = date;
+      }
+    }
 
-  // allow purpose to update the proof; the `proof` is in the
-  // SECURITY_CONTEXT_URL `@context` -- therefore the `purpose` must
-  // ensure any added fields are also represented in that same `@context`
-  proof = await purpose.update(
-    proof, {document, suite: this, documentLoader});
+    if(addVm) {
+      proof.verificationMethod = this.verificationMethod;
+    }
+    proof.cryptosuite = this.cryptosuite;
+    // add any extensions to proof (mostly for legacy support)
+    proof = await this.updateProof({
+      document, proof, purpose, documentLoader
+    });
+    if(addProofPurpose) {
+      // allow purpose to update the proof; the `proof` is in the
+      // SECURITY_CONTEXT_URL `@context` -- therefore the `purpose` must
+      // ensure any added fields are also represented in that same `@context`
+      proof = await purpose.update(
+        proof, {document, suite: this, documentLoader});
+    }
 
-  // create data to sign
-  const verifyData = await this.createVerifyData({
-    document, proof, documentLoader
-  });
+    // create data to sign
+    const verifyData = await this.createVerifyData({
+      document, proof, documentLoader
+    });
 
-  // sign data
-  proof = await this.sign(
-    {verifyData, document, proof, documentLoader});
+    // sign data
+    proof = await this.sign(
+      {verifyData, document, proof, documentLoader});
 
-  return proof;
+    return proof;
+  };
 }
 
 // used to create an invalid hash

@@ -3,7 +3,7 @@
  */
 import * as vc from '@digitalbazaar/vc';
 import {
-  createProofNoCreated,
+  invalidCreateProof,
   getMultikey,
   invalidCreateVerifyData
 } from './helpers.js';
@@ -27,7 +27,9 @@ const vcGenerators = new Map([
   ['digestSha512', _incorrectDigest],
   ['invalidCryptosuite', _incorrectCryptosuite],
   ['invalidProofType', _incorrectProofType],
-  ['noCreated', _noCreated]
+  ['noCreated', _noCreated],
+  ['noVm', _noVm],
+  ['noProofPurpose', _noProofPurpose]
 ]);
 
 export async function generateTestData() {
@@ -50,16 +52,37 @@ export async function generateTestData() {
   };
 }
 
-async function _noCreated({signer, credential}) {
+async function _noProofPurpose({signer, credential}) {
   const suite = _createEddsa2022Suite({signer});
-  suite.createProof = createProofNoCreated;
+  suite.createProof = invalidCreateProof({addProofPurpose: false});
   const signedVc = await vc.issue({
     credential: klona(credential),
     suite,
     documentLoader
   });
   return signedVc;
+}
 
+async function _noVm({signer, credential}) {
+  const suite = _createEddsa2022Suite({signer});
+  suite.createProof = invalidCreateProof({addVm: false});
+  const signedVc = await vc.issue({
+    credential: klona(credential),
+    suite,
+    documentLoader
+  });
+  return signedVc;
+}
+
+async function _noCreated({signer, credential}) {
+  const suite = _createEddsa2022Suite({signer});
+  suite.createProof = invalidCreateProof({addCreated: false});
+  const signedVc = await vc.issue({
+    credential: klona(credential),
+    suite,
+    documentLoader
+  });
+  return signedVc;
 }
 
 async function _incorrectCryptosuite({signer, credential}) {

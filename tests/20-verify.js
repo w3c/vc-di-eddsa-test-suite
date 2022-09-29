@@ -53,15 +53,13 @@ describe('eddsa-2022 (verify)', function() {
         it('If the "verificationMethod" field is missing or invalid, ' +
           'a MALFORMED error MUST be returned.', async function() {
           this.test.cell = {columnId, rowId: this.test.title};
-          const credential = credentials.clone('issuedVc');
-          delete credential.proof.verificationMethod;
+          const credential = credentials.clone('noVm');
           await verificationFail({credential, verifier});
         });
         it('If the "proofPurpose" field is missing or invalid, ' +
           'a MALFORMED error MUST be returned.', async function() {
           this.test.cell = {columnId, rowId: this.test.title};
-          const credential = credentials.clone('issuedVc');
-          delete credential.proof.proofPurpose;
+          const credential = credentials.clone('noProofPurpose');
           await verificationFail({credential, verifier});
         });
         it('If the "proofValue" field is missing or invalid, ' +
