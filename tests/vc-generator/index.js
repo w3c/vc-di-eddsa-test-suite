@@ -2,14 +2,13 @@
  * Copyright 2022 Digital Bazaar, Inc. All Rights Reserved
  */
 import * as vc from '@digitalbazaar/vc';
-import {concatTypeArrays, getMultikey} from './helpers.js';
+import {getMultikey, invalidCreateVerifyData} from './helpers.js';
 import canonicalize from 'canonicalize';
 import {DataIntegrityProof} from '@digitalbazaar/data-integrity';
 import {documentLoader} from './documentLoader.js';
 import {
   cryptosuite as eddsa2022CryptoSuite
 } from '@digitalbazaar/eddsa-2022-cryptosuite';
-import {hashDigest} from './hashDigest.js';
 import {klona} from 'klona';
 import {validVc} from './validVc.js';
 
@@ -68,33 +67,7 @@ async function _incorrectCanonize({signer, credential}) {
 async function _incorrectDigest({signer, credential}) {
   //FIXME replace the hash function
   const suite = _createEddsa2022Suite({signer});
-  const sha512Digest = hashDigest({algorithm: 'sha512'});
-  suite.createVerifyData = async function({document, proof, documentLoader}) {
-    // get cached document hash
-    let cachedDocHash;
-    const {_hashCache} = this;
-    if(_hashCache && _hashCache.document === document) {
-      cachedDocHash = _hashCache.hash;
-    } else {
-      this._hashCache = {
-        document,
-        // canonize and hash document
-        hash: cachedDocHash =
-          this.canonize(document, {documentLoader})
-            .then(c14nDocument => sha512Digest({string: c14nDocument}))
-      };
-    }
-
-    // await both c14n proof hash and c14n document hash
-    const [proofHash, docHash] = await Promise.all([
-      // canonize and hash proof
-      this.canonizeProof(proof, {document, documentLoader})
-        .then(c14nProofOptions => sha512Digest({string: c14nProofOptions})),
-      cachedDocHash
-    ]);
-    // concatenate hash of c14n proof options and hash of c14n document
-    return concatTypeArrays(proofHash, docHash);
-  };
+  suite.createVerifyData = invalidCreateVerifyData;
   const signedVc = await vc.issue({
     credential: klona(credential),
     suite,

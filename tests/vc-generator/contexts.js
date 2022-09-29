@@ -11,7 +11,6 @@ import multikeyCtx from '@digitalbazaar/multikey-context';
 // const odrlCtx = contexts['https://www.w3.org/ns/odrl.jsonld'];
 
 const contextMap = new Map();
-
 // add contexts for the documentLoader
 contextMap.set(multikeyCtx.constants.CONTEXT_URL, multikeyCtx.CONTEXT);
 contextMap.set(
