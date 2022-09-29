@@ -9,6 +9,7 @@ import {
 } from 'data-integrity-test-suite-assertion';
 import {endpoints} from 'vc-api-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
+import {shouldBeBs58} from './assertions.js';
 
 const tag = 'eddsa-2022';
 const cryptosuite = 'eddsa-2022';
@@ -17,7 +18,6 @@ const {match, nonMatch} = endpoints.filterByTag({
   property: 'issuers'
 });
 const should = chai.should();
-const bs58 = /^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]+$/;
 
 describe('eddsa-2022 (create)', function() {
   let validVc;
@@ -71,7 +71,7 @@ describe('eddsa-2022 (create)', function() {
         const multibase = 'z';
         proofs.some(proof => {
           const value = proof?.proofValue || '';
-          return value.startsWith(multibase) && bs58.test(value);
+          return value.startsWith(multibase) && shouldBeBs58(value);
         }).should.equal(
           true,
           'Expected "proof.proofValue" to be multibase-encoded base58-btc ' +
