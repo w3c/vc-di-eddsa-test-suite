@@ -23,7 +23,7 @@ describe('eddsa-2022 (create)', function() {
   let validVc;
   before(async function() {
     const credentials = await generateTestData();
-    validVc = credentials.get('validVc');
+    validVc = credentials.clone('validVc');
   });
   checkDataIntegrityProofFormat({
     implemented: match,
