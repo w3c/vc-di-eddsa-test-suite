@@ -17,11 +17,13 @@ describe('eddsa-2022 (verify)', function() {
   let issuedVc;
   let incorrectCannonization;
   let incorrectHash;
+  let incorrectCryptosuite;
   before(async function() {
     const credentials = await generateTestData();
     issuedVc = credentials.get('issuedVc');
     incorrectCannonization = credentials.get('canonizeJcs');
     incorrectHash = credentials.get('digestSha512');
+    incorrectCryptosuite = credentials.get('incorrectCryptosuite');
   });
   describe('Data Integrity (verifier)', function() {
     // this will tell the report
@@ -78,7 +80,13 @@ describe('eddsa-2022 (verify)', function() {
           delete credential.proof.proofValue;
           await verificationFail({credential, verifier});
         });
-
+        it('If the "type" field is not the string "DataIntegrityProof", an ' +
+          'UNKNOWN_CRYPTOSUITE_TYPE error MUST be returned.', async function() {
+          this.test.cell = {columnId, rowId: this.test.title};
+          const credential = klona(issuedVc);
+          credential.proof.type = 'UnknownCryptoSuite';
+          await verificationFail({credential, verifier});
+        });
       });
     }
   });
@@ -102,13 +110,6 @@ describe('eddsa-2022 (verify)', function() {
             const credential = klona(issuedVc);
             await verificationSuccess({credential, verifier});
           });
-        it('If the "type" field is not the string "DataIntegrityProof", an ' +
-          'UNKNOWN_CRYPTOSUITE_TYPE error MUST be returned.', async function() {
-          this.test.cell = {columnId, rowId: this.test.title};
-          const credential = klona(issuedVc);
-          credential.proof.type = 'UnknownCryptoSuite';
-          await verificationFail({credential, verifier});
-        });
         it('If the "proofValue" field is not a multibase-encoded base58-btc ' +
           'value, an INVALID_PROOF_VALUE error MUST be returned.',
         async function() {
@@ -137,29 +138,21 @@ describe('eddsa-2022 (verify)', function() {
           const credential = klona(incorrectCannonization);
           await verificationFail({credential, verifier});
         });
-        it('If a canonicalization data hashing algorithm SHA-2-256 is used, ' +
-          'a INVALID_PROOF_VALUE error MUST be returned.', async function() {
+        it('If a canonicalization data hashing other than algorithm SHA-2-256' +
+          ' is used, a INVALID_PROOF_VALUE error MUST be returned.',
+        async function() {
           this.test.cell = {columnId, rowId: this.test.title};
           const credential = klona(incorrectHash);
           await verificationFail({credential, verifier});
         });
+        it('If the "cryptosuite" field is not the string "eddsa-2022", ' +
+          'an UNKNOWN_CRYPTOSUITE_TYPE error MUST be returned.',
+        async function() {
+          this.test.cell = {columnId, rowId: this.test.title};
+          const credential = klona(incorrectCryptosuite);
+          await verificationFail({credential, verifier});
+        });
       });
     }
-  });
-  describe.skip('eddsa-2022 cryptosuite', function() {
-    it('If the "type" field is not the string "DataIntegritySignature", ' +
-      'a UNKNOWN_PROOF_TYPE error MUST be returned.');
-    it('If the "cryptosuite" field is not the string "eddsa-2022", ' +
-      'an UNKNOWN_CRYPTOSUITE_TYPE error MUST be returned.');
-    it('If the "proofValue" field is not a multibase-encoded base58-btc ' +
-      'value, an INVALID_PROOF_VALUE error MUST be returned.');
-    it('If the "proofValue" field, when decoded to raw bytes, is not 64 ' +
-      'bytes in length if the associated public key is 32 bytes in length, ' +
-      'or 114 bytes in length if the public key is 57 bytes in length, ' +
-      'an INVALID_PROOF_LENGTH error MUST be returned.');
-    it('If a canonicalization algorithm other than URDNA2015 is used, ' +
-      'a INVALID_PROOF_VALUE error MUST be returned.');
-    it('If a canonicalization data hashing algorithm SHA-2-256 is used, ' +
-      'a INVALID_PROOF_VALUE error MUST be returned.');
   });
 });
