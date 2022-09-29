@@ -3,8 +3,8 @@
  */
 import * as vc from '@digitalbazaar/vc';
 import {
-  invalidCreateProof,
   getMultikey,
+  invalidCreateProof,
   invalidCreateVerifyData
 } from './helpers.js';
 import canonicalize from 'canonicalize';
