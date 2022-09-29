@@ -21,7 +21,7 @@ describe('eddsa-2022 (interop)', function() {
   let validVc;
   before(async function() {
     const credentials = await generateTestData();
-    validVc = credentials.get('validVc');
+    validVc = credentials.clone('validVc');
   });
   // this will tell the report
   // to make an interop matrix with this suite

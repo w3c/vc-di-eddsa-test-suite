@@ -2,7 +2,11 @@
  * Copyright 2022 Digital Bazaar, Inc. All Rights Reserved
  */
 import * as vc from '@digitalbazaar/vc';
-import {getMultikey, invalidCreateVerifyData} from './helpers.js';
+import {
+  createProofNoCreated,
+  getMultikey,
+  invalidCreateVerifyData
+} from './helpers.js';
 import canonicalize from 'canonicalize';
 import {DataIntegrityProof} from '@digitalbazaar/data-integrity';
 import {documentLoader} from './documentLoader.js';
@@ -22,7 +26,8 @@ const vcGenerators = new Map([
   ['canonizeJcs', _incorrectCanonize],
   ['digestSha512', _incorrectDigest],
   ['invalidCryptosuite', _incorrectCryptosuite],
-  ['invalidProofType', _incorrectProofType]
+  ['invalidProofType', _incorrectProofType],
+  ['noCreated', _noCreated]
 ]);
 
 export async function generateTestData() {
@@ -38,7 +43,23 @@ export async function generateTestData() {
     const testData = await generator({signer, credential});
     vcCache.set(id, testData);
   }
-  return vcCache;
+  return {
+    clone(key) {
+      return klona(vcCache.get(key));
+    }
+  };
+}
+
+async function _noCreated({signer, credential}) {
+  const suite = _createEddsa2022Suite({signer});
+  suite.createProof = createProofNoCreated;
+  const signedVc = await vc.issue({
+    credential: klona(credential),
+    suite,
+    documentLoader
+  });
+  return signedVc;
+
 }
 
 async function _incorrectCryptosuite({signer, credential}) {

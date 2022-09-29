@@ -41,6 +41,49 @@ export function hashDigest({algorithm = 'sha256'} = {}) {
     crypto.createHash(algorithm).update(string).digest());
 }
 
+export async function createProofNoCreated({
+  document,
+  purpose,
+  documentLoader
+}) {
+  // build proof (currently known as `signature options` in spec)
+  let proof;
+  if(this.proof) {
+    // shallow copy
+    proof = {...this.proof};
+  } else {
+    // create proof JSON-LD document
+    proof = {};
+  }
+  // ensure proof type is set
+  proof.type = this.type;
+
+  proof.verificationMethod = this.verificationMethod;
+  proof.cryptosuite = this.cryptosuite;
+  // add any extensions to proof (mostly for legacy support)
+  proof = await this.updateProof({
+    document, proof, purpose, documentLoader
+  });
+
+  // allow purpose to update the proof; the `proof` is in the
+  // SECURITY_CONTEXT_URL `@context` -- therefore the `purpose` must
+  // ensure any added fields are also represented in that same `@context`
+  proof = await purpose.update(
+    proof, {document, suite: this, documentLoader});
+
+  // create data to sign
+  const verifyData = await this.createVerifyData({
+    document, proof, documentLoader
+  });
+
+  // sign data
+  proof = await this.sign(
+    {verifyData, document, proof, documentLoader});
+
+  return proof;
+}
+
+// used to create an invalid hash
 export async function invalidCreateVerifyData({
   document,
   proof,
