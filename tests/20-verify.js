@@ -66,6 +66,8 @@ describe('eddsa-2022 (verify)', function() {
           'a MALFORMED error MUST be returned.', async function() {
           this.test.cell = {columnId, rowId: this.test.title};
           const credential = credentials.clone('issuedVc');
+          // proofValue is added after signing so we can
+          // safely delete it for this test
           delete credential.proof.proofValue;
           await verificationFail({credential, verifier});
         });
@@ -103,7 +105,9 @@ describe('eddsa-2022 (verify)', function() {
         async function() {
           this.test.cell = {columnId, rowId: this.test.title};
           const credential = credentials.clone('issuedVc');
-          credential.proof.proofValue = 'not-multibase-bs58-encoded!!';
+          // remove the initial Z
+          credential.proof.proofValue = credential.proof.proofValue.slice(
+            1, credential.proof.proofValue.length);
           await verificationFail({credential, verifier});
         });
         it('If the "proofValue" field, when decoded to raw bytes, is not ' +
