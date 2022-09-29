@@ -21,7 +21,8 @@ const vcGenerators = new Map([
   ['issuedVc', _issuedVc],
   ['canonizeJcs', _incorrectCanonize],
   ['digestSha512', _incorrectDigest],
-  ['invalidCryptosuite', _incorrectCryptosuite]
+  ['invalidCryptosuite', _incorrectCryptosuite],
+  ['invalidProofType', _incorrectProofType]
 ]);
 
 export async function generateTestData() {
@@ -43,6 +44,17 @@ export async function generateTestData() {
 async function _incorrectCryptosuite({signer, credential}) {
   const suite = _createEddsa2022Suite({signer});
   suite.cryptosuite = 'unknown-cryptosuite-2017';
+  const signedVc = await vc.issue({
+    credential: klona(credential),
+    suite,
+    documentLoader
+  });
+  return signedVc;
+}
+
+async function _incorrectProofType({signer, credential}) {
+  const suite = _createEddsa2022Suite({signer});
+  suite.type = 'UnknownProofType';
   const signedVc = await vc.issue({
     credential: klona(credential),
     suite,

@@ -4,18 +4,19 @@
 import credentialsCtx from 'credentials-context';
 import dataIntegrityCtx from '@digitalbazaar/data-integrity-context';
 import didCtx from '@digitalcredentials/did-context';
+import {klona} from 'klona';
 import multikeyCtx from '@digitalbazaar/multikey-context';
 
-// const credentialExamplesCtx = contexts[
-//   'https://www.w3.org/2018/credentials/examples/v1'];
-// const odrlCtx = contexts['https://www.w3.org/ns/odrl.jsonld'];
-
 const contextMap = new Map();
+const _dataIntegrityCtx = klona(dataIntegrityCtx.CONTEXT);
+// add UnknownProofType to local context for test data
+_dataIntegrityCtx['@context'].UnknownProofType =
+  klona(_dataIntegrityCtx['@context'].DataIntegrityProof);
 // add contexts for the documentLoader
 contextMap.set(multikeyCtx.constants.CONTEXT_URL, multikeyCtx.CONTEXT);
 contextMap.set(
   dataIntegrityCtx.constants.CONTEXT_URL,
-  dataIntegrityCtx.CONTEXT
+  _dataIntegrityCtx
 );
 contextMap.set(
   didCtx.constants.DID_CONTEXT_URL,

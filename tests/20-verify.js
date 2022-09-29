@@ -18,12 +18,14 @@ describe('eddsa-2022 (verify)', function() {
   let incorrectCannonization;
   let incorrectHash;
   let incorrectCryptosuite;
+  let invalidProofType;
   before(async function() {
     const credentials = await generateTestData();
     issuedVc = credentials.get('issuedVc');
     incorrectCannonization = credentials.get('canonizeJcs');
     incorrectHash = credentials.get('digestSha512');
     incorrectCryptosuite = credentials.get('incorrectCryptosuite');
+    invalidProofType = credentials.get('invalidProofType');
   });
   describe('Data Integrity (verifier)', function() {
     // this will tell the report
@@ -83,8 +85,7 @@ describe('eddsa-2022 (verify)', function() {
         it('If the "type" field is not the string "DataIntegrityProof", an ' +
           'UNKNOWN_CRYPTOSUITE_TYPE error MUST be returned.', async function() {
           this.test.cell = {columnId, rowId: this.test.title};
-          const credential = klona(issuedVc);
-          credential.proof.type = 'UnknownCryptoSuite';
+          const credential = klona(invalidProofType);
           await verificationFail({credential, verifier});
         });
       });
