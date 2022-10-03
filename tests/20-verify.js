@@ -44,10 +44,16 @@ describe('eddsa-2022 (verify)', function() {
           delete credential.proof.type;
           await verificationFail({credential, verifier});
         });
-        it('If the "created" field is missing or invalid, a MALFORMED error ' +
+        it('If the "created" field is missing, a MALFORMED error ' +
           'MUST be returned.', async function() {
           this.test.cell = {columnId, rowId: this.test.title};
           const credential = credentials.clone('noCreated');
+          await verificationFail({credential, verifier});
+        });
+        it('If the "created" field invalid, a MALFORMED error ' +
+          'MUST be returned.', async function() {
+          this.test.cell = {columnId, rowId: this.test.title};
+          const credential = credentials.clone('invalidCreated');
           await verificationFail({credential, verifier});
         });
         it('If the "verificationMethod" field is missing or invalid, ' +
