@@ -56,25 +56,46 @@ describe('eddsa-2022 (verify)', function() {
           const credential = credentials.clone('invalidCreated');
           await verificationFail({credential, verifier});
         });
-        it('If the "verificationMethod" field is missing or invalid, ' +
+        it('If the "verificationMethod" field is missing, ' +
           'a MALFORMED error MUST be returned.', async function() {
           this.test.cell = {columnId, rowId: this.test.title};
           const credential = credentials.clone('noVm');
           await verificationFail({credential, verifier});
         });
-        it('If the "proofPurpose" field is missing or invalid, ' +
+        it('If the "verificationMethod" field is invalid, ' +
+          'a MALFORMED error MUST be returned.', async function() {
+          this.test.cell = {columnId, rowId: this.test.title};
+          const credential = credentials.clone('invalidVm');
+          await verificationFail({credential, verifier});
+        });
+        it('If the "proofPurpose" field is missing, ' +
           'a MALFORMED error MUST be returned.', async function() {
           this.test.cell = {columnId, rowId: this.test.title};
           const credential = credentials.clone('noProofPurpose');
           await verificationFail({credential, verifier});
         });
-        it('If the "proofValue" field is missing or invalid, ' +
+        it('If the "proofPurpose" field is invalid, ' +
+          'a MALFORMED error MUST be returned.', async function() {
+          this.test.cell = {columnId, rowId: this.test.title};
+          const credential = credentials.clone('invalidProofPurpose');
+          await verificationFail({credential, verifier});
+        });
+        it('If the "proofValue" field is missing, ' +
           'a MALFORMED error MUST be returned.', async function() {
           this.test.cell = {columnId, rowId: this.test.title};
           const credential = credentials.clone('issuedVc');
           // proofValue is added after signing so we can
           // safely delete it for this test
           delete credential.proof.proofValue;
+          await verificationFail({credential, verifier});
+        });
+        it('If the "proofValue" field is invalid, ' +
+          'a MALFORMED error MUST be returned.', async function() {
+          this.test.cell = {columnId, rowId: this.test.title};
+          const credential = credentials.clone('issuedVc');
+          // proofValue is added after signing so we can
+          // safely delete it for this test
+          credential.proof.proofValue = 'invalidProofValue';
           await verificationFail({credential, verifier});
         });
         it('If the "type" field is not the string "DataIntegrityProof", an ' +

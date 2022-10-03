@@ -44,7 +44,8 @@ export function hashDigest({algorithm = 'sha256'} = {}) {
 export function invalidCreateProof({
   addCreated = true,
   addVm = true,
-  addProofPurpose = true
+  addProofPurpose = true,
+  mockPurpose
 }) {
   return async function({
     document,
@@ -89,11 +90,15 @@ export function invalidCreateProof({
       document, proof, purpose, documentLoader
     });
     if(addProofPurpose) {
+      if(mockPurpose) {
+        proof.proofPurpose = mockPurpose;
+      } else {
       // allow purpose to update the proof; the `proof` is in the
       // SECURITY_CONTEXT_URL `@context` -- therefore the `purpose` must
       // ensure any added fields are also represented in that same `@context`
-      proof = await purpose.update(
-        proof, {document, suite: this, documentLoader});
+        proof = await purpose.update(
+          proof, {document, suite: this, documentLoader});
+      }
     }
 
     // create data to sign
