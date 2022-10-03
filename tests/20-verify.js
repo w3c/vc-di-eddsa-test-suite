@@ -30,20 +30,36 @@ describe('eddsa-2022 (verify)', function() {
       describe(columnId, function() {
       // wrap the testApi config in an Implementation class
         const [verifier] = endpoints;
-        it('If the "proof" field is missing or invalid, a MALFORMED error ' +
+        it('If the "proof" field is missing, a MALFORMED error ' +
           'MUST be returned.', async function() {
           this.test.cell = {columnId, rowId: this.test.title};
           const credential = credentials.clone('issuedVc');
           delete credential.proof;
           await verificationFail({credential, verifier});
         });
-        it('If the "type" field is missing or invalid, a MALFORMED error ' +
+        it('If the "proof" field is invalid, a MALFORMED error ' +
+          'MUST be returned.', async function() {
+          this.test.cell = {columnId, rowId: this.test.title};
+          const credential = credentials.clone('issuedVc');
+          credential.proof = null;
+          await verificationFail({credential, verifier});
+        });
+
+        it('If the "type" field is missing, a MALFORMED error ' +
           'MUST be returned.', async function() {
           this.test.cell = {columnId, rowId: this.test.title};
           const credential = credentials.clone('issuedVc');
           delete credential.proof.type;
           await verificationFail({credential, verifier});
         });
+        it('If the "type" field is invalid, a MALFORMED error ' +
+          'MUST be returned.', async function() {
+          this.test.cell = {columnId, rowId: this.test.title};
+          const credential = credentials.clone('issuedVc');
+          credential.proof.type = null;
+          await verificationFail({credential, verifier});
+        });
+
         it('If the "created" field is missing, a MALFORMED error ' +
           'MUST be returned.', async function() {
           this.test.cell = {columnId, rowId: this.test.title};
