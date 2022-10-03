@@ -93,9 +93,8 @@ describe('eddsa-2022 (verify)', function() {
           'a MALFORMED error MUST be returned.', async function() {
           this.test.cell = {columnId, rowId: this.test.title};
           const credential = credentials.clone('issuedVc');
-          // proofValue is added after signing so we can
-          // safely delete it for this test
-          credential.proof.proofValue = 'invalidProofValue';
+          // null should be an invalid proofValue for almost any proof
+          credential.proof.proofValue = null;
           await verificationFail({credential, verifier});
         });
         it('If the "type" field is not the string "DataIntegrityProof", an ' +
