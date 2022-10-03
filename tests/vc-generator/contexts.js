@@ -8,10 +8,19 @@ import {klona} from 'klona';
 import multikeyCtx from '@digitalbazaar/multikey-context';
 
 const contextMap = new Map();
+
 const _dataIntegrityCtx = klona(dataIntegrityCtx.CONTEXT);
+const diCtx = _dataIntegrityCtx['@context'];
 // add UnknownProofType to local context for test data
-_dataIntegrityCtx['@context'].UnknownProofType =
+diCtx.UnknownProofType =
   klona(_dataIntegrityCtx['@context'].DataIntegrityProof);
+// add InvalidProofPurpose to context for test data
+diCtx.DataIntegrityProof['@context'].proofPurpose['@context'].invalidPurpose = {
+  '@id': 'https://w3id.org/security#invalidPurpose',
+  '@type': '@id',
+  '@container': '@set'
+};
+
 // add contexts for the documentLoader
 contextMap.set(multikeyCtx.constants.CONTEXT_URL, multikeyCtx.CONTEXT);
 contextMap.set(
