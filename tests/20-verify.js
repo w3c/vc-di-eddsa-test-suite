@@ -50,7 +50,7 @@ describe('eddsa-2022 (verify)', function() {
           const credential = credentials.clone('noCreated');
           await verificationFail({credential, verifier});
         });
-        it('If the "created" field invalid, a MALFORMED error ' +
+        it('If the "created" field is invalid, a MALFORMED error ' +
           'MUST be returned.', async function() {
           this.test.cell = {columnId, rowId: this.test.title};
           const credential = credentials.clone('invalidCreated');
