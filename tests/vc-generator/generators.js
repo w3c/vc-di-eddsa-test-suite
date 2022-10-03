@@ -21,6 +21,7 @@ export const vcGenerators = new Map([
   ['invalidCryptosuite', _incorrectCryptosuite],
   ['invalidProofType', _incorrectProofType],
   ['noCreated', _noCreated],
+  ['invalidCreated', _invalidCreated],
   ['noVm', _noVm],
   ['noProofPurpose', _noProofPurpose]
 ]);
@@ -39,6 +40,17 @@ async function _noProofPurpose({signer, credential}) {
 async function _noVm({signer, credential}) {
   const suite = _createEddsa2022Suite({signer});
   suite.createProof = invalidCreateProof({addVm: false});
+  const signedVc = await vc.issue({
+    credential: klona(credential),
+    suite,
+    documentLoader
+  });
+  return signedVc;
+}
+
+async function _invalidCreated({signer, credential}) {
+  const suite = _createEddsa2022Suite({signer});
+  suite.date = 'invalidDate';
   const signedVc = await vc.issue({
     credential: klona(credential),
     suite,
