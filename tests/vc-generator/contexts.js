@@ -14,7 +14,7 @@ const diCtx = _dataIntegrityCtx['@context'];
 // add UnknownProofType to local context for test data
 diCtx.UnknownProofType =
   klona(_dataIntegrityCtx['@context'].DataIntegrityProof);
-// add InvalidProofPurpose to context for test data
+// add invalidPurpose to context for test data
 diCtx.DataIntegrityProof['@context'].proofPurpose['@context'].invalidPurpose = {
   '@id': 'https://w3id.org/security#invalidPurpose',
   '@type': '@id',
