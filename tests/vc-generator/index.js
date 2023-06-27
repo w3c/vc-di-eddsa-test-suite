@@ -19,7 +19,7 @@ const vcCache = new Map([
  */
 export async function generateTestData() {
   const {signer, issuer} = await getMultikey({
-    seedMultibase: process.env.CLIENT_SECRET_DB
+    seedMultibase: (process.env?.KEY_SEED_DB || process.env?.CLIENT_SECRET_DB)
   });
   const credential = klona(validVc);
   credential.issuer = issuer;
