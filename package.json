@@ -34,7 +34,7 @@
     "canonicalize": "^1.0.8",
     "chai": "^4.3.6",
     "credentials-context": "^2.0.0",
-    "data-integrity-test-suite-assertion": "github:w3c-ccg/data-integrity-test-suite-assertion#use-endpoint-class",
+    "data-integrity-test-suite-assertion": "github:w3c-ccg/data-integrity-test-suite-assertion",
     "jsonld-document-loader": "^1.2.1",
     "klona": "^2.0.5",
     "mocha": "^10.0.0",
