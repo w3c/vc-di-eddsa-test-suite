@@ -57,8 +57,8 @@ describe('eddsa-2022 (verify)', function() {
           const credential = credentials.clone('canonizeJcs');
           await verificationFail({credential, verifier});
         });
-        it('If a canonicalization data hashing other than algorithm SHA-2-256' +
-          ' is used, a INVALID_PROOF_VALUE error MUST be returned.',
+        it('If a canonicalization data hashing other than algorithm ' +
+          'SHA-2-256 is used, a INVALID_PROOF_VALUE error MUST be returned.',
         async function() {
           this.test.cell = {columnId, rowId: this.test.title};
           const credential = credentials.clone('digestSha512');
