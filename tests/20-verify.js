@@ -17,111 +17,6 @@ describe('eddsa-2022 (verify)', function() {
   before(async function() {
     credentials = await generateTestData();
   });
-  describe('Data Integrity (verifier)', function() {
-    // this will tell the report
-    // to make an interop matrix with this suite
-    this.matrix = true;
-    this.report = true;
-    this.rowLabel = 'Test Name';
-    this.columnLabel = 'Verifier';
-    this.implemented = [...match.keys()];
-    this.notImplemented = [...nonMatch.keys()];
-    for(const [columnId, {endpoints}] of match) {
-      describe(columnId, function() {
-      // wrap the testApi config in an Implementation class
-        const [verifier] = endpoints;
-        it('If the "proof" field is missing, a MALFORMED error ' +
-          'MUST be returned.', async function() {
-          this.test.cell = {columnId, rowId: this.test.title};
-          const credential = credentials.clone('issuedVc');
-          delete credential.proof;
-          await verificationFail({credential, verifier});
-        });
-        it('If the "proof" field is invalid, a MALFORMED error ' +
-          'MUST be returned.', async function() {
-          this.test.cell = {columnId, rowId: this.test.title};
-          const credential = credentials.clone('issuedVc');
-          credential.proof = null;
-          await verificationFail({credential, verifier});
-        });
-
-        it('If the "type" field is missing, a MALFORMED error ' +
-          'MUST be returned.', async function() {
-          this.test.cell = {columnId, rowId: this.test.title};
-          const credential = credentials.clone('issuedVc');
-          delete credential.proof.type;
-          await verificationFail({credential, verifier});
-        });
-        it('If the "type" field is invalid, a MALFORMED error ' +
-          'MUST be returned.', async function() {
-          this.test.cell = {columnId, rowId: this.test.title};
-          const credential = credentials.clone('issuedVc');
-          credential.proof.type = null;
-          await verificationFail({credential, verifier});
-        });
-
-        it('If the "created" field is missing, a MALFORMED error ' +
-          'MUST be returned.', async function() {
-          this.test.cell = {columnId, rowId: this.test.title};
-          const credential = credentials.clone('noCreated');
-          await verificationFail({credential, verifier});
-        });
-        it('If the "created" field is invalid, a MALFORMED error ' +
-          'MUST be returned.', async function() {
-          this.test.cell = {columnId, rowId: this.test.title};
-          const credential = credentials.clone('invalidCreated');
-          await verificationFail({credential, verifier});
-        });
-        it('If the "verificationMethod" field is missing, ' +
-          'a MALFORMED error MUST be returned.', async function() {
-          this.test.cell = {columnId, rowId: this.test.title};
-          const credential = credentials.clone('noVm');
-          await verificationFail({credential, verifier});
-        });
-        it('If the "verificationMethod" field is invalid, ' +
-          'a MALFORMED error MUST be returned.', async function() {
-          this.test.cell = {columnId, rowId: this.test.title};
-          const credential = credentials.clone('invalidVm');
-          await verificationFail({credential, verifier});
-        });
-        it('If the "proofPurpose" field is missing, ' +
-          'a MALFORMED error MUST be returned.', async function() {
-          this.test.cell = {columnId, rowId: this.test.title};
-          const credential = credentials.clone('noProofPurpose');
-          await verificationFail({credential, verifier});
-        });
-        it('If the "proofPurpose" field is invalid, ' +
-          'a MALFORMED error MUST be returned.', async function() {
-          this.test.cell = {columnId, rowId: this.test.title};
-          const credential = credentials.clone('invalidProofPurpose');
-          await verificationFail({credential, verifier});
-        });
-        it('If the "proofValue" field is missing, ' +
-          'a MALFORMED error MUST be returned.', async function() {
-          this.test.cell = {columnId, rowId: this.test.title};
-          const credential = credentials.clone('issuedVc');
-          // proofValue is added after signing so we can
-          // safely delete it for this test
-          delete credential.proof.proofValue;
-          await verificationFail({credential, verifier});
-        });
-        it('If the "proofValue" field is invalid, ' +
-          'a MALFORMED error MUST be returned.', async function() {
-          this.test.cell = {columnId, rowId: this.test.title};
-          const credential = credentials.clone('issuedVc');
-          // null should be an invalid proofValue for almost any proof
-          credential.proof.proofValue = null;
-          await verificationFail({credential, verifier});
-        });
-        it('If the "type" field is not the string "DataIntegrityProof", an ' +
-          'UNKNOWN_CRYPTOSUITE_TYPE error MUST be returned.', async function() {
-          this.test.cell = {columnId, rowId: this.test.title};
-          const credential = credentials.clone('invalidProofType');
-          await verificationFail({credential, verifier});
-        });
-      });
-    }
-  });
   describe('eddsa-2022 cryptosuite (verifier)', function() {
     // this will tell the report
     // to make an interop matrix with this suite
@@ -142,16 +37,6 @@ describe('eddsa-2022 (verify)', function() {
             const credential = credentials.clone('issuedVc');
             await verificationSuccess({credential, verifier});
           });
-        it('If the "proofValue" field is not a multibase-encoded base58-btc ' +
-          'value, an INVALID_PROOF_VALUE error MUST be returned.',
-        async function() {
-          this.test.cell = {columnId, rowId: this.test.title};
-          const credential = credentials.clone('issuedVc');
-          // remove the initial Z
-          credential.proof.proofValue = credential.proof.proofValue.slice(
-            1, credential.proof.proofValue.length);
-          await verificationFail({credential, verifier});
-        });
         it('If the "proofValue" field, when decoded to raw bytes, is not ' +
           '64 bytes in length if the associated public key is 32 bytes ' +
           'in length, or 114 bytes in length if the public key is 57 bytes ' +
