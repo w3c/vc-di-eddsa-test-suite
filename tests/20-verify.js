@@ -3,6 +3,9 @@
  */
 import {bs58Decode, bs58Encode} from './helpers.js';
 import {verificationFail, verificationSuccess} from './assertions.js';
+import {
+  checkDataIntegrityProofVerifyErrors
+} from 'data-integrity-test-suite-assertion';
 import {endpoints} from 'vc-api-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
 
@@ -16,6 +19,10 @@ describe('eddsa-2022 (verify)', function() {
   let credentials;
   before(async function() {
     credentials = await generateTestData();
+  });
+  checkDataIntegrityProofVerifyErrors({
+    implemented: match,
+    notImplemented: nonMatch
   });
   describe('eddsa-2022 cryptosuite (verifier)', function() {
     // this will tell the report
