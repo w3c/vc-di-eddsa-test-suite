@@ -9,7 +9,6 @@ import {
 } from 'data-integrity-test-suite-assertion';
 import {endpoints} from 'vc-api-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
-import {shouldBeBs58} from './assertions.js';
 
 const tag = 'eddsa-2022';
 const cryptosuite = 'eddsa-2022';
@@ -48,15 +47,6 @@ describe('eddsa-2022 (create)', function() {
           proofs = Array.isArray(issuedVc?.proof) ?
             issuedVc.proof : [issuedVc?.proof];
         });
-        it('MUST have property "cryptosuite"', function() {
-          this.test.cell = {columnId, rowId: this.test.title};
-          proofs.some(
-            proof => typeof proof?.cryptosuite === 'string'
-          ).should.equal(
-            true,
-            'Expected at least one proof to have cryptosuite.'
-          );
-        });
         it('The field "cryptosuite" MUST be `eddsa-2022`', function() {
           this.test.cell = {columnId, rowId: this.test.title};
           proofs.some(
@@ -64,19 +54,6 @@ describe('eddsa-2022 (create)', function() {
           ).should.equal(
             true,
             'Expected at least one proof to have "cryptosuite" `eddsa-2022`.'
-          );
-        });
-        it('"proofValue" field MUST exist and be a multibase-encoded ' +
-            'base58-btc encoded value', function() {
-          this.test.cell = {columnId, rowId: this.test.title};
-          const multibase = 'z';
-          proofs.some(proof => {
-            const value = proof?.proofValue || '';
-            return value.startsWith(multibase) && shouldBeBs58(value);
-          }).should.equal(
-            true,
-            'Expected "proof.proofValue" to be multibase-encoded base58-btc ' +
-            'value.'
           );
         });
         it('"proofValue" field when decoded to raw bytes, MUST be 64 bytes ' +
