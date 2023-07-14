@@ -72,7 +72,7 @@ describe('eddsa-2022 (verify)', function() {
           await verificationFail({credential, verifier});
         });
         it('If the "cryptosuite" field is not the string "eddsa-2022", ' +
-          'an UNKNOWN_CRYPTOSUITE_TYPE error MUST be returned.',
+          'an INVALID_PROOF_CONFIGURATION error MUST be returned.',
         async function() {
           this.test.cell = {columnId, rowId: this.test.title};
           const credential = credentials.clone('incorrectCryptosuite');
