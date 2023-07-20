@@ -10,7 +10,7 @@ import {endpoints} from 'vc-api-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
 
 // only use implementations with `eddsa-2022` verifiers.
-const {match, nonMatch} = endpoints.filterByTag({
+const {match} = endpoints.filterByTag({
   tags: ['eddsa-2022'],
   property: 'verifiers'
 });
@@ -22,7 +22,6 @@ describe('eddsa-2022 (verify)', function() {
   });
   checkDataIntegrityProofVerifyErrors({
     implemented: match,
-    notImplemented: nonMatch
   });
   describe('eddsa-2022 cryptosuite (verifier)', function() {
     // this will tell the report
@@ -32,7 +31,6 @@ describe('eddsa-2022 (verify)', function() {
     this.rowLabel = 'Test Name';
     this.columnLabel = 'Verifier';
     this.implemented = [...match.keys()];
-    this.notImplemented = [...nonMatch.keys()];
 
     for(const [columnId, {endpoints}] of match) {
       describe(columnId, function() {
