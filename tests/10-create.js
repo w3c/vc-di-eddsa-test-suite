@@ -12,7 +12,7 @@ import {generateTestData} from './vc-generator/index.js';
 
 const tag = 'eddsa-2022';
 const cryptosuite = 'eddsa-2022';
-const {match, nonMatch} = endpoints.filterByTag({
+const {match} = endpoints.filterByTag({
   tags: [tag],
   property: 'issuers'
 });
@@ -25,14 +25,12 @@ describe('eddsa-2022 (create)', function() {
     validVc = credentials.clone('validVc');
   });
   checkDataIntegrityProofFormat({
-    implemented: match,
-    notImplemented: nonMatch
+    implemented: match
   });
   describe('eddsa-2022 (issuer)', function() {
     this.matrix = true;
     this.report = true;
     this.implemented = [...match.keys()];
-    this.notImplemented = [...nonMatch.keys()];
     this.rowLabel = 'Test Name';
     this.columnLabel = 'Implementation';
     for(const [columnId, {endpoints, implementation}] of match) {
