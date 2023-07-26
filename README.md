@@ -1,4 +1,4 @@
-# di-eddsa-test-suite
+# di-eddsa-2022-test-suite
 
 > Test Suite for [EDDSA](https://www.w3.org/TR/vc-di-eddsa/)
   [Data Integrity](https://w3c.github.io/vc-data-integrity/) Cryptosuites.
