@@ -1,7 +1,4 @@
-# di-eddsa-2022-test-suite
-
-> Test Suite for [EDDSA](https://www.w3.org/TR/vc-di-eddsa/)
-  [Data Integrity](https://w3c.github.io/vc-data-integrity/) Cryptosuites.
+# Test Suite for [EDDSA](https://www.w3.org/TR/vc-di-eddsa/) [Data Integrity](https://w3c.github.io/vc-data-integrity/) Cryptosuites.
 
 ## Table of Contents
 
@@ -14,7 +11,7 @@
 
 ## Background
 Provides interoperability tests for verifiable credential processors
-(issuers/verifiers) that support [EDDSA](https://www.w3.org/TR/vc-di-eddsa/)
+(issuers and verifiers) that support [EDDSA](https://www.w3.org/TR/vc-di-eddsa/)
 [Data Integrity](https://w3c.github.io/vc-data-integrity/) cryptosuites.
 
 ## Install
@@ -37,8 +34,8 @@ with `DataIntegrityProof` proof type using the `eddsa-2022` cryptosuite.
 
 To add your implementation to this test suite, you will need to add 2 endpoints
 to your implementation manifest.
-- A credentials issuer endpoint (/credentials/issue) in the `issuers` property.
-- A credentials verifier endpoint (/credentials/verify) in the `verifiers`
+- A credential issuer endpoint (/credentials/issue) in the `issuers` property.
+- A credential verifier endpoint (/credentials/verify) in the `verifiers`
   property.
 
 All endpoints will need the tag `eddsa-2022`.
@@ -69,16 +66,16 @@ oauth authentication to your endpoints. You can find an example in the
 [vc-api-test-suite-implementations README here](https://github.com/w3c-ccg/vc-api-test-suite-implementations#adding-a-new-implementation).
 
 To run the tests, some implementations may require client secrets that can be
-passed as env variables to the test script. To see which ones require client
+passed as environment variables to the test script. To see which implementations require client
 secrets, please check the implementation manifest within the
 [vc-api-test-suite-implementations](https://github.com/w3c-ccg/vc-api-test-suite-implementations/tree/main/implementations) library.
 
 ## Docker Integration (TODO)
 
 We are presently working on implementing a new feature that will enable the
-utilization of Docker images instead of live endpoints. The docker image that
+use of Docker images instead of live endpoints. The Docker image that
 you provide will be started when the test suite is run. The image is expected
-to expose the API provided above, which will be utilized in the same way that
+to expose the API provided above, which will be used in the same way that
 live HTTP endpoints are used above.
 
 ## License
