@@ -1,7 +1,7 @@
 {
   "name": "vc-di-eddsa-test-suite",
   "version": "0.0.1",
-  "description": "Test suite for the data integrity of EDDSA cryptosuite.",
+  "description": "Interoperability test suite for EDDSA data integrity cryptosuites.",
   "main": "/tests",
   "type": "module",
   "directories": {
