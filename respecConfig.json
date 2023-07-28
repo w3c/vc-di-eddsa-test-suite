@@ -1,22 +1,22 @@
 {
   "specStatus": "unofficial",
-  "shortName": "di-eddsa-2022-test-suite",
+  "shortName": "vc-di-eddsa-test-suite",
   "subtitle": "Test Interoperability eddsa-2022 cryptosuite",
-  "github": "https://github.com/w3c-ccg/di-eddsa-2022-test-suite",
-  "edDraftURI": "https://w3c-ccg.github.io/di-eddsa-2022-test-suite",
+  "github": "https://github.com/w3c-ccg/vc-di-eddsa-test-suite",
+  "edDraftURI": "https://w3c-ccg.github.io/vc-di-eddsa-test-suite",
   "doJsonLd": true,
   "includePermalinks": false,
   "editors": [
     { "name": "Andrew Jones", "url": "https://github.com/aljones15",
-      "company": "Digital Bazaar", "companyURL": "http://digitalbazaar.com/" 
+      "company": "Digital Bazaar", "companyURL": "http://digitalbazaar.com/"
     }
-  ],  
+  ],
   "authors": [
     { "name": "Andrew Jones", "url": "https://github.com/aljones15",
-      "company": "Digital Bazaar", "companyURL": "http://digitalbazaar.com/" 
+      "company": "Digital Bazaar", "companyURL": "http://digitalbazaar.com/"
     },
     { "name": "Manu Sporny", "url": "http://manu.sporny.org/",
-      "company": "Digital Bazaar", "companyURL": "http://digitalbazaar.com/ " 
+      "company": "Digital Bazaar", "companyURL": "http://digitalbazaar.com/ "
     }
-    ]   
+    ]
 }

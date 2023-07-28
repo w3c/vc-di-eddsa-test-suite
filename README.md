@@ -1,4 +1,4 @@
-# Test Suite for [EDDSA](https://www.w3.org/TR/vc-di-eddsa/) [Data Integrity](https://w3c.github.io/vc-data-integrity/) Cryptosuites.
+# Test Suite for [EDDSA](https://www.w3.org/TR/vc-di-eddsa-test-suite/) [Data Integrity](https://w3c.github.io/vc-data-integrity/) Cryptosuites.
 
 ## Table of Contents
 
@@ -11,7 +11,7 @@
 
 ## Background
 Provides interoperability tests for verifiable credential processors
-(issuers and verifiers) that support [EDDSA](https://www.w3.org/TR/vc-di-eddsa/)
+(issuers and verifiers) that support [EDDSA](https://www.w3.org/TR/vc-di-eddsa-test-suite/)
 [Data Integrity](https://w3c.github.io/vc-data-integrity/) cryptosuites.
 
 ## Install
