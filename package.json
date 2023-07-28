@@ -1,7 +1,7 @@
 {
-  "name": "di-eddsa-2022-test-suite",
+  "name": "vc-di-eddsa-test-suite",
   "version": "0.0.1",
-  "description": "Test suite for the di-eddsa-2022 cryptosuite.",
+  "description": "Test suite for the data integrity of EDDSA cryptosuite.",
   "main": "/tests",
   "type": "module",
   "directories": {
