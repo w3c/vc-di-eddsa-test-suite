@@ -45,7 +45,7 @@ describe('eddsa-2022 (verify)', function() {
         it('If the "proofValue" field, when decoded to raw bytes, is not ' +
           '64 bytes in length if the associated public key is 32 bytes ' +
           'in length, or 114 bytes in length if the public key is 57 bytes ' +
-          'in length, an INVALID_PROOF_LENGTH error MUST be returned.',
+          'in length, an error MUST be raised.',
         async function() {
           this.test.cell = {columnId, rowId: this.test.title};
           const credential = credentials.clone('issuedVc');
