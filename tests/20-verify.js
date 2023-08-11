@@ -57,20 +57,20 @@ describe('eddsa-2022 (verify)', function() {
           await verificationFail({credential, verifier});
         });
         it('If a canonicalization algorithm other than URDNA2015 is used, ' +
-          'a INVALID_PROOF_VALUE error MUST be returned.', async function() {
+          'an error MUST be raised.', async function() {
           this.test.cell = {columnId, rowId: this.test.title};
           const credential = credentials.clone('canonizeJcs');
           await verificationFail({credential, verifier});
         });
         it('If a canonicalization data hashing other than algorithm ' +
-          'SHA-2-256 is used, a INVALID_PROOF_VALUE error MUST be returned.',
+          'SHA-2-256 is used, an error MUST be raised.',
         async function() {
           this.test.cell = {columnId, rowId: this.test.title};
           const credential = credentials.clone('digestSha512');
           await verificationFail({credential, verifier});
         });
         it('If the "cryptosuite" field is not the string "eddsa-2022", ' +
-          'an INVALID_PROOF_CONFIGURATION error MUST be returned.',
+          'an error MUST be raised.',
         async function() {
           this.test.cell = {columnId, rowId: this.test.title};
           const credential = credentials.clone('incorrectCryptosuite');
