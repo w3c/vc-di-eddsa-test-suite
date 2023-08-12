@@ -7,7 +7,7 @@ import chai from 'chai';
 import {
   checkDataIntegrityProofFormat
 } from 'data-integrity-test-suite-assertion';
-import {endpoints} from 'vc-api-test-suite-implementations';
+import {endpoints} from 'vc-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
 
 const tag = 'eddsa-2022';
