@@ -1,7 +1,7 @@
 {
   "name": "vc-di-eddsa-test-suite",
-  "version": "0.0.1",
-  "description": "Interoperability test suite for EdDSA Data Integrity cryptosuites.",
+  "version": "2.0.0",
+  "description": "Test suite for the EdDSA Data Integrity cryptosuites.",
   "main": "/tests",
   "type": "module",
   "directories": {
@@ -13,9 +13,9 @@
     "lint": "eslint ."
   },
   "author": {
-    "name": "Digital Bazaar, Inc.",
-    "email": "support@digitalbazaar.com",
-    "url": "https://digitalbazaar.com/"
+    "name": "W3C Verifiable Credentials Working Group",
+    "email": "public-vc-wg@w3.org",
+    "url": "https://www.w3.org/groups/wg/vc/"
   },
   "engines": {
     "node": ">=18"
@@ -40,7 +40,7 @@
     "mocha": "^10.0.0",
     "uuid": "^9.0.0",
     "varint": "^6.0.0",
-    "vc-api-test-suite-implementations": "github:w3c-ccg/vc-api-test-suite-implementations"
+    "vc-test-suite-implementations": "github:w3c/vc-test-suite-implementations"
   },
   "devDependencies": {
     "eslint": "^8.23.1",
