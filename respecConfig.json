@@ -2,8 +2,8 @@
   "specStatus": "unofficial",
   "shortName": "vc-di-eddsa-test-suite",
   "subtitle": "Interoperability test suite for EdDSA Data Integrity cryptosuites.",
-  "github": "https://github.com/w3c-ccg/vc-di-eddsa-test-suite",
-  "edDraftURI": "https://w3c-ccg.github.io/vc-di-eddsa-test-suite",
+  "github": "https://github.com/w3c/vc-di-eddsa-test-suite",
+  "edDraftURI": "https://w3c.github.io/vc-di-eddsa-test-suite",
   "doJsonLd": true,
   "includePermalinks": false,
   "editors": [
