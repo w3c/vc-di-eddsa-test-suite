@@ -99,7 +99,7 @@
       Total tests 164
       </p>
       <p>
-        These tests were run on <time>13 August 2023 at 5:13 am UTC</time>
+        These tests were run on <time>14 August 2023 at 4:42 pm UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -4834,7 +4834,7 @@
               </tr>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">If the &quot;proofValue&quot; field, when decoded to raw bytes, is not 64 bytes in length if the associated public key is 32 bytes in length, or 114 bytes in length if the public key is 57 bytes in length, an INVALID_PROOF_LENGTH error MUST be returned.</td>
+                <td class="subtest">If the &quot;proofValue&quot; field, when decoded to raw bytes, is not 64 bytes in length if the associated public key is 32 bytes in length, or 114 bytes in length if the public key is 57 bytes in length, an error MUST be raised.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
@@ -4967,7 +4967,7 @@
               </tr>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">If a canonicalization algorithm other than URDNA2015 is used, a INVALID_PROOF_VALUE error MUST be returned.</td>
+                <td class="subtest">If a canonicalization algorithm other than URDNA2015 is used, an error MUST be raised.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
@@ -5100,7 +5100,7 @@
               </tr>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">If a canonicalization data hashing other than algorithm SHA-2-256 is used, a INVALID_PROOF_VALUE error MUST be returned.</td>
+                <td class="subtest">If a canonicalization data hashing other than algorithm SHA-2-256 is used, an error MUST be raised.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
@@ -5233,7 +5233,7 @@
               </tr>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">If the &quot;cryptosuite&quot; field is not the string &quot;eddsa-2022&quot;, an INVALID_PROOF_CONFIGURATION error MUST be returned.</td>
+                <td class="subtest">If the &quot;cryptosuite&quot; field is not the string &quot;eddsa-2022&quot;, an error MUST be raised.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
