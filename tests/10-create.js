@@ -7,6 +7,7 @@ import chai from 'chai';
 import {
   checkDataIntegrityProofFormat
 } from 'data-integrity-test-suite-assertion';
+import {documentLoader} from './documentLoader.js';
 import {endpoints} from 'vc-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
 
@@ -40,10 +41,19 @@ describe('eddsa-2022 (create)', function() {
           v => v.tags.has(tag));
         let issuedVc;
         let proofs;
+        const verificationMethodDocuments = [];
         before(async function() {
           issuedVc = await createInitialVc({issuer, vc: validVc});
           proofs = Array.isArray(issuedVc?.proof) ?
             issuedVc.proof : [issuedVc?.proof];
+          const verificationMethods = proofs.map(
+            proof => proof.verificationMethod);
+          for(const verificationMethod of verificationMethods) {
+            const verificationMethodDocument = await documentLoader({
+              url: verificationMethod
+            });
+            verificationMethodDocuments.push(verificationMethodDocument);
+          }
         });
         it('The field "cryptosuite" MUST be "eddsa-rdfc-2022" ' +
           'or "eddsa-jcs-2022"', function() {
@@ -53,6 +63,17 @@ describe('eddsa-2022 (create)', function() {
           ).should.equal(true, 'Expected at least one proof to have ' +
             '"cryptosuite" with the value "eddsa-rdfc-2022" or ' +
             '"eddsa-rdfc-2022".');
+        });
+        it('Dereferencing the "verificationMethod" MUST result in an ' +
+          'object containing a type property with "Multikey" value.',
+        function() {
+          verificationMethodDocuments.should.not.eql([], 'Expected ' +
+          'at least one "verificationMethodDocument".');
+          verificationMethodDocuments.some(
+            verificationMethodDocument =>
+              verificationMethodDocument?.type === 'Multikey'
+          ).should.equal(true, 'Expected at least one proof to have "type" ' +
+            'property value "Multikey".');
         });
         it('"proofValue" field when decoded to raw bytes, MUST be 64 bytes ' +
           'in length if the associated public key is 32 bytes or 114 bytes ' +
