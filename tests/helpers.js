@@ -2,12 +2,18 @@
  * Copyright 2022 Digital Bazaar, Inc. All Rights Reserved
  */
 import * as didKey from '@digitalbazaar/did-method-key';
+import * as Ed25519Multikey from '@digitalbazaar/ed25519-multikey';
 import {IdDecoder, IdEncoder} from 'bnid';
 import {klona} from 'klona';
 import {v4 as uuidv4} from 'uuid';
 import varint from 'varint';
 
+const multibaseMultikeyHeader = 'z6Mk';
 const didKeyDriver = didKey.driver();
+didKeyDriver.use({
+  multibaseMultikeyHeader,
+  fromMultibase: Ed25519Multikey.from
+});
 const decoder = new IdDecoder({
   encoding: 'base58',
   multibase: true
