@@ -9,7 +9,6 @@
   },
   "scripts": {
     "test": "mocha tests/ --reporter @digitalbazaar/mocha-w3c-interop-reporter --reporter-options abstract=\"$PWD/abstract.hbs\",reportDir=\"$PWD/reports\",respec=\"$PWD/respecConfig.json\",suiteLog='./suite.log',templateData=\"$PWD/reports/index.json\",title=\"Data Integrity eddsa 2022 Interoperability Report 1.0\" --timeout 15000 --preserve-symlinks",
-    "generate-credentials": "node credentials-generator/index.js",
     "lint": "eslint ."
   },
   "author": {
