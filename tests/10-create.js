@@ -11,7 +11,7 @@ import {endpoints} from 'vc-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
 
 const tag = 'eddsa-2022';
-const cryptosuite = 'eddsa-2022';
+const cryptosuite = ['eddsa-rdfc-2022', 'eddsa-jcs-2022'];
 const {match} = endpoints.filterByTag({
   tags: [tag],
   property: 'issuers'
@@ -45,14 +45,14 @@ describe('eddsa-2022 (create)', function() {
           proofs = Array.isArray(issuedVc?.proof) ?
             issuedVc.proof : [issuedVc?.proof];
         });
-        it('The field "cryptosuite" MUST be `eddsa-2022`', function() {
+        it('The field "cryptosuite" MUST be "eddsa-rdfc-2022" ' +
+          'or "eddsa-jcs-2022"', function() {
           this.test.cell = {columnId, rowId: this.test.title};
           proofs.some(
-            proof => proof?.cryptosuite === cryptosuite
-          ).should.equal(
-            true,
-            'Expected at least one proof to have "cryptosuite" `eddsa-2022`.'
-          );
+            proof => cryptosuite.includes(proof?.cryptosuite)
+          ).should.equal(true, 'Expected at least one proof to have ' +
+            '"cryptosuite" with the value "eddsa-rdfc-2022" or ' +
+            '"eddsa-rdfc-2022".');
         });
         it('"proofValue" field when decoded to raw bytes, MUST be 64 bytes ' +
           'in length if the associated public key is 32 bytes or 114 bytes ' +
@@ -62,7 +62,7 @@ describe('eddsa-2022 (create)', function() {
             'credential.');
           should.exist(proofs, 'Expected credential to have a proof.');
           const eddsa2022Proofs = proofs.filter(
-            proof => proof?.cryptosuite === cryptosuite);
+            proof => cryptosuite.includes(proof?.cryptosuite));
           eddsa2022Proofs.length.should.be.gte(1, 'Expected at least one ' +
             'eddsa-2022 cryptosuite.');
           for(const proof of eddsa2022Proofs) {
