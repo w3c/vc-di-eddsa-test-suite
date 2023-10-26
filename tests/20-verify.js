@@ -69,8 +69,8 @@ describe('eddsa-2022 (verify)', function() {
           const credential = credentials.clone('digestSha512');
           await verificationFail({credential, verifier});
         });
-        it('If the "cryptosuite" field is not the string "eddsa-2022", ' +
-          'an error MUST be raised.',
+        it('If the "cryptosuite" field is not the string "eddsa-rdfc-2022" ' +
+          'or "eddsa-jcs-2022", an error MUST be raised.',
         async function() {
           this.test.cell = {columnId, rowId: this.test.title};
           const credential = credentials.clone('incorrectCryptosuite');
