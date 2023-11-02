@@ -69,17 +69,7 @@ describe('eddsa-2022 (create)', function() {
         it('Dereferencing the "verificationMethod" MUST result in an ' +
           'object containing a type property with "Multikey" value.',
         function() {
-          verificationMethodDocuments.should.not.eql([], 'Expected ' +
-          'at least one "verificationMethodDocument".');
-          verificationMethodDocuments.some(
-            verificationMethodDocument =>
-              verificationMethodDocument?.type === 'Multikey'
-          ).should.equal(true, 'Expected at least one proof to have "type" ' +
-            'property value "Multikey".');
-        });
-        it('Dereferencing the "verificationMethod" MUST result in an ' +
-          'object containing a type property with "Multikey" value.',
-        function() {
+          this.test.cell = {columnId, rowId: this.test.title};
           verificationMethodDocuments.should.not.eql([], 'Expected ' +
             'at least one "verificationMethodDocument".');
           verificationMethodDocuments.some(
@@ -88,9 +78,36 @@ describe('eddsa-2022 (create)', function() {
           ).should.equal(true, 'Expected at least one proof to have "type" ' +
             'property value "Multikey".');
         });
+        it('The "proof.proofPurpose" field MUST match the verification ' +
+          'relationship expressed by the verification method controller.',
+        async function() {
+          this.test.cell = {columnId, rowId: this.test.title};
+          verificationMethodDocuments.should.not.eql([], 'Expected ' +
+            'at least one "verificationMethodDocument".');
+          verificationMethodDocuments.some(
+            verificationMethodDocument =>
+              verificationMethodDocument?.type === 'Multikey'
+          ).should.equal(true, 'Expected at least one proof to have "type" ' +
+            'property value "Multikey".'
+          );
+          const controllerDocuments = [];
+          for(const verificationMethodDocument of verificationMethodDocuments) {
+            const controllerDocument = await documentLoader({
+              url: verificationMethodDocument.controller
+            });
+            controllerDocuments.push(controllerDocument);
+          }
+          proofs.some(
+            proof => controllerDocuments.some(controllerDocument =>
+              controllerDocument.hasOwnProperty(proof.proofPurpose))
+          ).should.equal(true, 'Expected "proof.proofPurpose" field ' +
+             'to match the verification method controller.'
+          );
+        });
         it('The "publicKeyMultibase" value of the verification method MUST ' +
           'be 35 bytes in length and starts with the base-58-btc prefix (z).',
         async function() {
+          this.test.cell = {columnId, rowId: this.test.title};
           verificationMethodDocuments.should.not.eql([], 'Expected ' +
             'at least one "verificationMethodDocument".');
           for(const verificationMethodDocument of verificationMethodDocuments) {
