@@ -52,3 +52,9 @@ export const getPublicKeyBytes = async ({did}) => {
 export const bs58Decode = ({id}) => decoder.decode(id);
 
 export const bs58Encode = data => encoder.encode(data);
+
+// RegExp with bs58 characters in it
+const bs58 =
+  /^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]+$/;
+// assert something is entirely bs58 encoded
+export const shouldBeBs58 = s => bs58.test(s);
