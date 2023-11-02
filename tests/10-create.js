@@ -2,7 +2,9 @@
  * Copyright 2022 Digital Bazaar, Inc. All Rights Reserved
  */
 
-import {bs58Decode, createInitialVc, getPublicKeyBytes} from './helpers.js';
+import {
+  bs58Decode, createInitialVc, getPublicKeyBytes, shouldBeBs58
+} from './helpers.js';
 import chai from 'chai';
 import {
   checkDataIntegrityProofFormat
@@ -74,6 +76,41 @@ describe('eddsa-2022 (create)', function() {
               verificationMethodDocument?.type === 'Multikey'
           ).should.equal(true, 'Expected at least one proof to have "type" ' +
             'property value "Multikey".');
+        });
+        it('Dereferencing the "verificationMethod" MUST result in an ' +
+          'object containing a type property with "Multikey" value.',
+        function() {
+          verificationMethodDocuments.should.not.eql([], 'Expected ' +
+            'at least one "verificationMethodDocument".');
+          verificationMethodDocuments.some(
+            verificationMethodDocument =>
+              verificationMethodDocument?.type === 'Multikey'
+          ).should.equal(true, 'Expected at least one proof to have "type" ' +
+            'property value "Multikey".');
+        });
+        it('The "publicKeyMultibase" value of the verification method MUST ' +
+          'be 35 bytes in length and starts with the base-58-btc prefix (z).',
+        async function() {
+          verificationMethodDocuments.should.not.eql([], 'Expected ' +
+            'at least one "verificationMethodDocument".');
+          for(const verificationMethodDocument of verificationMethodDocuments) {
+            const multibase = 'z';
+            const {publicKeyMultibase} = verificationMethodDocument;
+            const isMultibaseEncoded =
+              publicKeyMultibase.startsWith(multibase) &&
+                shouldBeBs58(publicKeyMultibase);
+            isMultibaseEncoded.should.equal(
+              true,
+              'Expected "publicKeyMultibase" value of the verification ' +
+              'method to be multibase base58-btc encoded value'
+            );
+            const publicKeyMultibaseBytes = bs58Decode({
+              id: publicKeyMultibase
+            });
+            publicKeyMultibaseBytes.byteLength.should.equal(35, 'Expected ' +
+              '"publicKeyMultibase" value of the verification method to ' +
+              'be 35 bytes in length.');
+          }
         });
         it('"proofValue" field when decoded to raw bytes, MUST be 64 bytes ' +
           'in length if the associated public key is 32 bytes or 114 bytes ' +
