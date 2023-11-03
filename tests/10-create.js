@@ -105,7 +105,7 @@ describe('eddsa-2022 (create)', function() {
           );
         });
         it('The "publicKeyMultibase" value of the verification method MUST ' +
-          'be 35 bytes in length and starts with the base-58-btc prefix (z).',
+          'be 34 bytes in length and starts with the base-58-btc prefix (z).',
         async function() {
           this.test.cell = {columnId, rowId: this.test.title};
           verificationMethodDocuments.should.not.eql([], 'Expected ' +
@@ -124,9 +124,9 @@ describe('eddsa-2022 (create)', function() {
             const publicKeyMultibaseBytes = bs58Decode({
               id: publicKeyMultibase
             });
-            publicKeyMultibaseBytes.byteLength.should.equal(35, 'Expected ' +
+            publicKeyMultibaseBytes.byteLength.should.equal(34, 'Expected ' +
               '"publicKeyMultibase" value of the verification method to ' +
-              'be 35 bytes in length.');
+              'be 34 bytes in length.');
           }
         });
         it('"proofValue" field when decoded to raw bytes, MUST be 64 bytes ' +
