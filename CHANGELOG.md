@@ -3,11 +3,11 @@
 ## 2.0.0 - 2023-11-16
 
 ### Added
-- Add test to check if dereferencing the `verificationMethod` results in an
+- Add test to check whether dereferencing the `verificationMethod` results in an
   object containing a type property with `Multikey` value.
-- Add test to check if `publicKeyMultibase` is 34 bytes in length and is
+- Add test to check whether `publicKeyMultibase` is 34 bytes in length and is
   multibase base58-btc encoded.
-- Adds test to check if `proof.proofPurpose` field matches the verification
+- Adds test to check whether `proof.proofPurpose` field matches the verification
   relationship expressed by the verification method controller.
 
 ### Changed
