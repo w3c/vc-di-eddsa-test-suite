@@ -11,8 +11,11 @@
   relationship expressed by the verification method controller.
 
 ### Changed
-- **BREAKING**: The tests require the cryptosuite type value to be either `eddsa-rdfc-2022`
-  or `eddsa-jcs-2022`.
+- **BREAKING**: The tests require the cryptosuite type value to be either
+  `eddsa-rdfc-2022` or `eddsa-jcs-2022`.
+- **BREAKING**: The tags required for the test suite have been updated, shifting
+  from `eddsa-2022` to `eddsa-rdfc-2022` and/or `eddsa-jcs-2022`.
+- Test VCs now uses `data-integrity/v2` context.
 
 ### Removed
 - Removed unused `generate-credentials` script.
