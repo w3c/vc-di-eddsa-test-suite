@@ -33,7 +33,7 @@ npm test
 
 You will need an issuer and verifier that are compatible with [VC API](https://w3c-ccg.github.io/vc-api/)
 and are capable of handling issuance and verification of Verifiable Credentials
-with `DataIntegrityProof` proof type using the `eddsa-2022` cryptosuite.
+with `DataIntegrityProof` proof type using the `eddsa-rdfc-2022` or `eddsa-jcs-2022` cryptosuites.
 
 To add your implementation to this test suite, you will need to add 2 endpoints
 to your implementation manifest.
@@ -41,7 +41,7 @@ to your implementation manifest.
 - A credential verifier endpoint (/credentials/verify) in the `verifiers`
   property.
 
-All endpoints will need the tag `eddsa-2022`.
+All endpoints will need the tags either `eddsa-rdfc-2022` or `eddsa-jcs-2022`.
 
 A simplified manifest would look like this:
 
@@ -53,13 +53,18 @@ A simplified manifest would look like this:
     "id": "",
     "endpoint": "https://issuer.mycompany.com/credentials/issue",
     "method": "POST",
-    "tags": ["eddsa-2022"]
+    "tags": ["eddsa-rdfc-2022"]
+  }, {
+    "id": "",
+    "endpoint": "https://issuer.mycompany.com/credentials/issue",
+    "method": "POST",
+    "tags": ["eddsa-jcs-2022"]
   }],
   "verifiers": [{
     "id": "",
     "endpoint": "https://verifier.mycompany.com/credentials/verify",
     "method": "POST",
-    "tags": ["eddsa-2022"]
+    "tags": ["eddsa-rdfc-2022", "eddsa-jcs-2022"]
   }]
 }
 ```

@@ -1,5 +1,5 @@
 /*!
- * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2022-2023 Digital Bazaar, Inc. All rights reserved.
  */
 import chai from 'chai';
 import {createInitialVc} from './helpers.js';
@@ -7,9 +7,9 @@ import {endpoints} from 'vc-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
 
 const should = chai.should();
-const tag = 'eddsa-2022';
+const tag = 'eddsa-rdfc-2022';
 
-// only use implementations with `eddsa-2022` issuers.
+// only use implementations with `eddsa-rdfc-2022` issuers.
 const {
   match: issuerMatches
 } = endpoints.filterByTag({tags: [tag], property: 'issuers'});
@@ -17,7 +17,7 @@ const {
   match: verifierMatches
 } = endpoints.filterByTag({tags: [tag], property: 'verifiers'});
 
-describe('eddsa-2022 (interop)', function() {
+describe('eddsa-rdfc-2022 (interop)', function() {
   let validVc;
   before(async function() {
     const credentials = await generateTestData();

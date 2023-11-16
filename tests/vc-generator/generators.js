@@ -1,5 +1,5 @@
 /*!
- * Copyright 2022 Digital Bazaar, Inc. All Rights Reserved
+ * Copyright 2022-2023 Digital Bazaar, Inc. All Rights Reserved
  */
 import * as vc from '@digitalbazaar/vc';
 import {
@@ -10,8 +10,8 @@ import canonicalize from 'canonicalize';
 import {DataIntegrityProof} from '@digitalbazaar/data-integrity';
 import {documentLoader} from './documentLoader.js';
 import {
-  cryptosuite as eddsa2022CryptoSuite
-} from '@digitalbazaar/eddsa-2022-cryptosuite';
+  cryptosuite as eddsaRdfc2022CryptoSuite
+} from '@digitalbazaar/eddsa-rdfc-2022-cryptosuite';
 import {klona} from 'klona';
 
 export const vcGenerators = new Map([
@@ -100,7 +100,7 @@ async function _incorrectDigest({signer, credential}) {
 function _createEddsa2022Suite({signer}) {
   // remove milliseconds precision
   const date = new Date().toISOString().replace(/\.\d+Z$/, 'Z');
-  const cryptosuite = eddsa2022CryptoSuite;
+  const cryptosuite = eddsaRdfc2022CryptoSuite;
   return new DataIntegrityProof({signer, date, cryptosuite});
 }
 
@@ -111,4 +111,3 @@ async function _issueCloned({suite, credential, loader = documentLoader}) {
     documentLoader: loader
   });
 }
-
