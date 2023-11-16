@@ -1,5 +1,5 @@
 /*!
- * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2022-2023 Digital Bazaar, Inc. All rights reserved.
  */
 import {bs58Decode, bs58Encode} from './helpers.js';
 import {verificationFail, verificationSuccess} from './assertions.js';
@@ -9,13 +9,13 @@ import {
 import {endpoints} from 'vc-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
 
-// only use implementations with `eddsa-2022` verifiers.
+// only use implementations with `eddsa-rdfc-2022` verifiers.
 const {match} = endpoints.filterByTag({
-  tags: ['eddsa-2022'],
+  tags: ['eddsa-rdfc-2022'],
   property: 'verifiers'
 });
 
-describe('eddsa-2022 (verify)', function() {
+describe('eddsa-rdfc-2022 (verify)', function() {
   let credentials;
   before(async function() {
     credentials = await generateTestData();
@@ -23,7 +23,7 @@ describe('eddsa-2022 (verify)', function() {
   checkDataIntegrityProofVerifyErrors({
     implemented: match,
   });
-  describe('eddsa-2022 cryptosuite (verifier)', function() {
+  describe('eddsa-rdfc-2022 cryptosuite (verifier)', function() {
     // this will tell the report
     // to make an interop matrix with this suite
     this.matrix = true;
@@ -36,7 +36,7 @@ describe('eddsa-2022 (verify)', function() {
       describe(columnId, function() {
       // wrap the testApi config in an Implementation class
         const [verifier] = endpoints;
-        it('MUST verify a valid VC with an eddsa-2022 proof',
+        it('MUST verify a valid VC with an eddsa-rdfc-2022 proof',
           async function() {
             this.test.cell = {columnId, rowId: this.test.title};
             const credential = credentials.clone('issuedVc');

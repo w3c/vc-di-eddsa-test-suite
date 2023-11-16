@@ -1,5 +1,5 @@
 /*!
- * Copyright 2022 Digital Bazaar, Inc. All Rights Reserved
+ * Copyright 2022-2023 Digital Bazaar, Inc. All Rights Reserved
  */
 
 import {
@@ -13,7 +13,7 @@ import {documentLoader} from './documentLoader.js';
 import {endpoints} from 'vc-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
 
-const tag = 'eddsa-2022';
+const tag = 'eddsa-rdfc-2022';
 const cryptosuite = ['eddsa-rdfc-2022', 'eddsa-jcs-2022'];
 const {match} = endpoints.filterByTag({
   tags: [tag],
@@ -21,7 +21,7 @@ const {match} = endpoints.filterByTag({
 });
 const should = chai.should();
 
-describe('eddsa-2022 (create)', function() {
+describe('eddsa-rdfc-2022 (create)', function() {
   let validVc;
   before(async function() {
     const credentials = await generateTestData();
@@ -30,7 +30,7 @@ describe('eddsa-2022 (create)', function() {
   checkDataIntegrityProofFormat({
     implemented: match
   });
-  describe('eddsa-2022 (issuer)', function() {
+  describe('eddsa-rdfc-2022 (issuer)', function() {
     this.matrix = true;
     this.report = true;
     this.implemented = [...match.keys()];
@@ -139,7 +139,7 @@ describe('eddsa-2022 (create)', function() {
           const eddsa2022Proofs = proofs.filter(
             proof => cryptosuite.includes(proof?.cryptosuite));
           eddsa2022Proofs.length.should.be.gte(1, 'Expected at least one ' +
-            'eddsa-2022 cryptosuite.');
+            'eddsa-rdfc-2022 cryptosuite.');
           for(const proof of eddsa2022Proofs) {
             should.exist(proof.proofValue, 'Expected a proof value on ' +
               'the proof.');
