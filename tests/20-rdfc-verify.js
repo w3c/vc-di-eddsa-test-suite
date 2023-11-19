@@ -23,7 +23,7 @@ describe('eddsa-rdfc-2022 (verify)', function() {
   checkDataIntegrityProofVerifyErrors({
     implemented: match,
   });
-  describe('eddsa-rdfc-2022 cryptosuite (verifier)', function() {
+  describe('eddsa-rdfc-2022 (verifier)', function() {
     // this will tell the report
     // to make an interop matrix with this suite
     this.matrix = true;
