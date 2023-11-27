@@ -1,6 +1,6 @@
 # w3c/vc-di-eddsa-test-suite ChangeLog
 
-## 2.0.0 - 2023-11-16
+## 2.0.0 - 2023-11-27
 
 ### Added
 - Add test to check whether dereferencing the `verificationMethod` results in an
