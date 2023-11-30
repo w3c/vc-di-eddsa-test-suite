@@ -72,9 +72,9 @@
     <section id="abstract">
       <p>
       The purpose of this test suite is to demonstrate a path to interoperability
-      for the <a href="https://w3c.github.io/vc-data-integrity/">eddsa-2022 cryptosuite</a>.
+      for the <a href="https://w3c.github.io/vc-data-integrity/">eddsa-rdfc-2022 and eddsa-jcs-2022 cryptosuites</a>.
       The technologies explored in this test suite are experimental.
-      This document contains the most recent interoperability report for a DataIntegrityProof using the eddsa-2022 cryptosuite.
+      This document contains the most recent interoperability report for a DataIntegrityProof using the eddsa-rdfc-2022 and eddsa-jcs-2022 cryptosuites.
       This report is auto-generated.
       </p>
     </section>
@@ -84,22 +84,22 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-      Tests passed 161/168 95%
+      Tests passed 162/180 90%
       </p>
       <p>
-      Tests failed 7/168 5%
+      Tests failed 18/180 10%
       </p>
       <p>
-      Failures 7
+      Failures 18
       </p>
       <p>
       Tests skipped 0
       </p>
       <p>
-      Total tests 168
+      Total tests 180
       </p>
       <p>
-        These tests were run on <time>26 November 2023 at 5:05 am UTC</time>
+        These tests were run on <time>30 November 2023 at 2:02 pm UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -625,7 +625,78 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "expected false to equal true",
-                      "stack": "AssertionError: expected false to equal true\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/index.js:140:38)\n    at process.processImmediate (node:internal/timers:478:21)"
+                      "stack": "AssertionError: expected false to equal true\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/index.js:145:38)\n    at process.processImmediate (node:internal/timers:478:21)"
+                    }</pre>
+                      </span>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "expected false to equal true",
+                      "stack": "AssertionError: expected false to equal true\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/index.js:145:38)\n    at process.processImmediate (node:internal/timers:478:21)"
                     }</pre>
                       </span>
                     </div>
@@ -664,85 +735,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "expected false to equal true",
-                      "stack": "AssertionError: expected false to equal true\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/index.js:140:38)\n    at process.processImmediate (node:internal/timers:478:21)"
-                    }</pre>
-                      </span>
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <style>
-                       .hide {
-                         display: none;
-                       }
-                       .err {
-                         position: relative;
-                         z-index: 1;
-                         width: 50rem;
-                         right: calc(0% + 15rem);
-                         background: rgba(0, 0, 0, 0.0);
-                       }
-                       .no-space-around {
-                         margin: 0;
-                         padding: 0;
-                       }
-                       pre {
-                         width: 75%;
-                         white-space: pre-line;
-                         word-break: break-all;
-                         margin: 0;
-                         padding: 0;
-                         background: white;
-                       }
-                       code > span.hljs-attr {
-                         margin-left: 1rem;
-                       }
-                      </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "AssertionError",
-                      "message": "expected false to equal true",
-                      "stack": "AssertionError: expected false to equal true\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/index.js:140:38)\n    at process.processImmediate (node:internal/timers:478:21)"
-                    }</pre>
-                      </span>
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <style>
-                       .hide {
-                         display: none;
-                       }
-                       .err {
-                         position: relative;
-                         z-index: 1;
-                         width: 50rem;
-                         right: calc(0% + 15rem);
-                         background: rgba(0, 0, 0, 0.0);
-                       }
-                       .no-space-around {
-                         margin: 0;
-                         padding: 0;
-                       }
-                       pre {
-                         width: 75%;
-                         white-space: pre-line;
-                         word-break: break-all;
-                         margin: 0;
-                         padding: 0;
-                         background: white;
-                       }
-                       code > span.hljs-attr {
-                         margin-left: 1rem;
-                       }
-                      </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "AssertionError",
-                      "message": "expected false to equal true",
-                      "stack": "AssertionError: expected false to equal true\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/index.js:140:38)\n    at process.processImmediate (node:internal/timers:478:21)"
+                      "stack": "AssertionError: expected false to equal true\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/index.js:145:38)\n    at process.processImmediate (node:internal/timers:478:21)"
                     }</pre>
                       </span>
                     </div>
@@ -2223,8 +2216,8 @@
             </div>
           </div>
         </section>
-        <section class="informative" id="eddsa-2022 (issuer)">
-          <h2>eddsa-2022 (issuer)</h2>
+        <section class="informative" id="eddsa-rdfc-2022 (issuer)">
+          <h2>eddsa-rdfc-2022 (issuer)</h2>
           <style>
             .no-wrap {
               white-space: nowrap;
@@ -2291,7 +2284,427 @@
               <tbody>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">The field &quot;cryptosuite&quot; MUST be &#x60;eddsa-2022&#x60;</td>
+                <td class="subtest">The field &quot;cryptosuite&quot; MUST be &quot;eddsa-rdfc-2022&quot; or &quot;eddsa-jcs-2022&quot;</td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Expected at least one proof to have \"cryptosuite\" with the value \"eddsa-rdfc-2022\" or \"eddsa-rdfc-2022\".: expected false to equal true",
+                      "stack": "AssertionError: Expected at least one proof to have \"cryptosuite\" with the value \"eddsa-rdfc-2022\" or \"eddsa-rdfc-2022\".: expected false to equal true\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/10-rdfc-create.js:65:20)\n    at process.processImmediate (node:internal/timers:478:21)"
+                    }</pre>
+                      </span>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Expected at least one proof to have \"cryptosuite\" with the value \"eddsa-rdfc-2022\" or \"eddsa-rdfc-2022\".: expected false to equal true",
+                      "stack": "AssertionError: Expected at least one proof to have \"cryptosuite\" with the value \"eddsa-rdfc-2022\" or \"eddsa-rdfc-2022\".: expected false to equal true\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/10-rdfc-create.js:65:20)\n    at process.processImmediate (node:internal/timers:478:21)"
+                    }</pre>
+                      </span>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Expected at least one proof to have \"cryptosuite\" with the value \"eddsa-rdfc-2022\" or \"eddsa-rdfc-2022\".: expected false to equal true",
+                      "stack": "AssertionError: Expected at least one proof to have \"cryptosuite\" with the value \"eddsa-rdfc-2022\" or \"eddsa-rdfc-2022\".: expected false to equal true\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/10-rdfc-create.js:65:20)\n    at process.processImmediate (node:internal/timers:478:21)"
+                    }</pre>
+                      </span>
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">Dereferencing the &quot;verificationMethod&quot; MUST result in an object containing a type property with &quot;Multikey&quot; value.</td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">The &quot;proof.proofPurpose&quot; field MUST match the verification relationship expressed by the verification method controller.</td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">The &quot;publicKeyMultibase&quot; value of the verification method MUST be 34 bytes in length and starts with the base-58-btc prefix (z).</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
@@ -2426,8 +2839,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">&quot;proofValue&quot; field when decoded to raw bytes, MUST be 64 bytes in length if the associated public key is 32 bytes or 114 bytes in length if the public key is 57 bytes.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -2456,6 +2869,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Expected at least one eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1",
+                      "stack": "AssertionError: Expected at least one eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/10-rdfc-create.js:141:44)\n    at process.processImmediate (node:internal/timers:478:21)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -2490,8 +2910,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -2520,10 +2940,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Expected at least one eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1",
+                      "stack": "AssertionError: Expected at least one eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/10-rdfc-create.js:141:44)\n    at process.processImmediate (node:internal/timers:478:21)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -2552,6 +2979,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Expected at least one eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1",
+                      "stack": "AssertionError: Expected at least one eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/10-rdfc-create.js:141:44)\n    at process.processImmediate (node:internal/timers:478:21)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
               </tr>
@@ -3900,7 +4334,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Expected no result from verifier.: expected Response{ data: { …(3) }, …(3) } to not exist",
-                      "stack": "AssertionError: Expected no result from verifier.: expected Response{ data: { …(3) }, …(3) } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/helpers.js:52:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/index.js:398:7)"
+                      "stack": "AssertionError: Expected no result from verifier.: expected Response{ data: { …(3) }, …(3) } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/helpers.js:52:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/index.js:406:7)"
                     }</pre>
                       </span>
                     </div>
@@ -4306,7 +4740,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Expected no result from verifier.: expected Response{ data: { …(3) }, …(3) } to not exist",
-                      "stack": "AssertionError: Expected no result from verifier.: expected Response{ data: { …(3) }, …(3) } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/helpers.js:52:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/index.js:429:7)"
+                      "stack": "AssertionError: Expected no result from verifier.: expected Response{ data: { …(3) }, …(3) } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/helpers.js:52:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/index.js:437:7)"
                     }</pre>
                       </span>
                     </div>
@@ -4787,8 +5221,8 @@
             </div>
           </div>
         </section>
-        <section class="informative" id="eddsa-2022 cryptosuite (verifier)">
-          <h2>eddsa-2022 cryptosuite (verifier)</h2>
+        <section class="informative" id="eddsa-rdfc-2022 (verifier)">
+          <h2>eddsa-rdfc-2022 (verifier)</h2>
           <style>
             .no-wrap {
               white-space: nowrap;
@@ -4855,10 +5289,10 @@
               <tbody>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">MUST verify a valid VC with an eddsa-2022 proof</td>
+                <td class="subtest">MUST verify a valid VC with an eddsa-rdfc-2022 proof</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -4887,6 +5321,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Expected a result from verifier.: expected undefined to exist",
+                      "stack": "AssertionError: Expected a result from verifier.: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at verificationSuccess (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/assertions.js:65:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/20-rdfc-verify.js:43:13)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -4921,8 +5362,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -4951,10 +5392,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Expected a result from verifier.: expected undefined to exist",
+                      "stack": "AssertionError: Expected a result from verifier.: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at verificationSuccess (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/assertions.js:65:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/20-rdfc-verify.js:43:13)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -4983,6 +5431,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Expected a result from verifier.: expected undefined to exist",
+                      "stack": "AssertionError: Expected a result from verifier.: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at verificationSuccess (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/assertions.js:65:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/20-rdfc-verify.js:43:13)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
               </tr>
@@ -5387,7 +5842,7 @@
               </tr>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">If the &quot;cryptosuite&quot; field is not the string &quot;eddsa-2022&quot;, an error MUST be raised.</td>
+                <td class="subtest">If the &quot;cryptosuite&quot; field is not the string &quot;eddsa-rdfc-2022&quot; or &quot;eddsa-jcs-2022&quot;, an error MUST be raised.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
@@ -5530,8 +5985,8 @@
             </div>
           </div>
         </section>
-        <section class="informative" id="eddsa-2022 (interop)">
-          <h2>eddsa-2022 (interop)</h2>
+        <section class="informative" id="eddsa-rdfc-2022 (interop)">
+          <h2>eddsa-rdfc-2022 (interop)</h2>
           <style>
             .no-wrap {
               white-space: nowrap;
@@ -5733,8 +6188,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">Digital Bazaar</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -5763,6 +6218,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(6) } to not exist",
+                      "stack": "AssertionError: Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(6) } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/30-rdfc-interop.js:50:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -5797,8 +6259,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -5827,10 +6289,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist",
+                      "stack": "AssertionError: Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/30-rdfc-interop.js:50:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -5859,6 +6328,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist",
+                      "stack": "AssertionError: Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/30-rdfc-interop.js:50:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
               </tr>
@@ -6097,7 +6573,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist",
-                      "stack": "AssertionError: Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/30-interop.js:50:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+                      "stack": "AssertionError: Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/30-rdfc-interop.js:50:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
                     }</pre>
                       </span>
                     </div>
