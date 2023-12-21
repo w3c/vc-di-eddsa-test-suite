@@ -5,6 +5,9 @@
 ### Added
 - Add a default key seed to the vc-generator.
 
+### Fixed
+- Interop tests records results more accurately.
+
 ## 2.0.0 - 2023-11-27
 
 ### Added
