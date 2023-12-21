@@ -34,12 +34,17 @@ describe('eddsa-rdfc-2022 (interop)', function() {
     let issuedVc;
     before(async function() {
       const [issuer] = endpoints;
-      issuedVc = await createInitialVc({issuer, vc: validVc});
+      try {
+        issuedVc = await createInitialVc({issuer, vc: validVc});
+      } catch(e) {
+        console.error(`issuer ${issuerName} failed to issue interop VC`, e);
+      }
     });
     for(const [verifierName, {endpoints}] of verifierMatches) {
       const [verifier] = endpoints;
       it(`${verifierName} should verify ${issuerName}`, async function() {
         this.test.cell = {rowId: issuerName, columnId: verifierName};
+        should.exist(issuedVc, `Expected issuer: ${issuerName} to issue a VC`);
         const body = {
           verifiableCredential: issuedVc,
           options: {
