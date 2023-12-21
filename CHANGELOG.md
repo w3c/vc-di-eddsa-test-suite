@@ -1,5 +1,10 @@
 # w3c/vc-di-eddsa-test-suite ChangeLog
 
+## 2.1.0 - 2023-12-21
+
+### Added
+- Add a default key seed to the vc-generator.
+
 ## 2.0.0 - 2023-11-27
 
 ### Added
