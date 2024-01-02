@@ -1,5 +1,5 @@
 /*!
- * Copyright (c) 2022-2023 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2023 Digital Bazaar, Inc. All rights reserved.
  */
 import {bs58Decode, bs58Encode} from './helpers.js';
 import {verificationFail, verificationSuccess} from './assertions.js';
@@ -9,22 +9,22 @@ import {
 import {endpoints} from 'vc-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
 
-// only use implementations with `eddsa-rdfc-2022` verifiers.
+// only use implementations with `eddsa-jcs-2022` verifiers.
 const {match} = endpoints.filterByTag({
-  tags: ['eddsa-rdfc-2022'],
+  tags: ['eddsa-jcs-2022'],
   property: 'verifiers'
 });
 
-describe('eddsa-rdfc-2022 (verify)', function() {
+describe('eddsa-jcs-2022 (verify)', function() {
   let credentials;
   before(async function() {
     credentials = await generateTestData();
   });
   checkDataIntegrityProofVerifyErrors({
     implemented: match,
-    testDescription: 'Data Integrity (eddsa-rdfc-2022 verifiers)'
+    testDescription: 'Data Integrity (eddsa-jcs-2022 verifiers)'
   });
-  describe('eddsa-rdfc-2022 (verifier)', function() {
+  describe('eddsa-jcs-2022 (verifier)', function() {
     // this will tell the report
     // to make an interop matrix with this suite
     this.matrix = true;
@@ -37,7 +37,7 @@ describe('eddsa-rdfc-2022 (verify)', function() {
       describe(columnId, function() {
       // wrap the testApi config in an Implementation class
         const [verifier] = endpoints;
-        it('MUST verify a valid VC with an eddsa-rdfc-2022 proof',
+        it('MUST verify a valid VC with an eddsa-jcs-2022 proof.',
           async function() {
             this.test.cell = {columnId, rowId: this.test.title};
             const credential = credentials.clone('issuedVc');
@@ -68,7 +68,7 @@ describe('eddsa-rdfc-2022 (verify)', function() {
           const credential = credentials.clone('digestSha512');
           await verificationFail({credential, verifier});
         });
-        it('If the "cryptosuite" field is not the string "eddsa-rdfc-2022", ' +
+        it('If the "cryptosuite" field is not the string "eddsa-jcs-2022", ' +
           'an error MUST be raised.', async function() {
           this.test.cell = {columnId, rowId: this.test.title};
           const credential = credentials.clone('incorrectCryptosuite');
