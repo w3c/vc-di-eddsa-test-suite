@@ -1,5 +1,5 @@
 /*!
- * Copyright 2022-2023 Digital Bazaar, Inc. All Rights Reserved
+ * Copyright 2023 Digital Bazaar, Inc. All Rights Reserved
  */
 import {
   bs58Decode, createInitialVc, getPublicKeyBytes, shouldBeBs58
@@ -12,15 +12,15 @@ import {documentLoader} from './documentLoader.js';
 import {endpoints} from 'vc-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
 
-const tag = 'eddsa-rdfc-2022';
-const cryptosuite = 'eddsa-rdfc-2022';
+const tag = 'eddsa-jcs-2022';
+const cryptosuite = 'eddsa-jcs-2022';
 const {match} = endpoints.filterByTag({
   tags: [tag],
   property: 'issuers'
 });
 const should = chai.should();
 
-describe('eddsa-rdfc-2022 (create)', function() {
+describe('eddsa-jcs-2022 (create)', function() {
   let validVc;
   before(async function() {
     const credentials = await generateTestData();
@@ -28,9 +28,9 @@ describe('eddsa-rdfc-2022 (create)', function() {
   });
   checkDataIntegrityProofFormat({
     implemented: match,
-    testDescription: 'Data Integrity (eddsa-rdfc-2022 issuers)'
+    testDescription: 'Data Integrity (eddsa-jcs-2022 issuers)'
   });
-  describe('eddsa-rdfc-2022 (issuer)', function() {
+  describe('eddsa-jcs-2022 (issuer)', function() {
     this.matrix = true;
     this.report = true;
     this.implemented = [...match.keys()];
@@ -57,12 +57,12 @@ describe('eddsa-rdfc-2022 (create)', function() {
             verificationMethodDocuments.push(verificationMethodDocument);
           }
         });
-        it('The field "cryptosuite" MUST be "eddsa-rdfc-2022".', function() {
+        it('The field "cryptosuite" MUST be "eddsa-jcs-2022".', function() {
           this.test.cell = {columnId, rowId: this.test.title};
           proofs.some(
             proof => proof?.cryptosuite === cryptosuite
           ).should.equal(true, 'Expected at least one proof to have ' +
-            '"cryptosuite" with the value "eddsa-rdfc-2022".');
+            '"cryptosuite" with the value "eddsa-jcs-2022".');
         });
         it('Dereferencing the "verificationMethod" MUST result in an ' +
           'object containing a type property with "Multikey" value.',
@@ -133,11 +133,12 @@ describe('eddsa-rdfc-2022 (create)', function() {
           this.test.cell = {columnId, rowId: this.test.title};
           should.exist(issuedVc, 'Expected issuer to have issued a ' +
             'credential.');
+          console.log(issuedVc, 'issuedVc<><><><>');
           should.exist(proofs, 'Expected credential to have a proof.');
           const eddsa2022Proofs = proofs.filter(
             proof => proof?.cryptosuite === cryptosuite);
           eddsa2022Proofs.length.should.be.gte(1, 'Expected at least one ' +
-            'eddsa-rdfc-2022 cryptosuite.');
+            'eddsa-jcs-2022 cryptosuite.');
           for(const proof of eddsa2022Proofs) {
             should.exist(proof.proofValue, 'Expected a proof value on ' +
               'the proof.');
