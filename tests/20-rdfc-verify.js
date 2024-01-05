@@ -10,8 +10,9 @@ import {endpoints} from 'vc-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
 
 // only use implementations with `eddsa-rdfc-2022` verifiers.
+const tag = 'eddsa-rdfc-2022';
 const {match} = endpoints.filterByTag({
-  tags: ['eddsa-rdfc-2022'],
+  tags: [tag],
   property: 'verifiers'
 });
 
