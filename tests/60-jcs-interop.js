@@ -17,9 +17,6 @@ const {
   match: verifierMatches
 } = endpoints.filterByTag({tags: [tag], property: 'verifiers'});
 
-console.log(issuerMatches, 'issuerMatches');
-console.log(verifierMatches, 'verifierMatches');
-
 describe('eddsa-jcs-2022 (interop)', function() {
   let validVc;
   before(async function() {
@@ -38,8 +35,6 @@ describe('eddsa-jcs-2022 (interop)', function() {
     before(async function() {
       const [issuer] = endpoints;
       try {
-        console.log(issuer, 'issuer');
-        console.log(validVc, 'validVc');
         issuedVc = await createInitialVc({issuer, vc: validVc});
       } catch(e) {
         console.error(`issuer ${issuerName} failed to issue interop VC`, e);

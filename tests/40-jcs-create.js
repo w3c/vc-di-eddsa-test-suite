@@ -133,7 +133,6 @@ describe('eddsa-jcs-2022 (create)', function() {
           this.test.cell = {columnId, rowId: this.test.title};
           should.exist(issuedVc, 'Expected issuer to have issued a ' +
             'credential.');
-          console.log(issuedVc, 'issuedVc<><><><>');
           should.exist(proofs, 'Expected credential to have a proof.');
           const eddsa2022Proofs = proofs.filter(
             proof => proof?.cryptosuite === cryptosuite);
