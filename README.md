@@ -26,8 +26,12 @@ npm i
 
 ## Usage
 
+To generate test data for `eddsa-jcs-2022` tests, testers can specify the
+issuer name using the environment variable `ISSUER_NAME_JCS`.
+
+If `$ISSUER_NAME_JCS` is not specified, `bovine` will be used.
 ```
-npm test
+ISSUER_NAME_JCS="IssuerNameJCS"  npm test
 ```
 
 ### Running Specific Tests
