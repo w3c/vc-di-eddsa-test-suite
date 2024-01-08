@@ -1,5 +1,13 @@
 # w3c/vc-di-eddsa-test-suite ChangeLog
 
+## 2.2.0 - 2024-01-08
+
+### Added
+- Add initial tests for `eddsa-jcs-2022`.
+- Get VC issuer for test data generation from test config. This will allow
+  testers to specify the VC issuer for generating the test data for the
+  `eddsa-jcs-2022` tests. The default value has been set to `bovine`.
+
 ## 2.1.0 - 2023-12-21
 
 ### Added
