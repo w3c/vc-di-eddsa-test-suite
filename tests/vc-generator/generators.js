@@ -1,5 +1,6 @@
 /*!
- * Copyright 2022-2023 Digital Bazaar, Inc. All Rights Reserved
+ * Copyright (c) 2022-2024 Digital Bazaar, Inc.
+ * SPDX-License-Identifier: BSD-3-Clause
  */
 import * as vc from '@digitalbazaar/vc';
 import {
