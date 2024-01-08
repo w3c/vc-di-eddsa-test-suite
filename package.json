@@ -12,10 +12,15 @@
     "lint": "eslint ."
   },
   "author": {
-    "name": "W3C Verifiable Credentials Working Group",
+    "name": "W3C, Inc.",
     "email": "public-vc-wg@w3.org",
     "url": "https://www.w3.org/groups/wg/vc/"
   },
+  "contributors": [{
+    "name": "Digital Bazaar, Inc.",
+    "email": "support@digitalbazaar.com",
+    "url": "https://digitalbazaar.com/"
+  }],
   "engines": {
     "node": ">=18"
   },
@@ -47,5 +52,6 @@
     "eslint-config-digitalbazaar": "^5.0.1",
     "eslint-plugin-jsdoc": "^46.8.2",
     "eslint-plugin-unicorn": "^48.0.1"
-  }
+  },
+  "license": "BSD-3-Clause"
 }

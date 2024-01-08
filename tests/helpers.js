@@ -1,5 +1,6 @@
 /*!
- * Copyright 2022 Digital Bazaar, Inc. All Rights Reserved
+ * Copyright (c) 2022-2024 Digital Bazaar, Inc.
+ * SPDX-License-Identifier: BSD-3-Clause
  */
 import * as didKey from '@digitalbazaar/did-method-key';
 import * as Ed25519Multikey from '@digitalbazaar/ed25519-multikey';
