@@ -152,7 +152,7 @@ describe('eddsa-rdfc-2022 (create)', function() {
               valueBytes.byteLength.should.equal(64, 'Expected 64 byte ' +
                 'proofValue for 32 byte key.');
             } else {
-              valueBytes.byteLength.should.equal(114, 'Expected 114 bytes ' +
+              valueBytes.byteLength.should.equal(114, 'Expected 114 byte ' +
                 'proofValue for 57 byte key.');
             }
           }
