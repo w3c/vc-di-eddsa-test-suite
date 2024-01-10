@@ -1,6 +1,6 @@
 BSD 3-Clause License
 
-Copyright (c) 2024, W3C Verifiable Credentials Working Group Contributors
+Copyright (c) 2024, W3C, Inc.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
