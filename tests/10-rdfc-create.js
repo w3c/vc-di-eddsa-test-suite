@@ -147,7 +147,7 @@ describe('eddsa-rdfc-2022 (create)', function() {
             const vmBytes = await getPublicKeyBytes({
               did: proof.verificationMethod});
             vmBytes.byteLength.should.be.oneOf([32, 57], 'Expected public ' +
-              'key bytes to be either 32 or 57 bytes.');
+              'key length to be either 32 or 57 bytes.');
             if(vmBytes.byteLength === 32) {
               valueBytes.byteLength.should.equal(64, 'Expected 64 byte ' +
                 'proofValue for 32 byte key.');
