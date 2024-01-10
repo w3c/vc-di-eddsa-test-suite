@@ -161,7 +161,7 @@ describe('eddsa-jcs-2022 (create)', function() {
           async function() {
             this.test.cell = {columnId, rowId: this.test.title};
             should.exist(verifier, 'Expected implementation to have a VC ' +
-              'HTTP API compatible verifier.');
+              'API compatible verifier.');
             const {result, error} = await verifier.post({json: {
               verifiableCredential: issuedVc,
               options: {checks: ['proof']}
