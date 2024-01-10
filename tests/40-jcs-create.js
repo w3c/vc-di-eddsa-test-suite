@@ -150,10 +150,10 @@ describe('eddsa-jcs-2022 (create)', function() {
               'key bytes to be either 32 or 57 bytes.');
             if(vmBytes.byteLength === 32) {
               valueBytes.byteLength.should.equal(64, 'Expected 64 bytes ' +
-                'proofValue for 32 bytes key.');
+                'proofValue for 32 byte key.');
             } else {
               valueBytes.byteLength.should.equal(114, 'Expected 114 bytes ' +
-                'proofValue for 57 bytes key.');
+                'proofValue for 57 byte key.');
             }
           }
         });
