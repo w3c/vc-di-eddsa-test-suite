@@ -1,6 +1,6 @@
 # w3c/vc-di-eddsa-test-suite ChangeLog
 
-## 2.2.0 - 2024-01-08
+## 2.2.0 - 2024-01-10
 
 ### Added
 - Add initial tests for `eddsa-jcs-2022`.
