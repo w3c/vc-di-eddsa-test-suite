@@ -1,5 +1,5 @@
 {
-  "specStatus": "unofficial",
+  "specStatus": "base",
   "shortName": "vc-di-eddsa-test-suite",
   "subtitle": "Interoperability test suite for EdDSA Data Integrity cryptosuites.",
   "github": "https://github.com/w3c/vc-di-eddsa-test-suite",
