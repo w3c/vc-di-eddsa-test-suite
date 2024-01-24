@@ -12,11 +12,12 @@ import {
 import {documentLoader} from './documentLoader.js';
 import {endpoints} from 'vc-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
+import {readFileSync} from 'fs';
 
-const tag = 'eddsa-rdfc-2022';
+const config = JSON.parse(readFileSync('./config/runner.json'));
 const cryptosuite = 'eddsa-rdfc-2022';
 const {match} = endpoints.filterByTag({
-  tags: [tag],
+  tags: [config.tag],
   property: 'issuers'
 });
 const should = chai.should();
@@ -41,7 +42,7 @@ describe('eddsa-rdfc-2022 (create)', function() {
       describe(columnId, function() {
         const [issuer] = endpoints;
         const verifier = implementation.verifiers.find(
-          v => v.tags.has(tag));
+          v => v.tags.has(config.tag));
         let issuedVc;
         let proofs;
         const verificationMethodDocuments = [];
