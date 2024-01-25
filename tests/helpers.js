@@ -6,8 +6,11 @@ import * as didKey from '@digitalbazaar/did-method-key';
 import * as Ed25519Multikey from '@digitalbazaar/ed25519-multikey';
 import {IdDecoder, IdEncoder} from 'bnid';
 import {klona} from 'klona';
+import {readFileSync} from 'fs';
 import {v4 as uuidv4} from 'uuid';
 import varint from 'varint';
+
+export const config = JSON.parse(readFileSync('./config/runner.json'));
 
 const multibaseMultikeyHeader = 'z6Mk';
 const didKeyDriver = didKey.driver();
