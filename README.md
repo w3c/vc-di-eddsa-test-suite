@@ -7,6 +7,7 @@
   - [Background](#background)
   - [Install](#install)
   - [Usage](#usage)
+    - [Running Specific Tests](##Running-Specific-Tests)
   - [Implementation](#implementation)
   - [Docker Integration (TODO)](#docker-integration-todo)
   - [Contribute](#contribute)
@@ -27,6 +28,15 @@ npm i
 
 ```
 npm test
+```
+
+### Running Specific Tests
+This suite uses [mocha.js](https://mochajs.org/#command-line-usage) for the tests.
+Mocha has multiple options for filtering which tests run.
+
+This snippet below uses grep to filter tests by name and only runs one of the test suites.
+```bash
+mocha --grep '"specificProperty" test name' ./tests/10-specific-test-suite.js
 ```
 
 ## Implementation
