@@ -2,21 +2,20 @@
  * Copyright (c) 2022-2024 Digital Bazaar, Inc.
  * SPDX-License-Identifier: BSD-3-Clause
  */
+import {config, createInitialVc} from './helpers.js';
 import chai from 'chai';
-import {createInitialVc} from './helpers.js';
 import {endpoints} from 'vc-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
 
 const should = chai.should();
-const tag = 'eddsa-rdfc-2022';
 
 // only use implementations with `eddsa-rdfc-2022` issuers.
 const {
   match: issuerMatches
-} = endpoints.filterByTag({tags: [tag], property: 'issuers'});
+} = endpoints.filterByTag({tags: [...config.tags], property: 'issuers'});
 const {
   match: verifierMatches
-} = endpoints.filterByTag({tags: [tag], property: 'verifiers'});
+} = endpoints.filterByTag({tags: [...config.tags], property: 'verifiers'});
 
 describe('eddsa-rdfc-2022 (interop)', function() {
   let validVc;

@@ -2,7 +2,7 @@
  * Copyright (c) 2022-2024 Digital Bazaar, Inc.
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import {bs58Decode, bs58Encode} from './helpers.js';
+import {bs58Decode, bs58Encode, config} from './helpers.js';
 import {verificationFail, verificationSuccess} from './assertions.js';
 import {
   checkDataIntegrityProofVerifyErrors
@@ -11,9 +11,8 @@ import {endpoints} from 'vc-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
 
 // only use implementations with `eddsa-rdfc-2022` verifiers.
-const tag = 'eddsa-rdfc-2022';
 const {match} = endpoints.filterByTag({
-  tags: [tag],
+  tags: [...config.tags],
   property: 'verifiers'
 });
 
