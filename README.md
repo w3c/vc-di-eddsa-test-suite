@@ -85,8 +85,9 @@ To specifically test only the localhost implementation, modify the test suite to
 filter implementations based on a specific tag in your local configuration file.
 
 For instance, if your `.localImplementationsConfig.cjs` config file looks like
-above in the `di-eddsa-2022-test-suite`, you can adjust the tag used in each test
-file of the test suite to filter the implementations by `localhost` instead of `eddsa-rdfc-2022`.
+the config above, you can adjust the tag used in each test suite
+to filter the implementations by `localhost` and other tags. The tags used to filter
+implementations in the test suites should be in `./config/runner.json` in the tags section.
 
 ## Implementation
 
