@@ -1,5 +1,14 @@
 # w3c/vc-di-eddsa-test-suite ChangeLog
 
+## 2.3.0 -
+
+### Changed
+- `respecConfig.json` is now `config/respec.json`.
+- `abstract.hbs` is now `config/abstract.hbs`.
+
+### Added
+- Add `config/runner.json` for configuring the tag used for the suite.
+
 ## 2.2.0 - 2024-01-11
 
 ### Added
