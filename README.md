@@ -51,9 +51,15 @@ If you need to change the tag the suites will run on you can change it in `./con
 
 ### Testing Locally
 
-If you want to test your implementations for endpoints running locally, you can
-create a configuration file `.localImplementationsConfig.cjs` in the root
-directory of the test suite.
+If you want to test implementations or just endpoints running locally, you can
+rename `localImplementationsConfig.cjs` to `.localImplementationsConfig.cjs`
+in the root directory of the test suite.
+
+```bash
+cp localImplementationsConfig.cjs .localImplementationsConfig.cjs
+```
+
+Git is set to ignore `.localImplementationsConfig.cjs` by default.
 
 This file must be a CommonJS module that exports an array of implementations:
 
@@ -61,25 +67,25 @@ This file must be a CommonJS module that exports an array of implementations:
 // .localImplementationsConfig.cjs defining local implementations
 // you can specify a BASE_URL before running the tests such as:
 // BASE_URL=http://localhost:40443/zDdfsdfs npm test
-const baseURL = process.env.BASE_URL || 'https://localhost:40443/id'
+const baseUrl = process.env.BASE_URL || 'https://localhost:40443/id';
 module.exports = [{
-  "name": "My Company",
-  "implementation": "My Implementation Name",
-  "issuers": [{
-    "id": "did:myMethod:implementation:issuer:id",
-    "endpoint": `${baseUrl}/credentials/issue`,
-    "tags": ["eddsa-rdfc-2022", "localhost"]
+  name: 'My Company',
+  implementation: 'My Implementation Name',
+  issuers: [{
+    id: 'did:myMethod:implementation:issuer:id',
+    endpoint: `${baseUrl}/credentials/issue`,
+    tags: ['eddsa-rdfc-2022', 'localhost']
   }],
-  "verifiers": [{
-    "id": "did:myMethod:implementation:verifier:id",
-    "endpoint": `${baseURL}/credentials/verify`,
-    "tags": ["eddsa-rdfc-2022", "localhost"]
+  verifiers: [{
+    id: 'did:myMethod:implementation:verifier:id',
+    endpoint: `${baseUrl}/credentials/verify`,
+    tags: ['eddsa-rdfc-2022', 'localhost']
   }]
 }];
 ```
 
 After adding the config file, both the localhost implementations and other
-non-localhost implementations will be included in the test run.
+implementations matching the test tag will be included in the test run.
 
 To specifically test only the localhost implementation, modify the test suite to
 filter implementations based on a specific tag in your local configuration file.
