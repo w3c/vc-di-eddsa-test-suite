@@ -9,6 +9,7 @@
   - [Usage](#usage)
     - [Running Specific Tests](#Running-Specific-Tests)
     - [Changing the Test Tag](#Changing-the-test-tag)
+    - [Testing Locally](#testing-locally)
   - [Implementation](#implementation)
   - [Docker Integration (TODO)](#docker-integration-todo)
   - [Contribute](#contribute)
@@ -17,7 +18,7 @@
 ## Background
 Provides interoperability tests for verifiable credential processors
 (issuers and verifiers) that support [EdDSA](https://www.w3.org/TR/vc-di-eddsa/)
-[Data Integrity](https://www.w3.org/TR/vc-data-integrity/) cryptosuites.
+and [Data Integrity](https://www.w3.org/TR/vc-data-integrity/) cryptosuites.
 
 ## Install
 
@@ -47,6 +48,45 @@ mocha --grep '"specificProperty" test name' ./tests/10-specific-test-suite.js
 ### Changing the Test Tag
 These test suites use tags to identify which implementation's endpoints are used in tests.
 If you need to change the tag the suites will run on you can change it in `./config/runner.json`.
+
+### Testing Locally
+
+If you want to test your implementations for endpoints running locally, you can
+create a configuration file `.localImplementationsConfig.cjs` in the root
+directory of the test suite.
+
+This file must be a CommonJS module that exports an array of implementations:
+
+```js
+// .localImplementationsConfig.cjs defining local implementations
+// you can specify a BASE_URL before running the tests such as:
+// BASE_URL=http://localhost:40443/zDdfsdfs npm test
+const baseURL = process.env.BASE_URL || 'https://localhost:40443/id'
+module.exports = [{
+  "name": "My Company",
+  "implementation": "My Implementation Name",
+  "issuers": [{
+    "id": "did:myMethod:implementation:issuer:id",
+    "endpoint": `${baseUrl}/credentials/issue`,
+    "tags": ["eddsa-rdfc-2022", "localhost"]
+  }],
+  "verifiers": [{
+    "id": "did:myMethod:implementation:verifier:id",
+    "endpoint": `${baseURL}/credentials/verify`,
+    "tags": ["eddsa-rdfc-2022", "localhost"]
+  }]
+}];
+```
+
+After adding the config file, both the localhost implementations and other
+non-localhost implementations will be included in the test run.
+
+To specifically test only the localhost implementation, modify the test suite to
+filter implementations based on a specific tag in your local configuration file.
+
+For instance, if your `.localImplementationsConfig.cjs` config file looks like
+above in the `di-eddsa-2022-test-suite`, you can adjust the tag used in each test
+file of the test suite to filter the implementations by `localhost` instead of `eddsa-rdfc-2022`.
 
 ## Implementation
 
