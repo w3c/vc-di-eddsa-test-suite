@@ -8,6 +8,7 @@
   - [Install](#install)
   - [Usage](#usage)
     - [Running Specific Tests](#Running-Specific-Tests)
+    - [Changing the Test Tag](#Changing-the-test-tag)
   - [Implementation](#implementation)
   - [Docker Integration (TODO)](#docker-integration-todo)
   - [Contribute](#contribute)
@@ -42,6 +43,10 @@ For example, the snippet below uses grep to filter tests by name and only runs o
 ```bash
 mocha --grep '"specificProperty" test name' ./tests/10-specific-test-suite.js
 ```
+
+### Changing the Test Tag
+These test suites use tags to identify which implementation's endpoints are used in tests.
+If you need to change the tag the suites will run on you can change it in `./config/runner.json`.
 
 ## Implementation
 
