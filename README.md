@@ -50,7 +50,6 @@ These test suites use tags to identify which implementation's endpoints are used
 If you need to change the tag the suites will run on you can change it in `./config/runner.json`.
 
 ### Testing Locally
-
 If you want to test implementations or just endpoints running locally, you can
 copy `localImplementationsConfig.example.cjs` to `.localImplementationsConfig.cjs`
 in the root directory of the test suite.
@@ -91,9 +90,8 @@ To specifically test only the localhost implementation, modify the test suite to
 filter implementations based on a specific tag in your local configuration file.
 
 For instance, if your `.localImplementationsConfig.cjs` config file looks like
-the config above, you can adjust the tag used in each test suite
-to filter the implementations by `localhost` and other tags. The tags used to filter
-implementations in the test suites should be in `./config/runner.json` in the tags section.
+the config above, you can adjust the tag used in each test suite by modifying `./config/runner.json`
+to filter the implementations by `localhost` and other tags.
 
 ## Implementation
 
