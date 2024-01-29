@@ -56,7 +56,7 @@ copy `localImplementationsConfig.example.cjs` to `.localImplementationsConfig.cj
 in the root directory of the test suite.
 
 ```bash
-cp localImplementationsConfig.cjs .localImplementationsConfig.cjs
+cp localImplementationsConfig.example.cjs .localImplementationsConfig.cjs
 ```
 
 Git is set to ignore `.localImplementationsConfig.cjs` by default.
