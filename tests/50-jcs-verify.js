@@ -2,7 +2,7 @@
  * Copyright (c) 2024 Digital Bazaar, Inc.
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import {bs58Decode, bs58Encode} from './helpers.js';
+import {bs58Decode, bs58Encode, config} from './helpers.js';
 import {verificationFail, verificationSuccess} from './assertions.js';
 import {
   checkDataIntegrityProofVerifyErrors
@@ -12,10 +12,10 @@ import {endpoints} from 'vc-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
 import {issuerNameJCS} from './test-config.js';
 
-const tag = 'eddsa-jcs-2022';
+const {tags} = config.suites['eddsa-jcs-2022'];
 // only use implementations with `eddsa-jcs-2022` verifiers.
 const {match: verifierMatches} = endpoints.filterByTag({
-  tags: [tag],
+  tags: [...tags],
   property: 'verifiers'
 });
 
@@ -24,7 +24,7 @@ describe('eddsa-jcs-2022 (verify)', function() {
   let credentials;
   before(async function() {
     const {match: issuerMatches} = endpoints.filterByTag({
-      tags: [tag],
+      tags: [...tags],
       property: 'issuers'
     });
     // FIXME: Currently uses 'bovine' as default issuer to issue a verifiable
