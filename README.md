@@ -52,7 +52,7 @@ If you need to change the tag the suites will run on you can change it in `./con
 ### Testing Locally
 
 If you want to test implementations or just endpoints running locally, you can
-copy `localImplementationsConfig.cjs` to `.localImplementationsConfig.cjs`
+copy `localImplementationsConfig.example.cjs` to `.localImplementationsConfig.cjs`
 in the root directory of the test suite.
 
 ```bash
