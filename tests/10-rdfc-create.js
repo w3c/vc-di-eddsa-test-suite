@@ -14,8 +14,9 @@ import {endpoints} from 'vc-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
 
 const cryptosuite = 'eddsa-rdfc-2022';
+const {tags} = config.suites['eddsa-rdfc-2022'];
 const {match} = endpoints.filterByTag({
-  tags: [...config.tags],
+  tags: [...tags],
   property: 'issuers'
 });
 const should = chai.should();
@@ -41,7 +42,7 @@ describe('eddsa-rdfc-2022 (create)', function() {
         const [issuer] = endpoints;
         const verifier = implementation.verifiers.find(
           // FIXME use Set's isSubsetOf in the future
-          v => config.tags.every(tag => v.tags.has(tag)));
+          v => tags.every(tag => v.tags.has(tag)));
         let issuedVc;
         let proofs;
         const verificationMethodDocuments = [];

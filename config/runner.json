@@ -1,3 +1,10 @@
 {
-  "tags": ["eddsa-rdfc-2022"]
+  "suites": {
+    "eddsa-rdfc-2022": {
+      "tags": ["eddsa-rdfc-2022"]
+    },
+    "eddsa-jcs-2022": {
+      "tags": ["eddsa-jcs-2022"]
+    }
+  }
 }
