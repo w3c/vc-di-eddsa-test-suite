@@ -6,13 +6,11 @@ and [Data Integrity](https://www.w3.org/TR/vc-data-integrity/) cryptosuites.
 
 - [Install](#install)
 - [Usage](#usage)
-  - [Running Specific Tests](#Running-Specific-Tests)
-  - [Changing the Test Tag](#Changing-the-test-tag)
-  - [Testing Locally](#testing-locally)
-- [Implementation](#implementation)
-- [Contribute](#contribute)
+    - [Wrapping Your Implementation](#wrapping-your-implementation)
+    - [Testing Locally](#testing-locally)
+    - [Running Specific Tests](#running-specific-tests)
+- [Adding a Public Implementation](#adding-a-public-implementation)
 - [License](#license)
-
 
 ## Install
 
