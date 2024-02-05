@@ -127,11 +127,7 @@ For instance, if your `.localImplementationsConfig.cjs` config file looks like
 the config above, you can adjust the tag used in each test suite by modifying `./config/runner.json`
 to filter the implementations by `localhost` and other tags.
 
-## Implementation
-
-You will need an issuer and verifier that are compatible with [VC API](https://w3c-ccg.github.io/vc-api/)
-and are capable of handling issuance and verification of Verifiable Credentials
-with `DataIntegrityProof` proof type using the `eddsa-rdfc-2022` or `eddsa-jcs-2022` cryptosuites.
+## Adding a Public Implementation
 
 To add your implementation to this test suite, you will need to add 2 endpoints
 to your implementation manifest.
@@ -143,7 +139,7 @@ All endpoints will need the tags either `eddsa-rdfc-2022` or `eddsa-jcs-2022`.
 
 A simplified manifest would look like this:
 
-```js
+```json
 {
   "name": "My Company",
   "implementation": "My implementation",
@@ -169,12 +165,12 @@ A simplified manifest would look like this:
 
 The example above represents an unauthenticated endpoint. You may add ZCAP or
 OAuth2 authentication to your endpoints. You can find an example in the
-[vc-test-suite-implementations README](https://github.com/w3c/vc-test-suite-implementations#adding-a-new-implementation).
+[w3c/vc-test-suite-implementations README](https://github.com/w3c/vc-test-suite-implementations#adding-a-new-implementation).
 
 To run the tests, some implementations may require client secrets that can be
 passed as environment variables to the test script. To see which implementations require client
 secrets, please check the implementation manifest within the
-[vc-test-suite-implementations](https://github.com/w3c/vc-test-suite-implementations/tree/main/implementations) library.
+[w3c/vc-test-suite-implementations](https://github.com/w3c/vc-test-suite-implementations/tree/main/implementations) repo.
 
 ## License
 
