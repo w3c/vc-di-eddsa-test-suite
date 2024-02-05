@@ -30,6 +30,50 @@ If `$ISSUER_NAME_JCS` is not specified, `bovine` will be used.
 ISSUER_NAME_JCS="IssuerNameJCS"  npm test
 ```
 
+### Wrapping Your Implementation
+
+A simplified version of issuer and verifier endpoints from
+[VC API](https://w3c-ccg.github.io/vc-api/)
+are used by the test suite code to communicate with the underlying cryptosuite.
+The credentials MUST use the `DataIntegrityProof` proof type and implement the
+`eddsa-rdfc-2022` and/or `eddsa-jcs-2022` cryptosuites.
+
+A community example implementation (written in Node.js/Express) is available at
+https://github.com/Wind4Greg/Server-for-VCs
+
+The typical server will implement the following endpoints and methods:
+```http
+POST /credentials/issue
+Content-Type: application/ld+json
+
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://w3id.org/security/data-integrity/v2"
+  ],
+  "credential": {},
+  "options": {}
+}
+```
+
+```http
+POST /credentials/verify
+Content-Type: application/ld+json
+
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://w3id.org/security/data-integrity/v2"
+  ],
+  "credential": {},
+  "options": {}
+}
+```
+
+```http
+POST /credentials/derive
+```
+
 ### Running Specific Tests
 This suite uses [mocha.js](https://mochajs.org) as the test runner.
 Mocha has [multiple options](https://mochajs.org/#command-line-usage) for filtering which tests run.
