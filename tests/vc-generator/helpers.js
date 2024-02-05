@@ -1,3 +1,7 @@
+/*!
+ * Copyright (c) 2022-2024 Digital Bazaar, Inc.
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
 import * as Ed25519Multikey from '@digitalbazaar/ed25519-multikey';
 import crypto from 'crypto';
 import {decodeSecretKeySeed} from 'bnid';

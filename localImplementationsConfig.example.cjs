@@ -1,3 +1,7 @@
+/*!
+ * Copyright (c) 2022-2024 Digital Bazaar, Inc.
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
 // Rename this file to .localImplementationsConfig.cjs
 // you can specify a BASE_URL before running the tests such as:
 // BASE_URL=http://localhost:40443/zDdfsdfs npm test
