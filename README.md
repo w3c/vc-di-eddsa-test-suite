@@ -39,10 +39,6 @@ For example, the snippet below uses grep to filter tests by name and only runs o
 mocha --grep '"specificProperty" test name' ./tests/10-specific-test-suite.js
 ```
 
-### Changing the Test Tag
-These test suites use tags to identify which implementation's endpoints are used in tests.
-If you need to change the tag the suites will run on you can change it in `./config/runner.json`.
-
 ### Testing Locally
 If you want to test implementations or just endpoints running locally, you can
 copy `localImplementationsConfig.example.cjs` to `.localImplementationsConfig.cjs`
@@ -136,20 +132,6 @@ passed as environment variables to the test script. To see which implementations
 secrets, please check the implementation manifest within the
 [vc-test-suite-implementations](https://github.com/w3c/vc-test-suite-implementations/tree/main/implementations) library.
 
-## Docker Integration (TODO)
-
-We are presently working on implementing a new feature that will enable the
-use of Docker images instead of live endpoints. The Docker image that
-you provide will be started when the test suite is run. The image is expected
-to expose the API provided above, which will be used in the same way that
-live HTTP endpoints are used above.
-
-## Contribute
-
-See [the CONTRIBUTING.md file](CONTRIBUTING.md).
-
-Pull Requests are welcome!
-
 ## License
 
-See [the LICENSE.md file](LICENSE.md)
+[BSD-3-Clause](LICENSE.md)
