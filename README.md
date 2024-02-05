@@ -65,22 +65,25 @@ Content-Type: application/ld+json
     "https://www.w3.org/ns/credentials/v2",
     "https://w3id.org/security/data-integrity/v2"
   ],
-  "credential": {},
-  "options": {}
+  "verifiableCredential": {
+    "proof": {}
+  }
 }
 ```
 
 ```http
 POST /credentials/derive
-```
+Content-Type: application/ld+json
 
-### Running Specific Tests
-This suite uses [mocha.js](https://mochajs.org) as the test runner.
-Mocha has [multiple options](https://mochajs.org/#command-line-usage) for filtering which tests run.
-
-For example, the snippet below uses grep to filter tests by name and only runs one of the test suites.
-```bash
-mocha --grep '"specificProperty" test name' ./tests/10-specific-test-suite.js
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://w3id.org/security/data-integrity/v2"
+  ],
+  "verifiableCredential": {
+    "proof": {}
+  }
+}
 ```
 
 ### Testing Locally
@@ -126,6 +129,15 @@ filter implementations based on a specific tag in your local configuration file.
 For instance, if your `.localImplementationsConfig.cjs` config file looks like
 the config above, you can adjust the tag used in each test suite by modifying `./config/runner.json`
 to filter the implementations by `localhost` and other tags.
+
+### Running Specific Tests
+This suite uses [mocha.js](https://mochajs.org) as the test runner.
+Mocha has [multiple options](https://mochajs.org/#command-line-usage) for filtering which tests run.
+
+For example, the snippet below uses grep to filter tests by name and only runs one of the test suites.
+```bash
+mocha --grep '"specificProperty" test name' ./tests/10-specific-test-suite.js
+```
 
 ## Adding a Public Implementation
 
