@@ -141,10 +141,10 @@ mocha --grep '"specificProperty" test name' ./tests/10-specific-test-suite.js
 
 ## Adding a Public Implementation
 
-To add your implementation to this test suite, you will need to add 2 endpoints
-to your implementation manifest.
-- A credential issuer endpoint (/credentials/issue) in the `issuers` property.
-- A credential verifier endpoint (/credentials/verify) in the `verifiers`
+To [add your implementation to the public list of tested implementations](https://github.com/w3c/vc-test-suite-implementations/tree/main?tab=readme-ov-file#adding-a-new-implementation),
+you will need to add 2 endpoints to your implementation manifest:
+- A credential issuer endpoint (ex: `/credentials/issue`) in the `issuers` property.
+- A credential verifier endpoint (ex: `/credentials/verify`) in the `verifiers`
   property.
 
 All endpoints will need the tags either `eddsa-rdfc-2022` or `eddsa-jcs-2022`.
