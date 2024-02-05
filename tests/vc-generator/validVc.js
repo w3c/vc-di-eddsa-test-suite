@@ -1,3 +1,7 @@
+/*!
+ * Copyright (c) 2022-2024 Digital Bazaar, Inc.
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
 export const validVc = {
   '@context': ['https://www.w3.org/2018/credentials/v1'],
   id: 'urn:uuid:86294362-4254-4f36-854f-3952fe42555d',
