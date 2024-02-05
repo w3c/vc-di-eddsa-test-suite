@@ -1,24 +1,18 @@
 # [EdDSA](https://www.w3.org/TR/vc-di-eddsa/) Cryptosuite test suite
 
-## Table of Contents
-
-- [EdDSA Cryptosuite test suite](#eddsa-cryptosuite-test-suite)
-  - [Table of Contents](#table-of-contents)
-  - [Background](#background)
-  - [Install](#install)
-  - [Usage](#usage)
-    - [Running Specific Tests](#Running-Specific-Tests)
-    - [Changing the Test Tag](#Changing-the-test-tag)
-    - [Testing Locally](#testing-locally)
-  - [Implementation](#implementation)
-  - [Docker Integration (TODO)](#docker-integration-todo)
-  - [Contribute](#contribute)
-  - [License](#license)
-
-## Background
-Provides interoperability tests for verifiable credential processors
-(issuers and verifiers) that support [EdDSA](https://www.w3.org/TR/vc-di-eddsa/)
+Provides interoperability tests for Verifiable Credential processors
+(Issuers and Verifiers) that support [EdDSA](https://www.w3.org/TR/vc-di-eddsa/)
 and [Data Integrity](https://www.w3.org/TR/vc-data-integrity/) cryptosuites.
+
+- [Install](#install)
+- [Usage](#usage)
+  - [Running Specific Tests](#Running-Specific-Tests)
+  - [Changing the Test Tag](#Changing-the-test-tag)
+  - [Testing Locally](#testing-locally)
+- [Implementation](#implementation)
+- [Contribute](#contribute)
+- [License](#license)
+
 
 ## Install
 
@@ -32,7 +26,7 @@ To generate test data for `eddsa-jcs-2022` tests, testers can specify the
 issuer name using the environment variable `ISSUER_NAME_JCS`.
 
 If `$ISSUER_NAME_JCS` is not specified, `bovine` will be used.
-```
+```sh
 ISSUER_NAME_JCS="IssuerNameJCS"  npm test
 ```
 
