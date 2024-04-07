@@ -86,13 +86,13 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-      Tests passed 250/272 91%
+      Tests passed 249/272 91%
       </p>
       <p>
-      Tests failed 22/272 9%
+      Tests failed 23/272 9%
       </p>
       <p>
-      Failures 22
+      Failures 23
       </p>
       <p>
       Tests skipped 0
@@ -101,7 +101,7 @@
       Total tests 272
       </p>
       <p>
-        These tests were run on <time>31 March 2024 at 5:05 am UTC</time>
+        These tests were run on <time>7 April 2024 at 5:06 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -1857,7 +1857,7 @@
               </tr>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">&quot;proof.proofValue&quot; MUST be a valid multibase-encoded value according to the format required by &quot;proof.cryptosuite&quot;.</td>
+                <td class="subtest">The contents of the value (&quot;proof.proofValue&quot;) MUST be expressed with a header and encoding as described in Section 2.4 Multibase.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
@@ -8108,8 +8108,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -8138,6 +8138,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(6) } to not exist",
+                      "stack": "AssertionError: Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(6) } to not exist\n    at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/30-rdfc-interop.js:56:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -8698,7 +8705,7 @@
               </tr>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">&quot;proof.proofValue&quot; MUST be a valid multibase-encoded value according to the format required by &quot;proof.cryptosuite&quot;.</td>
+                <td class="subtest">The contents of the value (&quot;proof.proofValue&quot;) MUST be expressed with a header and encoding as described in Section 2.4 Multibase.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
