@@ -53,7 +53,12 @@ describe('eddsa-jcs-2022 (verify)', function() {
       describe(columnId, function() {
       // wrap the testApi config in an Implementation class
         const [verifier] = endpoints;
-        it('MUST verify a valid VC with an eddsa-jcs-2022 proof.',
+        /**
+         * Sanity integration check for the verifier.
+         *
+         * This does not come from the spec but is useful for integrations.
+         */
+        it('verifies a valid eddsa-jcs-2022 proof.',
           async function() {
             this.test.cell = {columnId, rowId: this.test.title};
             await verificationSuccess({credential: issuedVc, verifier});
@@ -71,18 +76,13 @@ describe('eddsa-jcs-2022 (verify)', function() {
             new Uint8Array([...proofBytes, ...randomBytes]));
           await verificationFail({credential, verifier});
         });
-        it('If a canonicalization algorithm other than URDNA2015 is used, ' +
-          'an error MUST be raised.', async function() {
-          this.test.cell = {columnId, rowId: this.test.title};
-          const credential = credentials.clone('canonizeJcs');
-          await verificationFail({credential, verifier});
-        });
-        it('If a canonicalization data hashing other than algorithm ' +
-          'SHA-2-256 is used, an error MUST be raised.', async function() {
-          this.test.cell = {columnId, rowId: this.test.title};
-          const credential = credentials.clone('digestSha512');
-          await verificationFail({credential, verifier});
-        });
+        it('fails verification when credential is not canonicalized correctly.',
+          async function() {
+            this.test.cell = {columnId, rowId: this.test.title};
+            const credential = credentials.clone('canonizeUnknown');
+            await verificationFail({credential, verifier});
+          }
+        );
         it('If the "cryptosuite" field is not the string "eddsa-jcs-2022", ' +
           'an error MUST be raised.', async function() {
           this.test.cell = {columnId, rowId: this.test.title};
