@@ -11,6 +11,7 @@ import {
 } from 'data-integrity-test-suite-assertion';
 import {documentLoader} from './documentLoader.js';
 import {endpoints} from 'vc-test-suite-implementations';
+import {from as fromEncodedMultikey} from '@digitalbazaar/ed25519-multikey';
 import {generateTestData} from './vc-generator/index.js';
 
 const cryptosuite = 'eddsa-rdfc-2022';
@@ -59,15 +60,32 @@ describe('eddsa-rdfc-2022 (create)', function() {
             verificationMethodDocuments.push(verificationMethodDocument);
           }
         });
+        /**
+         * @see {@link https://www.w3.org/TR/vc-di-eddsa/#dataintegrityproof}
+         *
+         * "The cryptosuite property of the proof MUST be eddsa-rdfc-2022
+         * or eddsa-jcs-2022."
+         */
         it('The field "cryptosuite" MUST be "eddsa-rdfc-2022".', function() {
           this.test.cell = {columnId, rowId: this.test.title};
-          proofs.some(
-            proof => proof?.cryptosuite === cryptosuite
+          const suites = proofs.map(p => p?.cryptosuite);
+
+          suites.some(
+            suite => suite === cryptosuite
           ).should.equal(true, 'Expected at least one proof to have ' +
-            '"cryptosuite" with the value "eddsa-rdfc-2022".');
+            '"cryptosuite" with the value "eddsa-rdfc-2022": ' +
+            JSON.stringify(suites) + ' does not contain "eddsa-rdfc-2022".');
         });
+        /**
+         * @see {@link https://www.w3.org/TR/vc-di-eddsa/#ed25519signature2020}
+         *
+         * "The verificationMethod property of the proof MUST be a URL.
+         * Dereferencing the verificationMethod MUST result in an object
+         * containing a type property with the value set
+         * to Ed25519VerificationKey2020."
+         */
         it('Dereferencing the "verificationMethod" MUST result in an ' +
-          'object containing a type property with "Multikey" value.',
+          'object containing a type property with the value set to "Multikey".',
         function() {
           this.test.cell = {columnId, rowId: this.test.title};
           verificationMethodDocuments.should.not.eql([], 'Expected ' +
@@ -78,6 +96,13 @@ describe('eddsa-rdfc-2022 (create)', function() {
           ).should.equal(true, 'Expected at least one proof to have "type" ' +
             'property value "Multikey".');
         });
+        /**
+         * @see {@link https://www.w3.org/TR/vc-di-eddsa/#dataintegrityproof}
+         *
+         * "The proofPurpose property of the proof MUST be a string,
+         * and MUST match the verification relationship expressed
+         * by the verification method controller."
+         */
         it('The "proof.proofPurpose" field MUST match the verification ' +
           'relationship expressed by the verification method controller.',
         async function() {
@@ -104,8 +129,14 @@ describe('eddsa-rdfc-2022 (create)', function() {
              'to match the verification method controller.'
           );
         });
+        /**
+         * @see {@link https://www.w3.org/TR/vc-di-eddsa/#multikey}
+         *
+         * "The publicKeyMultibase value of the verification method
+         * MUST start with the base-58-btc prefix (z)"
+         */
         it('The "publicKeyMultibase" value of the verification method MUST ' +
-          'be 34 bytes in length and starts with the base-58-btc prefix (z).',
+          'be 34 bytes in length and start with the base-58-btc prefix (z).',
         async function() {
           this.test.cell = {columnId, rowId: this.test.title};
           verificationMethodDocuments.should.not.eql([], 'Expected ' +
@@ -129,6 +160,39 @@ describe('eddsa-rdfc-2022 (create)', function() {
               'be 34 bytes in length.');
           }
         });
+        /**
+         * @see {@link https://www.w3.org/TR/vc-di-eddsa/#multikey}
+         *
+         * "A Multibase-encoded Multikey value follows, which MUST consist
+         * of a binary value that starts with the two-byte prefix 0xed01,
+         * which is the Multikey header for an Ed25519 public key, followed
+         * by the 32-byte public key data, all of which is then encoded
+         * using base-58-btc. Any other encoding MUST NOT be allowed."
+         */
+        it('["publicKeyMultibase"] MUST consist of a binary value that starts' +
+          'with the two-byte prefix 0xed01', async function() {
+          this.test.cell = {columnId, rowId: this.test.title};
+
+          verificationMethodDocuments.should.not.eql([], 'Expected ' +
+            'at least one "verificationMethodDocument".');
+
+          for(const verificationMethodDocument of verificationMethodDocuments) {
+            // If we can decode then the key is valid
+            const {publicKey} =
+              await fromEncodedMultikey(verificationMethodDocument);
+
+            publicKey.length.should.equal(32, 'Expected public key ' +
+              'to be 32 bytes.');
+          }
+        }),
+        /**
+         * @see {@link https://www.w3.org/TR/vc-di-eddsa/#dataintegrityproof}
+         *
+         * "The proofValue property of the proof MUST be a detached EdDSA
+         * produced according to [RFC8032], encoded using the base-58-btc
+         * header and alphabet as described in the Multibase
+         * section of [VC-DATA-INTEGRITY]."
+         */
         it('"proofValue" field when decoded to raw bytes, MUST be 64 bytes ' +
           'in length if the associated public key is 32 bytes or 114 bytes ' +
           'in length if the public key is 57 bytes.', async function() {
@@ -158,6 +222,12 @@ describe('eddsa-rdfc-2022 (create)', function() {
             }
           }
         });
+        /**
+         * Sanity check to ensure that the verifier is capable of
+         * verifying the result.
+         *
+         * This assertion is not directly related to the specification.
+         */
         it('"proof" MUST verify when using a conformant verifier.',
           async function() {
             this.test.cell = {columnId, rowId: this.test.title};

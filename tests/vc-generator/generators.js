@@ -7,17 +7,18 @@ import {
   invalidCreateProof,
   invalidCreateVerifyData
 } from './helpers.js';
-import canonicalize from 'canonicalize';
 import {DataIntegrityProof} from '@digitalbazaar/data-integrity';
 import {documentLoader} from './documentLoader.js';
 import {
   cryptosuite as eddsaRdfc2022CryptoSuite
 } from '@digitalbazaar/eddsa-rdfc-2022-cryptosuite';
+import jcsCanonicalize from 'canonicalize';
 import {klona} from 'klona';
 
 export const vcGenerators = new Map([
   ['issuedVc', _issuedVc],
-  ['canonizeJcs', _incorrectCanonize],
+  ['canonizeJcs', _canonizeJcs],
+  ['canonizeUnknown', _canonizeUnknown],
   ['digestSha512', _incorrectDigest],
   ['invalidCryptosuite', _incorrectCryptosuite],
   ['invalidProofType', _incorrectProofType],
@@ -82,12 +83,26 @@ async function _issuedVc({signer, credential}) {
   return _issueCloned({suite, credential});
 }
 
-async function _incorrectCanonize({signer, credential}) {
+async function _canonizeJcs({signer, credential}) {
   const suite = _createEddsa2022Suite({signer});
-  // canonize is expected to be async
+  // canonize is expected to return a promise
   suite.canonize = async input => {
-    // this will canonize using JCS
-    return canonicalize(input);
+    return jcsCanonicalize(input);
+  };
+  return _issueCloned({suite, credential});
+}
+
+async function _canonizeUnknown({signer, credential}) {
+  const suite = _createEddsa2022Suite({signer});
+  // canonize is expected to return a promise
+  const prefix = 'unknown-';
+  suite.canonize = async input => {
+    const newObj = {};
+    // Our dummy canonical algo adds a prefix to each key
+    for(const key in input) {
+      newObj[prefix + key] = input[key];
+    }
+    return JSON.stringify(newObj);
   };
   return _issueCloned({suite, credential});
 }
