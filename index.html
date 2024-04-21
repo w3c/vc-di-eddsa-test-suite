@@ -86,10 +86,10 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-      Tests passed 249/272 91%
+      Tests passed 248/271 91%
       </p>
       <p>
-      Tests failed 23/272 9%
+      Tests failed 23/271 9%
       </p>
       <p>
       Failures 23
@@ -98,10 +98,10 @@
       Tests skipped 0
       </p>
       <p>
-      Total tests 272
+      Total tests 271
       </p>
       <p>
-        These tests were run on <time>14 April 2024 at 5:30 am UTC</time>
+        These tests were run on <time>21 April 2024 at 5:05 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -2860,8 +2860,8 @@
                       <span class="err hide no-space-around">
                         <pre>{
                       "name": "AssertionError",
-                      "message": "Expected at least one proof to have \"cryptosuite\" with the value \"eddsa-rdfc-2022\".: expected false to equal true",
-                      "stack": "AssertionError: Expected at least one proof to have \"cryptosuite\" with the value \"eddsa-rdfc-2022\".: expected false to equal true\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/10-rdfc-create.js:66:20)\n    at process.processImmediate (node:internal/timers:478:21)"
+                      "message": "Expected at least one proof to have \"cryptosuite\" with the value \"eddsa-rdfc-2022\": [\"eddsa-2022\"] does not contain \"eddsa-rdfc-2022\".: expected false to equal true",
+                      "stack": "AssertionError: Expected at least one proof to have \"cryptosuite\" with the value \"eddsa-rdfc-2022\": [\"eddsa-2022\"] does not contain \"eddsa-rdfc-2022\".: expected false to equal true\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/10-rdfc-create.js:75:20)\n    at process.processImmediate (node:internal/timers:478:21)"
                     }</pre>
                       </span>
                     </div>
@@ -2899,8 +2899,8 @@
                       <span class="err hide no-space-around">
                         <pre>{
                       "name": "AssertionError",
-                      "message": "Expected at least one proof to have \"cryptosuite\" with the value \"eddsa-rdfc-2022\".: expected false to equal true",
-                      "stack": "AssertionError: Expected at least one proof to have \"cryptosuite\" with the value \"eddsa-rdfc-2022\".: expected false to equal true\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/10-rdfc-create.js:66:20)\n    at process.processImmediate (node:internal/timers:478:21)"
+                      "message": "Expected at least one proof to have \"cryptosuite\" with the value \"eddsa-rdfc-2022\": [\"eddsa-2022\"] does not contain \"eddsa-rdfc-2022\".: expected false to equal true",
+                      "stack": "AssertionError: Expected at least one proof to have \"cryptosuite\" with the value \"eddsa-rdfc-2022\": [\"eddsa-2022\"] does not contain \"eddsa-rdfc-2022\".: expected false to equal true\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/10-rdfc-create.js:75:20)\n    at process.processImmediate (node:internal/timers:478:21)"
                     }</pre>
                       </span>
                     </div>
@@ -2940,7 +2940,7 @@
               </tr>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">Dereferencing the &quot;verificationMethod&quot; MUST result in an object containing a type property with &quot;Multikey&quot; value.</td>
+                <td class="subtest">Dereferencing the &quot;verificationMethod&quot; MUST result in an object containing a type property with the value set to &quot;Multikey&quot;.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
@@ -3270,7 +3270,172 @@
               </tr>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">The &quot;publicKeyMultibase&quot; value of the verification method MUST be 34 bytes in length and starts with the base-58-btc prefix (z).</td>
+                <td class="subtest">The &quot;publicKeyMultibase&quot; value of the verification method MUST be 34 bytes in length and start with the base-58-btc prefix (z).</td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">[&quot;publicKeyMultibase&quot;] MUST consist of a binary value that startswith the two-byte prefix 0xed01</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
@@ -3535,7 +3700,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Expected at least one eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1",
-                      "stack": "AssertionError: Expected at least one eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/10-rdfc-create.js:141:44)\n    at process.processImmediate (node:internal/timers:478:21)"
+                      "stack": "AssertionError: Expected at least one eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/10-rdfc-create.js:205:44)\n    at process.processImmediate (node:internal/timers:478:21)"
                     }</pre>
                       </span>
                     </div>
@@ -3574,7 +3739,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Expected at least one eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1",
-                      "stack": "AssertionError: Expected at least one eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/10-rdfc-create.js:141:44)\n    at process.processImmediate (node:internal/timers:478:21)"
+                      "stack": "AssertionError: Expected at least one eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1\n    at Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/10-rdfc-create.js:205:44)\n    at process.processImmediate (node:internal/timers:478:21)"
                     }</pre>
                       </span>
                     </div>
@@ -6426,7 +6591,7 @@
               <tbody>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">MUST verify a valid VC with an eddsa-rdfc-2022 proof</td>
+                <td class="subtest">verifies a valid eddsa-rdfc-2022 proof.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
@@ -6526,7 +6691,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Expected a result from verifier.: expected undefined to exist",
-                      "stack": "AssertionError: Expected a result from verifier.: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at verificationSuccess (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/assertions.js:66:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/20-rdfc-verify.js:46:13)"
+                      "stack": "AssertionError: Expected a result from verifier.: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at verificationSuccess (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/assertions.js:66:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/20-rdfc-verify.js:51:13)"
                     }</pre>
                       </span>
                     </div>
@@ -6565,7 +6730,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Expected a result from verifier.: expected undefined to exist",
-                      "stack": "AssertionError: Expected a result from verifier.: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at verificationSuccess (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/assertions.js:66:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/20-rdfc-verify.js:46:13)"
+                      "stack": "AssertionError: Expected a result from verifier.: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at verificationSuccess (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/assertions.js:66:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/20-rdfc-verify.js:51:13)"
                     }</pre>
                       </span>
                     </div>
@@ -6770,172 +6935,7 @@
               </tr>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">If a canonicalization algorithm other than URDNA2015 is used, an error MUST be raised.</td>
-                <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                      <style>
-                       .hide {
-                         display: none;
-                       }
-                       .err {
-                         position: relative;
-                         z-index: 1;
-                         width: 50rem;
-                         right: calc(0% + 15rem);
-                         background: rgba(0, 0, 0, 0.0);
-                       }
-                       .no-space-around {
-                         margin: 0;
-                         padding: 0;
-                       }
-                       pre {
-                         width: 75%;
-                         white-space: pre-line;
-                         word-break: break-all;
-                         margin: 0;
-                         padding: 0;
-                         background: white;
-                       }
-                       code > span.hljs-attr {
-                         margin-left: 1rem;
-                       }
-                      </style>
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                      <style>
-                       .hide {
-                         display: none;
-                       }
-                       .err {
-                         position: relative;
-                         z-index: 1;
-                         width: 50rem;
-                         right: calc(0% + 15rem);
-                         background: rgba(0, 0, 0, 0.0);
-                       }
-                       .no-space-around {
-                         margin: 0;
-                         padding: 0;
-                       }
-                       pre {
-                         width: 75%;
-                         white-space: pre-line;
-                         word-break: break-all;
-                         margin: 0;
-                         padding: 0;
-                         background: white;
-                       }
-                       code > span.hljs-attr {
-                         margin-left: 1rem;
-                       }
-                      </style>
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                      <style>
-                       .hide {
-                         display: none;
-                       }
-                       .err {
-                         position: relative;
-                         z-index: 1;
-                         width: 50rem;
-                         right: calc(0% + 15rem);
-                         background: rgba(0, 0, 0, 0.0);
-                       }
-                       .no-space-around {
-                         margin: 0;
-                         padding: 0;
-                       }
-                       pre {
-                         width: 75%;
-                         white-space: pre-line;
-                         word-break: break-all;
-                         margin: 0;
-                         padding: 0;
-                         background: white;
-                       }
-                       code > span.hljs-attr {
-                         margin-left: 1rem;
-                       }
-                      </style>
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                      <style>
-                       .hide {
-                         display: none;
-                       }
-                       .err {
-                         position: relative;
-                         z-index: 1;
-                         width: 50rem;
-                         right: calc(0% + 15rem);
-                         background: rgba(0, 0, 0, 0.0);
-                       }
-                       .no-space-around {
-                         margin: 0;
-                         padding: 0;
-                       }
-                       pre {
-                         width: 75%;
-                         white-space: pre-line;
-                         word-break: break-all;
-                         margin: 0;
-                         padding: 0;
-                         background: white;
-                       }
-                       code > span.hljs-attr {
-                         margin-left: 1rem;
-                       }
-                      </style>
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                      <style>
-                       .hide {
-                         display: none;
-                       }
-                       .err {
-                         position: relative;
-                         z-index: 1;
-                         width: 50rem;
-                         right: calc(0% + 15rem);
-                         background: rgba(0, 0, 0, 0.0);
-                       }
-                       .no-space-around {
-                         margin: 0;
-                         padding: 0;
-                       }
-                       pre {
-                         width: 75%;
-                         white-space: pre-line;
-                         word-break: break-all;
-                         margin: 0;
-                         padding: 0;
-                         background: white;
-                       }
-                       code > span.hljs-attr {
-                         margin-left: 1rem;
-                       }
-                      </style>
-                    </div>
-                  </td>
-              </tr>
-              <tr>
-                <!--This is the name of the test-->
-                <td class="subtest">If a canonicalization data hashing other than algorithm SHA-2-256 is used, an error MUST be raised.</td>
+                <td class="subtest">fails verification when credential is not canonicalized correctly.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
@@ -9892,7 +9892,7 @@
               <tbody>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">MUST verify a valid VC with an eddsa-jcs-2022 proof.</td>
+                <td class="subtest">verifies a valid eddsa-jcs-2022 proof.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
@@ -9966,44 +9966,7 @@
               </tr>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">If a canonicalization algorithm other than URDNA2015 is used, an error MUST be raised.</td>
-                <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                      <style>
-                       .hide {
-                         display: none;
-                       }
-                       .err {
-                         position: relative;
-                         z-index: 1;
-                         width: 50rem;
-                         right: calc(0% + 15rem);
-                         background: rgba(0, 0, 0, 0.0);
-                       }
-                       .no-space-around {
-                         margin: 0;
-                         padding: 0;
-                       }
-                       pre {
-                         width: 75%;
-                         white-space: pre-line;
-                         word-break: break-all;
-                         margin: 0;
-                         padding: 0;
-                         background: white;
-                       }
-                       code > span.hljs-attr {
-                         margin-left: 1rem;
-                       }
-                      </style>
-                    </div>
-                  </td>
-              </tr>
-              <tr>
-                <!--This is the name of the test-->
-                <td class="subtest">If a canonicalization data hashing other than algorithm SHA-2-256 is used, an error MUST be raised.</td>
+                <td class="subtest">fails verification when credential is not canonicalized correctly.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
