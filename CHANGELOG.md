@@ -5,6 +5,7 @@
 ### Changed
 - `respecConfig.json` is now `config/respec.json`.
 - `abstract.hbs` is now `config/abstract.hbs`.
+- `localImplementationsConfig.cjs` is now `localConfig.cjs`
 
 ### Added
 - Add `config/runner.json` for configuring the tag used for the suite.
