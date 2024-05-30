@@ -86,47 +86,47 @@ Content-Type: application/ld+json
 
 ### Testing Locally
 If you want to test implementations or just endpoints running locally, you can
-copy `localImplementationsConfig.example.cjs` to `.localImplementationsConfig.cjs`
+copy `localConfig.example.cjs` to `localConfig.cjs`
 in the root directory of the test suite.
 
 ```bash
-cp localImplementationsConfig.example.cjs .localImplementationsConfig.cjs
+cp localConfig.example.cjs localConfig.cjs
 ```
 
-Git is set to ignore `.localImplementationsConfig.cjs` by default.
+Git is set to ignore `localConfig.cjs` by default.
 
 This file must be a CommonJS module that exports an array of implementations:
 
 ```js
-// .localImplementationsConfig.cjs defining local implementations
+// .localConfig.cjs defining local implementations
 // you can specify a BASE_URL before running the tests such as:
 // BASE_URL=http://localhost:40443/zDdfsdfs npm test
 const baseUrl = process.env.BASE_URL || 'https://localhost:40443/id';
-module.exports = [{
-  name: 'My Company',
-  implementation: 'My Implementation Name',
-  issuers: [{
-    id: 'did:myMethod:implementation:issuer:id',
-    endpoint: `${baseUrl}/credentials/issue`,
-    tags: ['eddsa-rdfc-2022', 'localhost']
-  }],
-  verifiers: [{
-    id: 'did:myMethod:implementation:verifier:id',
-    endpoint: `${baseUrl}/credentials/verify`,
-    tags: ['eddsa-rdfc-2022', 'localhost']
-  }]
-}];
+module.exports = {
+  settings: {
+    enableInteropTests: false, // default
+    testAllImplementations: false // default
+  },
+  implementations: [{
+    name: 'My Company',
+    implementation: 'My Implementation Name',
+    issuers: [{
+      id: 'did:myMethod:implementation:issuer:id',
+      endpoint: `${baseUrl}/credentials/issue`,
+      supports: {
+        vc: ['1.1', '2.0']
+      },
+      tags: ['eddsa-rdfc-2022', 'localhost']
+    }],
+    verifiers: [{
+      id: 'did:myMethod:implementation:verifier:id',
+      endpoint: `${baseUrl}/credentials/verify`,
+      tags: ['eddsa-rdfc-2022', 'localhost']
+    }]
+  }];
+}
 ```
-
-After adding the config file, both the localhost implementations and other
-implementations matching the test tag will be included in the test run.
-
-To specifically test only the localhost implementation, modify the test suite to
-filter implementations based on a specific tag in your local configuration file.
-
-For instance, if your `.localImplementationsConfig.cjs` config file looks like
-the config above, you can adjust the tag used in each test suite by modifying `./config/runner.json`
-to filter the implementations by `localhost` and other tags.
+To specifically test only the implementations in `localConfig.cjs`, change `settings.testAllImplementations` to `false`.
 
 ### Running Specific Tests
 This suite uses [mocha.js](https://mochajs.org) as the test runner.
