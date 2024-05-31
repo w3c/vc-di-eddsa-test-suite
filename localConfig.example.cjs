@@ -29,4 +29,4 @@ module.exports = {
       tags: ['eddsa-rdfc-2022', 'localhost']
     }]
   }]
-}
+};
