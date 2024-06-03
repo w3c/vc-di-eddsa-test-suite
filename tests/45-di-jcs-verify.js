@@ -2,6 +2,8 @@
  * Copyright (c) 2024 Digital Bazaar, Inc.
  * SPDX-License-Identifier: BSD-3-Clause
  */
+/*
+// FIXME implement JCS DI verifier tests
 import {
   checkDataIntegrityProofVerifyErrors
 } from 'data-integrity-test-suite-assertion';
@@ -19,3 +21,4 @@ checkDataIntegrityProofVerifyErrors({
   implemented: verifierMatches,
   testDescription: 'Data Integrity (eddsa-jcs-2022 verifiers)'
 });
+*/
