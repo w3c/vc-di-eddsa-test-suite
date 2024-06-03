@@ -126,7 +126,8 @@ module.exports = {
   }];
 }
 ```
-To specifically test only the implementations in `localConfig.cjs`, change `settings.testAllImplementations` to `false`.
+To specifically test only the implementations in `localConfig.cjs`, change
+`settings.testAllImplementations` to `false`.
 
 ### Running Specific Tests
 This suite uses [mocha.js](https://mochajs.org) as the test runner.
