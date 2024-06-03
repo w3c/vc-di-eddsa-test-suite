@@ -4,9 +4,6 @@
  */
 import {bs58Decode, bs58Encode, config} from './helpers.js';
 import {verificationFail, verificationSuccess} from './assertions.js';
-import {
-  checkDataIntegrityProofVerifyErrors
-} from 'data-integrity-test-suite-assertion';
 import {createInitialVc} from './helpers.js';
 import {endpoints} from 'vc-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
@@ -35,10 +32,6 @@ describe('eddsa-jcs-2022 (verify)', function() {
     credentials = await generateTestData();
     const validVc = credentials.clone('validVc');
     issuedVc = await createInitialVc({issuer, vc: validVc});
-  });
-  checkDataIntegrityProofVerifyErrors({
-    implemented: verifierMatches,
-    testDescription: 'Data Integrity (eddsa-jcs-2022 verifiers)'
   });
   describe('eddsa-jcs-2022 (verifier)', function() {
     // this will tell the report

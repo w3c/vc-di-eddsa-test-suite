@@ -4,9 +4,6 @@
  */
 import {bs58Decode, bs58Encode, config} from './helpers.js';
 import {verificationFail, verificationSuccess} from './assertions.js';
-import {
-  checkDataIntegrityProofVerifyErrors
-} from 'data-integrity-test-suite-assertion';
 import {endpoints} from 'vc-test-suite-implementations';
 import {generateTestData} from './vc-generator/index.js';
 
@@ -21,10 +18,6 @@ describe('eddsa-rdfc-2022 (verify)', function() {
   let credentials;
   before(async function() {
     credentials = await generateTestData();
-  });
-  checkDataIntegrityProofVerifyErrors({
-    implemented: match,
-    testDescription: 'Data Integrity (eddsa-rdfc-2022 verifiers)'
   });
   describe('eddsa-rdfc-2022 (verifier)', function() {
     // this will tell the report

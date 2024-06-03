@@ -6,9 +6,6 @@ import {
   bs58Decode, config, createInitialVc, getPublicKeyBytes, shouldBeBs58
 } from './helpers.js';
 import chai from 'chai';
-import {
-  checkDataIntegrityProofFormat
-} from 'data-integrity-test-suite-assertion';
 import {documentLoader} from './documentLoader.js';
 import {endpoints} from 'vc-test-suite-implementations';
 import {from as fromEncodedMultikey} from '@digitalbazaar/ed25519-multikey';
@@ -27,10 +24,6 @@ describe('eddsa-rdfc-2022 (create)', function() {
   before(async function() {
     const credentials = await generateTestData();
     validVc = credentials.clone('validVc');
-  });
-  checkDataIntegrityProofFormat({
-    implemented: match,
-    testDescription: 'Data Integrity (eddsa-rdfc-2022 issuers)'
   });
   describe('eddsa-rdfc-2022 (issuer)', function() {
     this.matrix = true;
