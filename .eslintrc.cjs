@@ -10,6 +10,9 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
+  overrides: [{
+    files: ['**/*.js', '**/*.cjs']
+  }],
   extends: [
     'eslint-config-digitalbazaar',
     'eslint-config-digitalbazaar/jsdoc',
