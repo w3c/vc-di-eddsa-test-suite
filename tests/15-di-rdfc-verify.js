@@ -14,8 +14,13 @@ const {match} = endpoints.filterByTag({
   tags: [...tags],
   property: 'verifiers'
 });
+// options for the DI Verifier Suite
+const testDataOptions = {
+  suiteName: 'eddsa-rdfc-2022',
+};
 
 checkDataIntegrityProofVerifyErrors({
   implemented: match,
-  testDescription: 'Data Integrity (eddsa-rdfc-2022 verifiers)'
+  testDescription: 'Data Integrity (eddsa-rdfc-2022 verifiers)',
+  testDataOptions
 });
