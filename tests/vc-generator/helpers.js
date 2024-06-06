@@ -6,7 +6,10 @@ import * as Ed25519Multikey from '@digitalbazaar/ed25519-multikey';
 import crypto from 'crypto';
 import {decodeSecretKeySeed} from 'bnid';
 
-export const getMultikey = async ({seedMultibase}) => {
+export const getMultikey = async ({
+  // all else fails use the test key seed
+  seedMultibase = 'z1AYMku6XEB5KV3XJbYzz9VejGJYRuqzu5wmq4JDRyUCjr8'
+} = {}) => {
   if(!seedMultibase) {
     throw new Error('seedMultibase required');
   }
