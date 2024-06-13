@@ -18,11 +18,12 @@ const {match} = endpoints.filterByTag({
   tags: [...tags],
   property: 'verifiers'
 });
+const {key} = await getMultikey();
 // options for the DI Verifier Suite
 const testDataOptions = {
   suiteName: 'eddsa-rdfc-2022',
   cryptosuite: eddsaRdfc2022CryptoSuite,
-  key: await getMultikey()
+  key
 };
 
 checkDataIntegrityProofVerifyErrors({
