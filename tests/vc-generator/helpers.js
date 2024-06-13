@@ -19,10 +19,10 @@ export const getMultikey = async ({
   const signer = key.signer();
   // The issuer needs to match the signer or the controller of the signer
   const issuer = `did:key:${key.publicKeyMultibase}`;
+  key.controller = issuer;
   // verificationMethod needs to be a fragment
-  // this only works for did:key
-  signer.id = `${issuer}#${key.publicKeyMultibase}`;
-  return {signer, issuer};
+  key.id = signer.id = `${issuer}#${key.publicKeyMultibase}`;
+  return {signer, issuer, key};
 };
 
 /**
