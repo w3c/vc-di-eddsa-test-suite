@@ -17,5 +17,6 @@ const {match} = endpoints.filterByTag({
 
 checkDataIntegrityProofFormat({
   implemented: match,
-  testDescription: 'Data Integrity (eddsa-rdfc-2022 issuers)'
+  testDescription: 'Data Integrity (eddsa-rdfc-2022 issuers)',
+  cryptosuiteName: 'eddsa-rdfc-2022'
 });
