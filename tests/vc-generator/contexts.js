@@ -2,13 +2,15 @@
  * Copyright (c) 2022-2024 Digital Bazaar, Inc.
  * SPDX-License-Identifier: BSD-3-Clause
  */
-import credentialsCtx from 'credentials-context';
+import {
+  contexts as credentialsContexts
+} from '@digitalbazaar/credentials-context';
 import dataIntegrityCtx from '@digitalbazaar/data-integrity-context';
 import didCtx from '@digitalcredentials/did-context';
 import {klona} from 'klona';
 import multikeyCtx from '@digitalbazaar/multikey-context';
 
-const contextMap = new Map();
+const contextMap = new Map(credentialsContexts);
 
 const _dataIntegrityCtx = klona(dataIntegrityCtx.CONTEXT);
 const diCtx = _dataIntegrityCtx['@context'];
@@ -32,11 +34,6 @@ contextMap.set(
   didCtx.constants.DID_CONTEXT_URL,
   didCtx.contexts.get(
     didCtx.constants.DID_CONTEXT_URL)
-);
-contextMap.set(
-  credentialsCtx.constants.CONTEXT_URL,
-  credentialsCtx.contexts.get(
-    credentialsCtx.constants.CONTEXT_URL)
 );
 
 export {contextMap};

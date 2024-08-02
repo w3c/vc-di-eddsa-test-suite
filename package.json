@@ -16,29 +16,31 @@
     "email": "public-vc-wg@w3.org",
     "url": "https://www.w3.org/groups/wg/vc/"
   },
-  "contributors": [{
-    "name": "Digital Bazaar, Inc.",
-    "email": "support@digitalbazaar.com",
-    "url": "https://digitalbazaar.com/"
-  }],
+  "contributors": [
+    {
+      "name": "Digital Bazaar, Inc.",
+      "email": "support@digitalbazaar.com",
+      "url": "https://digitalbazaar.com/"
+    }
+  ],
   "engines": {
     "node": ">=18"
   },
   "dependencies": {
+    "@digitalbazaar/credentials-context": "^3.1.0",
     "@digitalbazaar/data-integrity": "^2.0.0",
     "@digitalbazaar/data-integrity-context": "^2.0.0",
     "@digitalbazaar/did-method-key": "^5.1.0",
     "@digitalbazaar/ed25519-multikey": "^1.0.1",
     "@digitalbazaar/eddsa-rdfc-2022-cryptosuite": "^1.0.1",
-    "@digitalbazaar/mocha-w3c-interop-reporter": "^1.6.0",
     "@digitalbazaar/http-client": "^4.0.0",
+    "@digitalbazaar/mocha-w3c-interop-reporter": "^1.6.0",
     "@digitalbazaar/multikey-context": "^1.0.0",
     "@digitalbazaar/vc": "^6.0.2",
     "@digitalcredentials/did-context": "^1.0.0",
     "bnid": "^3.0.0",
     "canonicalize": "^2.0.0",
     "chai": "^4.3.6",
-    "credentials-context": "^2.0.0",
     "data-integrity-test-suite-assertion": "github:w3c-ccg/data-integrity-test-suite-assertion",
     "jsonld-document-loader": "^2.0.0",
     "klona": "^2.0.5",
