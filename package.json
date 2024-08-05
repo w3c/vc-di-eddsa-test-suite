@@ -36,7 +36,7 @@
     "@digitalbazaar/http-client": "^4.0.0",
     "@digitalbazaar/mocha-w3c-interop-reporter": "^1.6.0",
     "@digitalbazaar/multikey-context": "^1.0.0",
-    "@digitalbazaar/vc": "^6.0.2",
+    "@digitalbazaar/vc": "^7.0.0",
     "@digitalcredentials/did-context": "^1.0.0",
     "bnid": "^3.0.0",
     "canonicalize": "^2.0.0",
