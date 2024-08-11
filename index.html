@@ -169,22 +169,22 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-      Tests passed 381/426 89%
+      Tests passed 377/434 86%
       </p>
       <p>
-      Tests failed 45/426 11%
+      Tests failed 57/434 14%
       </p>
       <p>
-      Failures 45
+      Failures 57
       </p>
       <p>
       Tests skipped 18
       </p>
       <p>
-      Total tests 444
+      Total tests 452
       </p>
       <p>
-        These tests were run on <time>4 August 2024 at 5:05 am UTC</time>
+        These tests were run on <time>11 August 2024 at 5:05 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -392,6 +392,54 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Dereferencing a URL did not result in a valid JSON-LD object. Possible causes are an inaccessible URL perhaps due to a same-origin policy (ensure the server uses CORS if you are using client-side JavaScript), too many redirects, a non-JSON response, or more than one HTTP Link Header was provided for a remote context.:</summary>
+                        <pre>jsonld.InvalidUrl: Dereferencing a URL did not result in a valid JSON-LD object. Possible causes are an inaccessible URL perhaps due to a same-origin policy (ensure the server uses CORS if you are using client-side JavaScript), too many redirects, a non-JSON response, or more than one HTTP Link Header was provided for a remote context.
+                        at ContextResolver._fetchContext (node_modules/jsonld/lib/ContextResolver.js:173:13)
+                        at async ContextResolver._resolveRemoteContext (node_modules/jsonld/lib/ContextResolver.js:117:34)
+                        at async ContextResolver.resolve (node_modules/jsonld/lib/ContextResolver.js:50:22)
+                        at async api.process (node_modules/jsonld/lib/context.js:87:20)
+                        at async api.expand (node_modules/jsonld/lib/expand.js:214:17)
+                        at async jsonld.expand (node_modules/jsonld/lib/jsonld.js:322:18)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:72:26)</pre>
+                      </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">
+                    <a href="https://w3c.github.io/vc-data-integrity/#contexts-and-vocabularies:~:text&#x3D;The%20type%20property%20MUST%20contain%20the%20string%20DataIntegrityProof.">The type property MUST contain the string DataIntegrityProof.</a>
+                </td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
@@ -406,7 +454,7 @@
               <tr>
                 <!--This is the name of the test-->
                 <td class="subtest">
-                    <a href="https://w3c.github.io/vc-data-integrity/#contexts-and-vocabularies:~:text&#x3D;The%20type%20property%20MUST%20contain%20the%20string%20DataIntegrityProof.">The type property MUST contain the string DataIntegrityProof.</a>
+                    <a href="https://w3c.github.io/vc-data-integrity/#proofs:~:text&#x3D;The%20proofValue%20property%20MUST%20be%20used%2C%20as%20specified%20in%202.1%20Proofs.">The proofValue property MUST be used, as specified in 2.1 Proofs.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -577,9 +625,21 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Dereferencing a URL did not result in a valid JSON-LD object. Possible causes are an inaccessible URL perhaps due to a same-origin policy (ensure the server uses CORS if you are using client-side JavaScript), too many redirects, a non-JSON response, or more than one HTTP Link Header was provided for a remote context.:</summary>
+                        <pre>jsonld.InvalidUrl: Dereferencing a URL did not result in a valid JSON-LD object. Possible causes are an inaccessible URL perhaps due to a same-origin policy (ensure the server uses CORS if you are using client-side JavaScript), too many redirects, a non-JSON response, or more than one HTTP Link Header was provided for a remote context.
+                        at ContextResolver._fetchContext (node_modules/jsonld/lib/ContextResolver.js:173:13)
+                        at async ContextResolver._resolveRemoteContext (node_modules/jsonld/lib/ContextResolver.js:117:34)
+                        at async ContextResolver.resolve (node_modules/jsonld/lib/ContextResolver.js:50:22)
+                        at async api.process (node_modules/jsonld/lib/context.js:87:20)
+                        at async api.expand (node_modules/jsonld/lib/expand.js:214:17)
+                        at async jsonld.expand (node_modules/jsonld/lib/jsonld.js:322:18)
+                        at async shouldMapToUrl (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:180:20)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:189:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -614,9 +674,21 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Dereferencing a URL did not result in a valid JSON-LD object. Possible causes are an inaccessible URL perhaps due to a same-origin policy (ensure the server uses CORS if you are using client-side JavaScript), too many redirects, a non-JSON response, or more than one HTTP Link Header was provided for a remote context.:</summary>
+                        <pre>jsonld.InvalidUrl: Dereferencing a URL did not result in a valid JSON-LD object. Possible causes are an inaccessible URL perhaps due to a same-origin policy (ensure the server uses CORS if you are using client-side JavaScript), too many redirects, a non-JSON response, or more than one HTTP Link Header was provided for a remote context.
+                        at ContextResolver._fetchContext (node_modules/jsonld/lib/ContextResolver.js:173:13)
+                        at async ContextResolver._resolveRemoteContext (node_modules/jsonld/lib/ContextResolver.js:117:34)
+                        at async ContextResolver.resolve (node_modules/jsonld/lib/ContextResolver.js:50:22)
+                        at async api.process (node_modules/jsonld/lib/context.js:87:20)
+                        at async api.expand (node_modules/jsonld/lib/expand.js:214:17)
+                        at async jsonld.expand (node_modules/jsonld/lib/jsonld.js:322:18)
+                        at async shouldMapToUrl (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:180:20)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:206:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -628,44 +700,7 @@
               <tr>
                 <!--This is the name of the test-->
                 <td class="subtest">
-                    <a href="https://w3c.github.io/vc-data-integrity/#proofs:~:text&#x3D;The%20proofValue%20property%20MUST%20be%20used">The proofValue property MUST be used, as specified in 2.1 Proofs.</a>
-                </td>
-                <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-              </tr>
-              <tr>
-                <!--This is the name of the test-->
-                <td class="subtest">
-                    The contents of the value (&quot;proof.proofValue&quot;) MUST be expressed with a header and encoding as described in Section 2.4 Multibase.
+                    <a href="https://w3c.github.io/vc-data-integrity/#proofs:~:text&#x3D;string%20value%20that%20contains%20the%20base%2Dencoded%20binary%20data%20necessary%20to%20verify%20the%20digital%20proof">(&quot;proof.proofValue&quot;) A string value that contains the base-encoded binary data necessary to verify the digital proof using the verificationMethod specified. The contents of the value MUST be expressed with a header and encoding as described in Section 2.4 Multibase of the Controller Documents 1.0 specification.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -887,6 +922,75 @@
               <tr>
                 <!--This is the name of the test-->
                 <td class="subtest">
+                    <a href="https://w3c.github.io/vc-data-integrity/#securing-data-losslessly:~:text&#x3D;Implementations%20that%20use%20JSON%2DLD%20processing%2C%20such%20as%20RDF%20Dataset%20Canonicalization%20%5BRDF%2DCANON%5D%2C%20MUST%20throw%20an%20error%2C%20which%20SHOULD%20be%20DATA_LOSS_DETECTION_ERROR%2C%20when%20data%20is%20dropped%20by%20a%20JSON%2DLD%20processor%2C%20such%20as%20when%20an%20undefined%20term%20is%20detected%20in%20an%20input%20document.">Implementations that use JSON-LD processing, such as RDF Dataset Canonicalization [RDF-CANON], MUST throw an error, which SHOULD be DATA_LOSS_DETECTION_ERROR, when data is dropped by a JSON-LD processor, such as when an undefined term is detected in an input document.</a>
+                </td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected issuer to error when VC has an undefined type.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/ld+json&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;0852000f20d4f3c9f9d64d57c3a54fc8&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:11 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;805&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected issuer to error when VC has an undefined type.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/ld+json&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;0852000f20d4f3c9f9d64d57c3a54fc8&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:11 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;805&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
+                        at shouldFailIssuance (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:72:14)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:295:7)</pre>
+                      </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected issuer to error when VC has an undefined type.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;823&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:13 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected issuer to error when VC has an undefined type.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;823&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:13 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
+                        at shouldFailIssuance (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:72:14)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:295:7)</pre>
+                      </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected issuer to error when VC has an undefined type.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 11 Aug 2024 05:05:14 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;29&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;%2BCVccFbZ8KD3rWWLHjDDUSX22XqQSK%2F1tgrPPlX2clpEA%2FuC13NRhrx7b9WOQxKlWg1XuWqxZ5zAB27lPy0lyoWlaHENOHti0MR4ZtHoA6ShvIai9NRmNgl3bfbo%2F%2BjQgl4td2hP4mWMUYqkfuQx&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8b15b0828b5b67b8-SJC&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected issuer to error when VC has an undefined type.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 11 Aug 2024 05:05:14 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;29&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;%2BCVccFbZ8KD3rWWLHjDDUSX22XqQSK%2F1tgrPPlX2clpEA%2FuC13NRhrx7b9WOQxKlWg1XuWqxZ5zAB27lPy0lyoWlaHENOHti0MR4ZtHoA6ShvIai9NRmNgl3bfbo%2F%2BjQgl4td2hP4mWMUYqkfuQx&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8b15b0828b5b67b8-SJC&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
+                        at shouldFailIssuance (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:72:14)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:295:7)</pre>
+                      </details>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected issuer to error when VC has an undefined type.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:16 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected issuer to error when VC has an undefined type.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:16 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
+                        at shouldFailIssuance (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:72:14)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:295:7)</pre>
+                      </details>
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-integrity/#introduction:~:text&#x3D;The%20value%20of%20the%20cryptosuite%20property%20MUST%20be%20a%20string%20that%20identifies%20the%20cryptographic%20suite.%20If%20the%20processing%20environment%20supports%20subtypes%20of%20string%2C%20the%20type%20of%20the%20cryptosuite%20value%20MUST%20be%20the%20https%3A//w3id.org/security%23cryptosuiteString%20subtype%20of%20string.">The value of the cryptosuite property MUST be a string that identifies the cryptographic suite.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
@@ -916,7 +1020,7 @@
                       <details class="err hide">
                         <summary>Expected at least one proof with cryptosuite eddsa-rdfc-2022: expected false to equal true:</summary>
                         <pre>AssertionError: Expected at least one proof with cryptosuite eddsa-rdfc-2022: expected false to equal true
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:290:35)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:314:35)
                         at process.processImmediate (node:internal/timers:483:21)</pre>
                       </details>
                     </div>
@@ -957,10 +1061,15 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected https://w3id.org/security#cryptosuite with @value eddsa-rdfc-2022 &amp; @type https://w3id.org/security#cryptosuiteString: expected false to equal true:</summary>
-                        <pre>AssertionError: Expected https://w3id.org/security#cryptosuite with @value eddsa-rdfc-2022 &amp; @type https://w3id.org/security#cryptosuiteString: expected false to equal true
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:321:32)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        <summary>Dereferencing a URL did not result in a valid JSON-LD object. Possible causes are an inaccessible URL perhaps due to a same-origin policy (ensure the server uses CORS if you are using client-side JavaScript), too many redirects, a non-JSON response, or more than one HTTP Link Header was provided for a remote context.:</summary>
+                        <pre>jsonld.InvalidUrl: Dereferencing a URL did not result in a valid JSON-LD object. Possible causes are an inaccessible URL perhaps due to a same-origin policy (ensure the server uses CORS if you are using client-side JavaScript), too many redirects, a non-JSON response, or more than one HTTP Link Header was provided for a remote context.
+                        at ContextResolver._fetchContext (node_modules/jsonld/lib/ContextResolver.js:173:13)
+                        at async ContextResolver._resolveRemoteContext (node_modules/jsonld/lib/ContextResolver.js:117:34)
+                        at async ContextResolver.resolve (node_modules/jsonld/lib/ContextResolver.js:50:22)
+                        at async api.process (node_modules/jsonld/lib/context.js:87:20)
+                        at async api.expand (node_modules/jsonld/lib/expand.js:214:17)
+                        at async jsonld.expand (node_modules/jsonld/lib/jsonld.js:322:18)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:333:28)</pre>
                       </details>
                     </div>
                   </td>
@@ -980,10 +1089,10 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected issuer apicatalog.com to perform context injection on a VC with an &quot;@context&quot; property: expected HTTPError: Request failed with status cod… { …(6) } to not exist:</summary>
-                        <pre>AssertionError: Expected issuer apicatalog.com to perform context injection on a VC with an &quot;@context&quot; property: expected HTTPError: Request failed with status cod… { …(6) } to not exist
+                        <summary>Expected issuer apicatalog.com to perform context injection on a VC with out an &quot;@context&quot; property: expected HTTPError: Request failed with status cod… { …(6) } to not exist:</summary>
+                        <pre>AssertionError: Expected issuer apicatalog.com to perform context injection on a VC with out an &quot;@context&quot; property: expected HTTPError: Request failed with status cod… { …(6) } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:457:18)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:484:18)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
                       </details>
                     </div>
@@ -992,10 +1101,10 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected issuer Digital Bazaar to perform context injection on a VC with an &quot;@context&quot; property: expected HTTPError: A validation error occured in … { …(6) } to not exist:</summary>
-                        <pre>AssertionError: Expected issuer Digital Bazaar to perform context injection on a VC with an &quot;@context&quot; property: expected HTTPError: A validation error occured in … { …(6) } to not exist
+                        <summary>Expected issuer Digital Bazaar to perform context injection on a VC with out an &quot;@context&quot; property: expected HTTPError: A validation error occured in … { …(6) } to not exist:</summary>
+                        <pre>AssertionError: Expected issuer Digital Bazaar to perform context injection on a VC with out an &quot;@context&quot; property: expected HTTPError: A validation error occured in … { …(6) } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:457:18)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:484:18)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
                       </details>
                     </div>
@@ -1004,10 +1113,10 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected issuer Open Security and Identity to perform context injection on a VC with an &quot;@context&quot; property: expected HTTPError: Request failed with status cod… { …(6) } to not exist:</summary>
-                        <pre>AssertionError: Expected issuer Open Security and Identity to perform context injection on a VC with an &quot;@context&quot; property: expected HTTPError: Request failed with status cod… { …(6) } to not exist
+                        <summary>Expected issuer Open Security and Identity to perform context injection on a VC with out an &quot;@context&quot; property: expected HTTPError: Request failed with status cod… { …(6) } to not exist:</summary>
+                        <pre>AssertionError: Expected issuer Open Security and Identity to perform context injection on a VC with out an &quot;@context&quot; property: expected HTTPError: Request failed with status cod… { …(6) } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:457:18)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:484:18)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
                       </details>
                     </div>
@@ -1016,10 +1125,10 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected issuer SpruceID to perform context injection on a VC with an &quot;@context&quot; property: expected HTTPError: Request failed with status cod… { …(5) } to not exist:</summary>
-                        <pre>AssertionError: Expected issuer SpruceID to perform context injection on a VC with an &quot;@context&quot; property: expected HTTPError: Request failed with status cod… { …(5) } to not exist
+                        <summary>Expected issuer SpruceID to perform context injection on a VC with out an &quot;@context&quot; property: expected HTTPError: Request failed with status cod… { …(5) } to not exist:</summary>
+                        <pre>AssertionError: Expected issuer SpruceID to perform context injection on a VC with out an &quot;@context&quot; property: expected HTTPError: Request failed with status cod… { …(5) } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:457:18)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:484:18)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
                       </details>
                     </div>
@@ -1028,10 +1137,10 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected issuer Trinsic to perform context injection on a VC with an &quot;@context&quot; property: expected HTTPError: Request failed with status cod… { …(6) } to not exist:</summary>
-                        <pre>AssertionError: Expected issuer Trinsic to perform context injection on a VC with an &quot;@context&quot; property: expected HTTPError: Request failed with status cod… { …(6) } to not exist
+                        <summary>Expected issuer Trinsic to perform context injection on a VC with out an &quot;@context&quot; property: expected HTTPError: Request failed with status cod… { …(6) } to not exist:</summary>
+                        <pre>AssertionError: Expected issuer Trinsic to perform context injection on a VC with out an &quot;@context&quot; property: expected HTTPError: Request failed with status cod… { …(6) } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:457:18)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:484:18)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
                       </details>
                     </div>
@@ -1727,12 +1836,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;3b1-ZX1cCDKejEcEq4W8lyyJlGZcCy8&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;18b206b18d9db5296cdb70d88c36a3b9&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:30 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;945&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
-                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;3b1-ZX1cCDKejEcEq4W8lyyJlGZcCy8&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;18b206b18d9db5296cdb70d88c36a3b9&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:30 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;945&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;3b1-e+61aPmNPgpfJYQ0mIYgiMoux4w&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;a3f409e684ebc3e19c2b4db91ead5bb0&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:31 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;945&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;3b1-e+61aPmNPgpfJYQ0mIYgiMoux4w&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;a3f409e684ebc3e19c2b4db91ead5bb0&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:31 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;945&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:36:14)
+                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:50:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:90:7)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:92:7)</pre>
                       </details>
                     </div>
                   </td>
@@ -1755,12 +1864,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:34 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;content-length&#x27;: &#x27;0&#x27;, connection: &#x27;keep-alive&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
-                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:34 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;content-length&#x27;: &#x27;0&#x27;, connection: &#x27;keep-alive&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:44 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;content-length&#x27;: &#x27;0&#x27;, connection: &#x27;keep-alive&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:44 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;content-length&#x27;: &#x27;0&#x27;, connection: &#x27;keep-alive&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:36:14)
+                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:50:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:90:7)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:92:7)</pre>
                       </details>
                     </div>
                   </td>
@@ -1768,7 +1877,7 @@
               <tr>
                 <!--This is the name of the test-->
                 <td class="subtest">
-                    If the &quot;proof.proofValue&quot; field is missing, an error MUST be raised.
+                    <a href="https://w3c.github.io/vc-data-integrity/#proofs:~:text&#x3D;The%20proofValue%20property%20MUST%20be%20used%2C%20as%20specified%20in%202.1%20Proofs.">The proofValue property MUST be used, as specified in 2.1 Proofs.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1805,7 +1914,7 @@
               <tr>
                 <!--This is the name of the test-->
                 <td class="subtest">
-                    If the &quot;proof.proofValue&quot; field is invalid, an error MUST be raised.
+                    <a href="https://w3c.github.io/vc-data-integrity/#proofs:~:text&#x3D;string%20value%20that%20contains%20the%20base%2Dencoded%20binary%20data%20necessary%20to%20verify%20the%20digital%20proof">(&quot;proof.proofValue&quot;) A string value that contains the base-encoded binary data necessary to verify the digital proof using the verificationMethod specified. The contents of the value MUST be expressed with a header and encoding as described in Section 2.4 Multibase of the Controller Documents 1.0 specification.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1836,6 +1945,67 @@
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">
+                    <a href="https://w3c.github.io/vc-data-integrity/#securing-data-losslessly:~:text&#x3D;Implementations%20that%20use%20JSON%2DLD%20processing%2C%20such%20as%20RDF%20Dataset%20Canonicalization%20%5BRDF%2DCANON%5D%2C%20MUST%20throw%20an%20error%2C%20which%20SHOULD%20be%20DATA_LOSS_DETECTION_ERROR%2C%20when%20data%20is%20dropped%20by%20a%20JSON%2DLD%20processor%2C%20such%20as%20when%20an%20undefined%20term%20is%20detected%20in%20an%20input%20document.">Implementations that use JSON-LD processing, such as RDF Dataset Canonicalization [RDF-CANON], MUST throw an error, which SHOULD be DATA_LOSS_DETECTION_ERROR, when data is dropped by a JSON-LD processor, such as when an undefined term is detected in an input document.</a>
+                </td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected no result from verifier.Should fail to verify VC if an undefined term is added after issuance.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, vary: &#x27;Accept-Encoding&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;061aa489def749ce5c9dfda0dfad35df;o&#x3D;1&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:21 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;cache-control&#x27;: &#x27;private&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected no result from verifier.Should fail to verify VC if an undefined term is added after issuance.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, vary: &#x27;Accept-Encoding&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;061aa489def749ce5c9dfda0dfad35df;o&#x3D;1&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:21 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;cache-control&#x27;: &#x27;private&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
+                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:50:14)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:127:7)</pre>
+                      </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected no result from verifier.Should fail to verify VC when data is dropped by JSON-LD: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;667&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:36 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected no result from verifier.Should fail to verify VC when data is dropped by JSON-LD: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;667&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:36 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
+                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:50:14)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:120:7)</pre>
+                      </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected no result from verifier.Should fail to verify VC if an undefined term is added after issuance.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:44 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;content-length&#x27;: &#x27;0&#x27;, connection: &#x27;keep-alive&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected no result from verifier.Should fail to verify VC if an undefined term is added after issuance.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:44 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;content-length&#x27;: &#x27;0&#x27;, connection: &#x27;keep-alive&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
+                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:50:14)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:127:7)</pre>
+                      </details>
                     </div>
                   </td>
               </tr>
@@ -1854,12 +2024,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;3a8-mOQWaO6dvCqdK4vKycIyfppfGTc&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;501cd5ebdc07c7f0e7854047efe9d4b6&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:31 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;936&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
-                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;3a8-mOQWaO6dvCqdK4vKycIyfppfGTc&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;501cd5ebdc07c7f0e7854047efe9d4b6&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:31 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;936&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;3a8-mOQWaO6dvCqdK4vKycIyfppfGTc&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;cbc5cec95bcd98745a7c4db07464e13e&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:33 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;936&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;3a8-mOQWaO6dvCqdK4vKycIyfppfGTc&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;cbc5cec95bcd98745a7c4db07464e13e&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:33 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;936&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:36:14)
+                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:50:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:121:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:150:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -1899,12 +2069,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;3b0-m1IYznrNflSCvTu+rXmX+Z0ioCo&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;2b291785e693c7a1c56ecd0b39177af6&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:31 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;944&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
-                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;3b0-m1IYznrNflSCvTu+rXmX+Z0ioCo&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;2b291785e693c7a1c56ecd0b39177af6&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:31 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;944&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;3b0-4nD7uFs3FxL4cOTCoqAFz4PeH8A&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;c5f2ad0d52c2c04152ae531dc4f94216&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:33 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;944&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;3b0-4nD7uFs3FxL4cOTCoqAFz4PeH8A&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;c5f2ad0d52c2c04152ae531dc4f94216&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:33 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;944&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:36:14)
+                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:50:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:129:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:158:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -1912,12 +2082,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;465&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:32 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
-                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;465&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:32 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;465&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:36 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;465&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:36 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:36:14)
+                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:50:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:129:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:158:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -1947,12 +2117,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, vary: &#x27;Accept-Encoding&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;df96e4f63857baa378a1ff64a631b32a&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:26 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;cache-control&#x27;: &#x27;private&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
-                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, vary: &#x27;Accept-Encoding&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;df96e4f63857baa378a1ff64a631b32a&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:26 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;cache-control&#x27;: &#x27;private&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, vary: &#x27;Accept-Encoding&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;b464e2ea70cee2ab2ddf763a49ef9abc&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:22 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;cache-control&#x27;: &#x27;private&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, vary: &#x27;Accept-Encoding&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;b464e2ea70cee2ab2ddf763a49ef9abc&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:22 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;cache-control&#x27;: &#x27;private&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:36:14)
+                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:50:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:134:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:163:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -1960,12 +2130,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;3d1-QsSKGfN5Df9MwW4BfgFVg/JCNFg&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;858da4b3dd49ba55d2fa3bb94844287a&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:31 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;977&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
-                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;3d1-QsSKGfN5Df9MwW4BfgFVg/JCNFg&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;858da4b3dd49ba55d2fa3bb94844287a&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:31 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;977&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;3d0-BmIkl+pY33vNaataLSCcaaq6III&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;048111e4be3b0894048b908ef3a1fc60&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:33 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;976&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;cache-control&#x27;: &#x27;no-cache, no-store, must-revalidate&#x27;, pragma: &#x27;no-cache&#x27;, expires: &#x27;0&#x27;, vary: &#x27;X-HTTP-Method-Override, Accept-Encoding&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, etag: &#x27;W/&quot;3d0-BmIkl+pY33vNaataLSCcaaq6III&quot;&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;048111e4be3b0894048b908ef3a1fc60&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:33 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;976&#x27;, via: &#x27;1.1 google&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:36:14)
+                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:50:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:134:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:163:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -1973,50 +2143,13 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;465&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:32 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
-                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;465&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:32 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;465&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:36 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;465&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:36 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:36:14)
+                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:50:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:134:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:163:9)</pre>
                       </details>
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-              </tr>
-              <tr>
-                <!--This is the name of the test-->
-                <td class="subtest">
-                    If the &quot;proof.proofValue&quot; field is not multibase-encoded, an error MUST be raised.
-                </td>
-                <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -2107,12 +2240,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:35 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;content-length&#x27;: &#x27;0&#x27;, connection: &#x27;keep-alive&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
-                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:35 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;content-length&#x27;: &#x27;0&#x27;, connection: &#x27;keep-alive&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:45 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;content-length&#x27;: &#x27;0&#x27;, connection: &#x27;keep-alive&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:45 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;content-length&#x27;: &#x27;0&#x27;, connection: &#x27;keep-alive&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:36:14)
+                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:50:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:162:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:184:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -2152,12 +2285,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:35 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;content-length&#x27;: &#x27;0&#x27;, connection: &#x27;keep-alive&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
-                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:35 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;content-length&#x27;: &#x27;0&#x27;, connection: &#x27;keep-alive&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:45 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;content-length&#x27;: &#x27;0&#x27;, connection: &#x27;keep-alive&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:45 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;content-length&#x27;: &#x27;0&#x27;, connection: &#x27;keep-alive&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:36:14)
+                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:50:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:173:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:195:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -2260,8 +2393,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;633&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:36 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
-                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;633&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:36 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;633&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:48 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;633&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:48 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/assertions.js:49:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -2305,8 +2438,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;633&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:36 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
-                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;633&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:36 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;633&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:48 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;633&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:48 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/assertions.js:49:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -2858,6 +2991,23 @@
               <tr>
                 <!--This is the name of the test-->
                 <td class="subtest">
+                    <a href="https://w3c.github.io/vc-data-integrity/#proofs:~:text&#x3D;The%20proofValue%20property%20MUST%20be%20used%2C%20as%20specified%20in%202.1%20Proofs.">The proofValue property MUST be used, as specified in 2.1 Proofs.</a>
+                </td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-integrity/#introduction:~:text&#x3D;If%20the%20proof%20type%20is%20DataIntegrityProof%2C%20cryptosuite%20MUST%20be%20specified%3B%20otherwise%2C%20cryptosuite%20MAY%20be%20specified.%20If%20specified%2C%20its%20value%20MUST%20be%20a%20string.">If the proof type is DataIntegrityProof, cryptosuite MUST be specified; otherwise, cryptosuite MAY be specified. If specified, its value MUST be a string.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
@@ -2943,24 +3093,7 @@
               <tr>
                 <!--This is the name of the test-->
                 <td class="subtest">
-                    <a href="https://w3c.github.io/vc-data-integrity/#proofs:~:text&#x3D;The%20proofValue%20property%20MUST%20be%20used">The proofValue property MUST be used, as specified in 2.1 Proofs.</a>
-                </td>
-                <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-              </tr>
-              <tr>
-                <!--This is the name of the test-->
-                <td class="subtest">
-                    The contents of the value (&quot;proof.proofValue&quot;) MUST be expressed with a header and encoding as described in Section 2.4 Multibase.
+                    <a href="https://w3c.github.io/vc-data-integrity/#proofs:~:text&#x3D;string%20value%20that%20contains%20the%20base%2Dencoded%20binary%20data%20necessary%20to%20verify%20the%20digital%20proof">(&quot;proof.proofValue&quot;) A string value that contains the base-encoded binary data necessary to verify the digital proof using the verificationMethod specified. The contents of the value MUST be expressed with a header and encoding as described in Section 2.4 Multibase of the Controller Documents 1.0 specification.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -3062,6 +3195,39 @@
               <tr>
                 <!--This is the name of the test-->
                 <td class="subtest">
+                    <a href="https://w3c.github.io/vc-data-integrity/#securing-data-losslessly:~:text&#x3D;Implementations%20that%20use%20JSON%2DLD%20processing%2C%20such%20as%20RDF%20Dataset%20Canonicalization%20%5BRDF%2DCANON%5D%2C%20MUST%20throw%20an%20error%2C%20which%20SHOULD%20be%20DATA_LOSS_DETECTION_ERROR%2C%20when%20data%20is%20dropped%20by%20a%20JSON%2DLD%20processor%2C%20such%20as%20when%20an%20undefined%20term%20is%20detected%20in%20an%20input%20document.">Implementations that use JSON-LD processing, such as RDF Dataset Canonicalization [RDF-CANON], MUST throw an error, which SHOULD be DATA_LOSS_DETECTION_ERROR, when data is dropped by a JSON-LD processor, such as when an undefined term is detected in an input document.</a>
+                </td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected issuer to error when VC has an undefined type.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;823&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:55 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected issuer to error when VC has an undefined type.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;823&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:55 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
+                        at shouldFailIssuance (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:72:14)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:295:7)</pre>
+                      </details>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected issuer to error when VC has an undefined type.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:55 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected issuer to error when VC has an undefined type.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:55 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
+                        at shouldFailIssuance (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:72:14)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:295:7)</pre>
+                      </details>
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">
                     If an @context property is not provided in a document that is being secured or verified, or the Data Integrity terms used in the document are not mapped by existing values in the @context property, implementations MUST inject or add an @context property with a value of https://w3id.org/security/data-integrity/v2.
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
@@ -3069,10 +3235,10 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected issuer Open Security and Identity to perform context injection on a VC with an &quot;@context&quot; property: expected HTTPError: Request failed with status cod… { …(6) } to not exist:</summary>
-                        <pre>AssertionError: Expected issuer Open Security and Identity to perform context injection on a VC with an &quot;@context&quot; property: expected HTTPError: Request failed with status cod… { …(6) } to not exist
+                        <summary>Expected issuer Open Security and Identity to perform context injection on a VC with out an &quot;@context&quot; property: expected HTTPError: Request failed with status cod… { …(6) } to not exist:</summary>
+                        <pre>AssertionError: Expected issuer Open Security and Identity to perform context injection on a VC with out an &quot;@context&quot; property: expected HTTPError: Request failed with status cod… { …(6) } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:457:18)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/create.js:484:18)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
                       </details>
                     </div>
@@ -3278,8 +3444,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;633&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:42 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
-                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;633&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:42 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;633&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:56 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;633&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:56 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/assertions.js:49:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -3303,8 +3469,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;633&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:42 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
-                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;633&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 04 Aug 2024 05:05:42 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;633&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:57 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist:</summary>
+                        <pre>AssertionError: Expected no result from verifier.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-length&#x27;: &#x27;633&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset&#x3D;utf-8&#x27;, date: &#x27;Sun, 11 Aug 2024 05:05:57 GMT&#x27;, server: &#x27;Python/3.9 aiohttp/3.9.5&#x27;, Authorization: &#x27;** SANITIZED TO PREVENT EXPOSING OF SECRETS ***&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/assertions.js:49:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
