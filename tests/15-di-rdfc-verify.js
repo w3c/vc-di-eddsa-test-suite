@@ -25,9 +25,13 @@ const testDataOptions = {
   cryptosuite: eddsaRdfc2022CryptoSuite,
   key
 };
+const optionalTests = {
+  proofChain: true
+};
 
 checkDataIntegrityProofVerifyErrors({
   implemented: match,
   testDescription: 'Data Integrity (eddsa-rdfc-2022 verifiers)',
-  testDataOptions
+  testDataOptions,
+  optionalTests
 });
