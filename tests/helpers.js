@@ -5,6 +5,8 @@
 import * as didKey from '@digitalbazaar/did-method-key';
 import * as Ed25519Multikey from '@digitalbazaar/ed25519-multikey';
 import {IdDecoder, IdEncoder} from 'bnid';
+import {documentLoader} from './documentLoader.js';
+import {isUtf8} from 'node:buffer';
 import {klona} from 'klona';
 import {readFileSync} from 'fs';
 import {v4 as uuidv4} from 'uuid';
@@ -22,6 +24,35 @@ const decoder = new IdDecoder({
   encoding: 'base58',
   multibase: true
 });
+
+export function setupMatrix(match) {
+  // this will tell the report
+  // to make an interop matrix with this suite
+  this.matrix = true;
+  this.report = true;
+  this.implemented = [...match.keys()];
+  this.rowLabel = 'Test Name';
+  this.columnLabel = 'Implementer';
+}
+
+export async function getProofs(issuedVc) {
+  const proofs = Array.isArray(issuedVc?.proof) ?
+    issuedVc.proof : [issuedVc?.proof];
+  return proofs;
+}
+
+export async function getVerificationMethodDocuments(proofs) {
+  const verificationMethodDocuments = [];
+  const verificationMethods = proofs.map(
+    proof => proof.verificationMethod);
+  for(const verificationMethod of verificationMethods) {
+    const verificationMethodDocument = await documentLoader({
+      url: verificationMethod
+    });
+    verificationMethodDocuments.push(verificationMethodDocument);
+  }
+  return verificationMethodDocuments;
+}
 
 export const createInitialVc = async ({issuer, vc}) => {
   const {settings: {id: issuerId, options}} = issuer;
@@ -62,3 +93,17 @@ const bs58 =
   /^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]+$/;
 // assert something is entirely bs58 encoded
 export const shouldBeBs58 = s => bs58.test(s);
+
+export function isValidUtf8(string) {
+  const textEncoder = new TextEncoder();
+  const uint8Array = textEncoder.encode(string);
+  if(!isUtf8(uint8Array)) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+export function isValidDatetime(dateString) {
+  return !isNaN(Date.parse(dateString));
+}
