@@ -33,7 +33,7 @@ describe('Data Model- Verification Methods (Multikey)', function() {
     const credentials = await generateTestData();
     validVc = credentials.clone('validVc');
   });
-  for(const [columnId, {endpoints, implementation}] of match) {
+  for(const [columnId, {endpoints}] of match) {
     describe(columnId, function() {
       const [issuer] = endpoints;
       let issuedVc;
@@ -106,7 +106,7 @@ describe('Data Model- Proof Representations (DataIntegrityProof)', function() {
     const credentials = await generateTestData();
     validVc = credentials.clone('validVc');
   });
-  for(const [columnId, {endpoints, implementation}] of match) {
+  for(const [columnId, {endpoints}] of match) {
     describe(columnId, function() {
       const [issuer] = endpoints;
       let issuedVc;

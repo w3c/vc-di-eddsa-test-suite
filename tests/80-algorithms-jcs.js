@@ -31,12 +31,9 @@ describe('Algorithms - Transformation (eddsa-jcs-2022)', function() {
     const credentials = await generateTestData();
     validVc = credentials.clone('validVc');
   });
-  for(const [columnId, {endpoints, implementation}] of match) {
+  for(const [columnId, {endpoints}] of match) {
     describe(columnId, function() {
       const [issuer] = endpoints;
-      const verifier = implementation.verifiers.find(
-        // FIXME use Set's isSubsetOf in the future
-        v => tags.every(tag => v.tags.has(tag)));
       let issuedVc;
       let proofs;
       let eddsa2022Proofs;
@@ -107,12 +104,9 @@ describe('Algorithms - Proof Configuration (eddsa-jcs-2022)', function() {
     const credentials = await generateTestData();
     validVc = credentials.clone('validVc');
   });
-  for(const [columnId, {endpoints, implementation}] of match) {
+  for(const [columnId, {endpoints}] of match) {
     describe(columnId, function() {
       const [issuer] = endpoints;
-      const verifier = implementation.verifiers.find(
-        // FIXME use Set's isSubsetOf in the future
-        v => tags.every(tag => v.tags.has(tag)));
       let issuedVc;
       let proofs;
       let eddsa2022Proofs;
@@ -181,12 +175,9 @@ describe('Algorithms - Proof Serialization (eddsa-jcs-2022)', function() {
     const credentials = await generateTestData();
     validVc = credentials.clone('validVc');
   });
-  for(const [columnId, {endpoints, implementation}] of match) {
+  for(const [columnId, {endpoints}] of match) {
     describe(columnId, function() {
       const [issuer] = endpoints;
-      const verifier = implementation.verifiers.find(
-        // FIXME use Set's isSubsetOf in the future
-        v => tags.every(tag => v.tags.has(tag)));
       let issuedVc;
       let proofs;
       let eddsa2022Proofs;
