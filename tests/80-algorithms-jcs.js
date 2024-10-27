@@ -9,6 +9,7 @@ import {
   isValidDatetime,
   isValidUtf8,
   setupMatrix,
+  setupRow
 } from './helpers.js';
 import chai from 'chai';
 import {endpoints} from 'vc-test-suite-implementations';
@@ -51,6 +52,7 @@ describe('Algorithms - Transformation (eddsa-jcs-2022)', function() {
         eddsa2022Proofs.length.should.be.gte(1, 'Expected at least one ' +
                     'eddsa-jcs-2022 cryptosuite.');
       });
+      beforeEach(setupRow);
       it('The transformation options MUST contain a type identifier ' +
         'for the cryptographic suite (type) and a cryptosuite identifier ' +
         '(cryptosuite).',
@@ -123,6 +125,7 @@ describe('Algorithms - Proof Configuration (eddsa-jcs-2022)', function() {
         eddsa2022Proofs.length.should.be.gte(1, 'Expected at least one ' +
                     'eddsa-jcs-2022 cryptosuite.');
       });
+      beforeEach(setupRow);
       it('The proof options MUST contain a type identifier for the ' +
         'cryptographic suite (type) and MUST contain a cryptosuite ' +
         'identifier (cryptosuite).',
@@ -194,6 +197,7 @@ describe('Algorithms - Proof Serialization (eddsa-jcs-2022)', function() {
         eddsa2022Proofs.length.should.be.gte(1,
           'Expected at least one eddsa-jcs-2022 cryptosuite.');
       });
+      beforeEach(setupRow);
       it('The proof options MUST contain a type identifier ' +
         'for the cryptographic suite (type) and MAY contain a ' +
         'cryptosuite identifier (cryptosuite).',

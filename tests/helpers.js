@@ -35,6 +35,14 @@ export function setupMatrix(match) {
   this.columnLabel = 'Implementer';
 }
 
+export function setupRow() {
+  // append test meta data to the it/test this.
+  this.currentTest.cell = {
+    columnId: this.currentTest.parent.title,
+    rowId: this.currentTest.title
+  };
+}
+
 export async function getProofs(issuedVc) {
   const proofs = Array.isArray(issuedVc?.proof) ?
     issuedVc.proof : [issuedVc?.proof];
