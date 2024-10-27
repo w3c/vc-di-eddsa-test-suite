@@ -9,6 +9,7 @@ import {
   getProofs,
   getVerificationMethodDocuments,
   setupMatrix,
+  setupRow,
   shouldBeBs58
 } from './helpers.js';
 import chai from 'chai';
@@ -45,6 +46,7 @@ describe('Data Model- Verification Methods (Multikey)', function() {
         verificationMethodDocuments =
           await getVerificationMethodDocuments(proofs);
       });
+      beforeEach(setupRow);
       it('The publicKeyMultibase value of the verification method MUST ' +
         'start with the base-58-btc prefix (z), as defined in the ' +
         'Multibase section of Controller Documents 1.0.',
@@ -116,7 +118,7 @@ describe('Data Model- Proof Representations (DataIntegrityProof)', function() {
         issuedVc = await createInitialVc({issuer, vc: validVc});
         proofs = await getProofs(issuedVc);
       });
-
+      beforeEach(setupRow);
       beforeEach(async function() {
         should.exist(issuedVc,
           'Expected issuer to have issued a credential.');
