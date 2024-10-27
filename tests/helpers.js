@@ -31,7 +31,9 @@ export const createInitialVc = async ({issuer, vc}) => {
   const body = {credential, options};
   const {data, error} = await issuer.post({json: body});
   if(error) {
-    throw error;
+    console.warn(
+      `Issuance failed for ${issuer.settings.endpoint}`,
+      {error, body});
   }
   return data;
 };
