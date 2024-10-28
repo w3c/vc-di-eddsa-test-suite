@@ -40,7 +40,7 @@ describe('Algorithms - Transformation (eddsa-rdfc-2022)', function() {
       let eddsa2022Proofs;
       before(async function() {
         issuedVc = await createInitialVc({issuer, vc: validVc});
-        proofs = await getProofs(issuedVc);
+        proofs = getProofs(issuedVc);
       });
 
       beforeEach(async function() {
@@ -116,7 +116,7 @@ describe('Algorithms - Proof Configuration (eddsa-rdfc-2022)', function() {
       let eddsa2022Proofs;
       before(async function() {
         issuedVc = await createInitialVc({issuer, vc: validVc});
-        proofs = await getProofs(issuedVc);
+        proofs = getProofs(issuedVc);
       });
 
       beforeEach(async function() {
@@ -191,7 +191,7 @@ describe('Algorithms - Proof Serialization (eddsa-rdfc-2022)', function() {
       let eddsa2022Proofs;
       before(async function() {
         issuedVc = await createInitialVc({issuer, vc: validVc});
-        proofs = await getProofs(issuedVc);
+        proofs = getProofs(issuedVc);
       });
 
       beforeEach(async function() {
