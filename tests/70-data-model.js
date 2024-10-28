@@ -113,26 +113,28 @@ describe('Data Model- Proof Representations (DataIntegrityProof)', function() {
       const [issuer] = endpoints;
       let issuedVc;
       let proofs;
-      let eddsa2022Proofs;
+      let eddsa2022Proofs = [];
       before(async function() {
         issuedVc = await createInitialVc({issuer, vc: validVc});
         proofs = await getProofs(issuedVc);
+        if(proofs?.length) {
+          eddsa2022Proofs = proofs.filter(
+            proof => cryptosuites.includes(proof?.cryptosuite));
+        }
       });
       beforeEach(setupRow);
-      beforeEach(async function() {
+      const commonAssert = () => {
         should.exist(issuedVc,
           'Expected issuer to have issued a credential.');
         should.exist(proofs,
           'Expected credential to have a proof.');
-        eddsa2022Proofs = proofs.filter(
-          proof => cryptosuites.includes(proof?.cryptosuite));
-
         eddsa2022Proofs.length.should.be.gte(1,
           'Expected eddsa-jcs-2022 or eddsa-rdfc-2022 cryptosuite.');
-      });
+      };
       it('The type property MUST be DataIntegrityProof.',
         async function() {
-          this.test.link = '';
+          this.test.link = 'https://w3c.github.io/vc-di-eddsa/#:~:text=The%20type%20property%20MUST%20be%20DataIntegrityProof';
+          commonAssert();
           for(const proof of eddsa2022Proofs) {
             should.exist(proof.type,
               'Expected a type identifier on the proof.');
@@ -143,7 +145,8 @@ describe('Data Model- Proof Representations (DataIntegrityProof)', function() {
       it('The cryptosuite property of the proof MUST be ' +
         'eddsa-rdfc-2022 or eddsa-jcs-2022.',
       async function() {
-        this.test.link = '';
+        this.test.link = 'https://w3c.github.io/vc-di-eddsa/#:~:text=The%20cryptosuite%20property%20of%20the%20proof%20MUST%20be%20eddsa%2Drdfc%2D2022%20or%20eddsa%2Djcs%2D2022';
+        commonAssert();
         for(const proof of eddsa2022Proofs) {
           should.exist(proof.cryptosuite,
             'Expected a cryptosuite identifier on the proof.');
@@ -156,7 +159,8 @@ describe('Data Model- Proof Representations (DataIntegrityProof)', function() {
         'base-58-btc header and alphabet as described in the ' +
         'Multibase section of Controller Documents 1.0.',
       async function() {
-        this.test.link = '';
+        this.test.link = 'https://w3c.github.io/vc-di-eddsa/#:~:text=The%20proofValue%20property%20of%20the%20proof%20MUST%20be%20a%20detached%20EdDSA%20signature%20produced%20according%20to%20%5BRFC8032%5D%2C%20encoded%20using%20the%20base%2D58%2Dbtc%20header%20and%20alphabet%20as%20described%20in%20the%20Multibase%20section%20of%20Controller%20Documents%201.0';
+        commonAssert();
         for(const proof of eddsa2022Proofs) {
           should.exist(proof.proofValue,
             'Expected a proof value on the proof.');
