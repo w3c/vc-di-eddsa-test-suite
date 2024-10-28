@@ -18,7 +18,7 @@ const should = chai.should();
 
 export function verificationMethods({suiteName, match}) {
   return describe(
-    `${suiteName} - Data Model- Verification Methods (Multikey)`, function() {
+    `${suiteName} - Data Model - Verification Methods (Multikey)`, function() {
       setupMatrix.call(this, match);
       let validVc;
       before(async function() {
@@ -33,7 +33,7 @@ export function verificationMethods({suiteName, match}) {
           let verificationMethodDocuments = [];
           before(async function() {
             issuedVc = await createInitialVc({issuer, vc: validVc});
-            proofs = await getProofs(issuedVc);
+            proofs = getProofs(issuedVc);
             verificationMethodDocuments =
               await getVerificationMethodDocuments(proofs);
           });
@@ -97,7 +97,7 @@ export function verificationMethods({suiteName, match}) {
 
 export function diProofs({suiteName, match, cryptosuites}) {
   return describe(
-    `${suiteName} - Data Model- Proof Representations (DataIntegrityProof)`,
+    `${suiteName} - Data Model - Proof Representations (DataIntegrityProof)`,
     function() {
       setupMatrix.call(this, match);
       let validVc;
@@ -113,7 +113,7 @@ export function diProofs({suiteName, match, cryptosuites}) {
           let eddsa2022Proofs = [];
           before(async function() {
             issuedVc = await createInitialVc({issuer, vc: validVc});
-            proofs = await getProofs(issuedVc);
+            proofs = getProofs(issuedVc);
             if(proofs?.length) {
               eddsa2022Proofs = proofs.filter(
                 proof => cryptosuites.includes(proof?.cryptosuite));

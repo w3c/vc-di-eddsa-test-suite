@@ -43,7 +43,7 @@ export function setupRow() {
   };
 }
 
-export async function getProofs(issuedVc) {
+export function getProofs(issuedVc) {
   const proofs = Array.isArray(issuedVc?.proof) ?
     issuedVc.proof : [issuedVc?.proof];
   return proofs;
