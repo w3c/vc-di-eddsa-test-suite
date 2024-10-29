@@ -37,27 +37,29 @@ describe('Algorithms - Transformation (eddsa-jcs-2022)', function() {
       const [issuer] = endpoints;
       let issuedVc;
       let proofs;
-      let eddsa2022Proofs;
+      let eddsa2022Proofs = [];
       before(async function() {
         issuedVc = await createInitialVc({issuer, vc: validVc});
         proofs = getProofs(issuedVc);
+        if(proofs?.length) {
+          eddsa2022Proofs = proofs.filter(
+            proof => proof?.cryptosuite === cryptosuite);
+        }
       });
-
-      beforeEach(async function() {
+      beforeEach(setupRow);
+      const assertBefore = () => {
         should.exist(issuedVc, 'Expected issuer to have issued a ' +
                     'credential.');
         should.exist(proofs, 'Expected credential to have a proof.');
-        eddsa2022Proofs = proofs.filter(
-          proof => proof?.cryptosuite === cryptosuite);
         eddsa2022Proofs.length.should.be.gte(1, 'Expected at least one ' +
                     'eddsa-jcs-2022 cryptosuite.');
-      });
-      beforeEach(setupRow);
+      };
       it('The transformation options MUST contain a type identifier ' +
         'for the cryptographic suite (type) and a cryptosuite identifier ' +
         '(cryptosuite).',
       async function() {
-        this.test.link = '';
+        this.test.link = 'https://w3c.github.io/vc-di-eddsa/#transformation-eddsa-jcs-2022';
+        assertBefore();
         for(const proof of eddsa2022Proofs) {
           should.exist(proof.type, 'Expected a type identifier on ' +
                             'the proof.');
@@ -67,7 +69,8 @@ describe('Algorithms - Transformation (eddsa-jcs-2022)', function() {
       });
       it('Whenever this algorithm encodes strings, it MUST use UTF-8 encoding.',
         async function() {
-          this.test.link = '';
+          this.test.link = 'https://w3c.github.io/vc-di-eddsa/#transformation-eddsa-jcs-2022';
+          assertBefore();
           for(const proof of eddsa2022Proofs) {
             should.exist(proof?.proofValue,
               'Expected proofValue to exist.');
@@ -82,7 +85,8 @@ describe('Algorithms - Transformation (eddsa-jcs-2022)', function() {
         'an error MUST be raised that SHOULD convey an error type of ' +
         'PROOF_VERIFICATION_ERROR.',
       async function() {
-        this.test.link = '';
+        this.test.link = 'https://w3c.github.io/vc-di-eddsa/#transformation-eddsa-jcs-2022:~:text=If%20options.type%20is%20not%20set%20to%20the%20string%20DataIntegrityProof%20and%20options.cryptosuite%20is%20not%20set%20to%20the%20string%20eddsa%2Djcs%2D2022%2C%20an%20error%20MUST%20be%20raised%20that%20SHOULD%20convey%20an%20error%20type%20of%20PROOF_VERIFICATION_ERROR.';
+        assertBefore();
         for(const proof of eddsa2022Proofs) {
           should.exist(proof.type,
             'Expected a type identifier on the proof.');
@@ -110,27 +114,29 @@ describe('Algorithms - Proof Configuration (eddsa-jcs-2022)', function() {
       const [issuer] = endpoints;
       let issuedVc;
       let proofs;
-      let eddsa2022Proofs;
+      let eddsa2022Proofs = [];
       before(async function() {
         issuedVc = await createInitialVc({issuer, vc: validVc});
         proofs = getProofs(issuedVc);
+        if(proofs?.length) {
+          eddsa2022Proofs = proofs.filter(
+            proof => proof?.cryptosuite === cryptosuite);
+        }
       });
-
-      beforeEach(async function() {
+      beforeEach(setupRow);
+      const assertBefore = () => {
         should.exist(issuedVc, 'Expected issuer to have issued a ' +
                     'credential.');
         should.exist(proofs, 'Expected credential to have a proof.');
-        eddsa2022Proofs = proofs.filter(
-          proof => proof?.cryptosuite === cryptosuite);
         eddsa2022Proofs.length.should.be.gte(1, 'Expected at least one ' +
                     'eddsa-jcs-2022 cryptosuite.');
-      });
-      beforeEach(setupRow);
+      };
       it('The proof options MUST contain a type identifier for the ' +
         'cryptographic suite (type) and MUST contain a cryptosuite ' +
         'identifier (cryptosuite).',
       async function() {
-        this.test.link = '';
+        this.test.link = 'https://w3c.github.io/vc-di-eddsa/#proof-configuration-eddsa-jcs-2022';
+        assertBefore();
         for(const proof of eddsa2022Proofs) {
           should.exist(proof.type,
             'Expected a type identifier on the proof.');
@@ -143,7 +149,8 @@ describe('Algorithms - Proof Configuration (eddsa-jcs-2022)', function() {
         'an error MUST be raised that SHOULD convey an error type ' +
         'of PROOF_GENERATION_ERROR.',
       async function() {
-        this.test.link = '';
+        this.test.link = 'https://w3c.github.io/vc-di-eddsa/#proof-configuration-eddsa-jcs-2022:~:text=If%20proofConfig.type%20is%20not%20set%20to%20DataIntegrityProof%20or%20proofConfig.cryptosuite%20is%20not%20set%20to%20eddsa%2Djcs%2D2022%2C%20an%20error%20MUST%20be%20raised';
+        assertBefore();
         for(const proof of eddsa2022Proofs) {
           should.exist(proof.type,
             'Expected a type identifier on the proof.');
@@ -155,14 +162,13 @@ describe('Algorithms - Proof Configuration (eddsa-jcs-2022)', function() {
         'valid [XMLSCHEMA11-2] datetime, an error MUST be raised and ' +
         'SHOULD convey an error type of PROOF_GENERATION_ERROR.',
       async function() {
-        this.test.link = '';
+        this.test.link = 'https://w3c.github.io/vc-di-eddsa/#proof-configuration-eddsa-jcs-2022:~:text=If%20proofConfig.created%20is%20set%20to%20a%20value%20that%20is%20not%20a%20valid%20%5BXMLSCHEMA11%2D2%5D%20datetime%2C%20an%20error%20MUST%20be%20raised';
         for(const proof of eddsa2022Proofs) {
           if(proof?.created) {
             isValidDatetime(proof.created).should.equal(
               true,
               'Expected created value to be a valid datetime string.'
             );
-          } else {
           }
         }
       });
@@ -182,27 +188,30 @@ describe('Algorithms - Proof Serialization (eddsa-jcs-2022)', function() {
       const [issuer] = endpoints;
       let issuedVc;
       let proofs;
-      let eddsa2022Proofs;
+      let eddsa2022Proofs = [];
       before(async function() {
         issuedVc = await createInitialVc({issuer, vc: validVc});
         proofs = getProofs(issuedVc);
+        if(proofs?.length) {
+          eddsa2022Proofs = proofs.filter(
+            proof => proof?.cryptosuite === cryptosuite);
+        }
       });
-      beforeEach(async function() {
+      const assertBefore = () => {
         should.exist(issuedVc,
           'Expected issuer to have issued a credential.');
         should.exist(proofs,
           'Expected credential to have a proof.');
-        eddsa2022Proofs = proofs.filter(
-          proof => proof?.cryptosuite === cryptosuite);
         eddsa2022Proofs.length.should.be.gte(1,
           'Expected at least one eddsa-jcs-2022 cryptosuite.');
-      });
+      };
       beforeEach(setupRow);
       it('The proof options MUST contain a type identifier ' +
         'for the cryptographic suite (type) and MAY contain a ' +
         'cryptosuite identifier (cryptosuite).',
       async function() {
-        this.test.link = '';
+        this.test.link = 'https://w3c.github.io/vc-di-eddsa/#proof-serialization-eddsa-jcs-2022';
+        assertBefore();
         for(const proof of eddsa2022Proofs) {
           should.exist(proof.type,
             'Expected a type identifier on the proof.');
