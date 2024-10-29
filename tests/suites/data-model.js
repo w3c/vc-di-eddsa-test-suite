@@ -94,12 +94,15 @@ export function verificationMethods({suiteName, match}) {
             'Multibase section of Controller Documents 1.0.',
           async function() {
             this.test.link = 'https://w3c.github.io/vc-di-eddsa/#:~:text=The%20secretKeyMultibase%20value%20of%20the%20verification%20method%20MUST%20start%20with%20the%20base%2D58%2Dbtc%20prefix%20(z)%2C%20as%20defined%20in%20the%20Multibase%20section%20of%20Controller%20Documents%201.0.';
-            this.skip('Testing secret keys is out of scope.');
+            this.test.cell.skipMessage = 'Testing secret keys is out of scope.';
+            this.skip();
           });
           it('Any other encoding MUST NOT be allowed. (secretKeyMultibase)',
             async function() {
               this.test.link = 'https://w3c.github.io/vc-di-eddsa/#:~:text=of%20Controller%20Documents%201.0.-,Any%20other%20encoding%20MUST%20NOT%20be%20allowed.,-Developers%20are%20advised%20to%20prevent';
-              this.skip('Testing secret keys is out of scope.');
+              this.test.cell.skipMessage =
+                'Testing secret keys is out of scope.';
+              this.skip();
             });
         });
       }
