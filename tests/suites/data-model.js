@@ -38,11 +38,22 @@ export function verificationMethods({suiteName, match}) {
               await getVerificationMethodDocuments(proofs);
           });
           beforeEach(setupRow);
+          const assertBefore = () => {
+            should.exist(
+              issuedVc,
+              `Issuer ${columnId} failed to issue VC`
+            );
+            should.exist(
+              proofs,
+              `VC issued from ${columnId} has no proofs`
+            );
+          };
           it('The publicKeyMultibase value of the verification method MUST ' +
             'start with the base-58-btc prefix (z), as defined in the ' +
             'Multibase section of Controller Documents 1.0.',
           async function() {
             this.test.link = 'https://w3c.github.io/vc-di-eddsa/#:~:text=The%20publicKeyMultibase%20value%20of%20the%20verification%20method%20MUST%20start%20with%20the%20base%2D58%2Dbtc%20prefix%20(z)%2C%20as%20defined%20in%20the%20Multibase%20section%20of%20Controller%20Documents%201.0.';
+            assertBefore();
             verificationMethodDocuments.should.not.eql([],
               'Expected at least one "verificationMethodDocument".');
             for(const verificationMethodDocument of
@@ -59,25 +70,25 @@ export function verificationMethods({suiteName, match}) {
               );
             }
           });
-          it('Any other encoding MUST NOT be allowed.',
-            async function() {
-              this.test.link = 'https://w3c.github.io/vc-di-eddsa/#:~:text=of%20Controller%20Documents%201.0.-,Any%20other%20encoding%20MUST%20NOT%20be%20allowed.,-Developers%20are%20advised%20to%20not';
-              verificationMethodDocuments.should.not.eql([],
-                'Expected at least one "verificationMethodDocument".');
-              for(const verificationMethodDocument of
-                verificationMethodDocuments) {
-                const multibase = 'z';
-                const {publicKeyMultibase} = verificationMethodDocument;
-                const isMultibaseEncoded =
-                  publicKeyMultibase.startsWith(multibase) &&
-                  shouldBeBs58(publicKeyMultibase);
-                isMultibaseEncoded.should.equal(
-                  true,
-                  'Expected "publicKeyMultibase" value of the verification ' +
-                  'method to be multibase base58-btc encoded value'
-                );
-              }
-            });
+          it('Any other encoding MUST NOT be allowed.', async function() {
+            this.test.link = 'https://w3c.github.io/vc-di-eddsa/#:~:text=of%20Controller%20Documents%201.0.-,Any%20other%20encoding%20MUST%20NOT%20be%20allowed.,-Developers%20are%20advised%20to%20not';
+            assertBefore();
+            verificationMethodDocuments.should.not.eql([],
+              'Expected at least one "verificationMethodDocument".');
+            for(const verificationMethodDocument of
+              verificationMethodDocuments) {
+              const multibase = 'z';
+              const {publicKeyMultibase} = verificationMethodDocument;
+              const isMultibaseEncoded =
+                publicKeyMultibase.startsWith(multibase) &&
+                shouldBeBs58(publicKeyMultibase);
+              isMultibaseEncoded.should.equal(
+                true,
+                'Expected "publicKeyMultibase" value of the verification ' +
+                'method to be multibase base58-btc encoded value'
+              );
+            }
+          });
           it('The secretKeyMultibase value of the verification method ' +
             'MUST start with the base-58-btc prefix (z), as defined in the ' +
             'Multibase section of Controller Documents 1.0.',
@@ -85,7 +96,7 @@ export function verificationMethods({suiteName, match}) {
             this.test.link = 'https://w3c.github.io/vc-di-eddsa/#:~:text=The%20secretKeyMultibase%20value%20of%20the%20verification%20method%20MUST%20start%20with%20the%20base%2D58%2Dbtc%20prefix%20(z)%2C%20as%20defined%20in%20the%20Multibase%20section%20of%20Controller%20Documents%201.0.';
             this.skip('Testing secret keys is out of scope.');
           });
-          it('Any other encoding MUST NOT be allowed.',
+          it('Any other encoding MUST NOT be allowed. (secretKeyMultibase)',
             async function() {
               this.test.link = 'https://w3c.github.io/vc-di-eddsa/#:~:text=of%20Controller%20Documents%201.0.-,Any%20other%20encoding%20MUST%20NOT%20be%20allowed.,-Developers%20are%20advised%20to%20prevent';
               this.skip('Testing secret keys is out of scope.');
