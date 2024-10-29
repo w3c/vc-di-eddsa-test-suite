@@ -53,7 +53,6 @@ describe('Algorithms - Transformation (eddsa-rdfc-2022)', function() {
           'Expected credential to have a proof.');
         eddsa2022Proofs.length.should.be.gte(1,
           'Expected at least one eddsa-rdfc-2022 cryptosuite.');
-
       };
       beforeEach(setupRow);
       it('The transformation options MUST contain a type identifier for ' +
