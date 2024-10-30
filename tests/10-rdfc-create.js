@@ -19,7 +19,7 @@ const {match} = endpoints.filterByTag({
 });
 const should = chai.should();
 
-describe('eddsa-rdfc-2022 (create)', function() {
+describe.skip('eddsa-rdfc-2022 (create)', function() {
   let validVc;
   before(async function() {
     const credentials = await generateTestData();

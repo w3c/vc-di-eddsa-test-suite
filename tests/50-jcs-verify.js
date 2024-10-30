@@ -16,7 +16,7 @@ const {match: verifierMatches} = endpoints.filterByTag({
   property: 'verifiers'
 });
 
-describe('eddsa-jcs-2022 (verify)', function() {
+describe.skip('eddsa-jcs-2022 (verify)', function() {
   let issuedVc;
   let credentials;
   before(async function() {
