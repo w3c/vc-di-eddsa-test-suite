@@ -44,7 +44,7 @@ export function setupRow() {
 }
 
 export function getProofs(issuedVc) {
-  // if the implementation failed to issue a VC or sign the VC return
+  // if the implementation failed to issue a VC or to sign the VC, return
   // an empty array
   if(!issuedVc?.proof) {
     return [];
