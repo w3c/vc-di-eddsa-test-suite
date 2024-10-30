@@ -69,7 +69,6 @@ describe('Algorithms - Transformation (eddsa-jcs-2022)', function() {
           for(const proof of eddsa2022Proofs) {
             should.exist(proof?.proofValue,
               'Expected proofValue to exist.');
-            console.log(proof?.proofValue);
             isValidUtf8(proof.proofValue).should.equal(
               true,
               'Expected proofValue value to be a valid UTF-8 encoded string.'
