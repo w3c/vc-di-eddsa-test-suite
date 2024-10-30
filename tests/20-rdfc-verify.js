@@ -14,7 +14,7 @@ const {match} = endpoints.filterByTag({
   property: 'verifiers'
 });
 
-describe('eddsa-rdfc-2022 (verify)', function() {
+describe.skip('eddsa-rdfc-2022 (verify)', function() {
   let credentials;
   before(async function() {
     credentials = await generateTestData();

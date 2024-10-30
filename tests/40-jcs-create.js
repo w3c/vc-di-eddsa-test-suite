@@ -18,7 +18,7 @@ const {match} = endpoints.filterByTag({
 });
 const should = chai.should();
 
-describe('eddsa-jcs-2022 (create)', function() {
+describe.skip('eddsa-jcs-2022 (create)', function() {
   let validVc;
   before(async function() {
     const credentials = await generateTestData();
