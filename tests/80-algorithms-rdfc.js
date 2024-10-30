@@ -96,8 +96,8 @@ describe('eddsa-rdfc-2022 - Algorithms - Transformation', function() {
             'Expected a cryptosuite identifier on the proof.');
           proof.type.should.equal('DataIntegrityProof',
             'Expected DataIntegrityProof type.');
-          proof.cryptosuite.should.equal('eddsa-jcs-2022',
-            'Expected eddsa-jcs-2022 cryptosuite.');
+          proof.cryptosuite.should.equal('eddsa-rdfc-2022',
+            'Expected eddsa-rdfc-2022 cryptosuite.');
         }
       });
     });
