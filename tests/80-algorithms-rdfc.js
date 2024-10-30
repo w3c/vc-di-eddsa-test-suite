@@ -25,7 +25,7 @@ const {match} = endpoints.filterByTag({
 });
 const should = chai.should();
 
-describe('Algorithms - Transformation (eddsa-rdfc-2022)', function() {
+describe('eddsa-rdfc-2022 - Algorithms - Transformation', function() {
   setupMatrix.call(this, match);
   let validVc;
   before(async function() {
@@ -104,7 +104,7 @@ describe('Algorithms - Transformation (eddsa-rdfc-2022)', function() {
   }
 });
 
-describe('Algorithms - Proof Configuration (eddsa-rdfc-2022)', function() {
+describe('eddsa-rdfc-2022 - Algorithms - Proof Configuration', function() {
   setupMatrix.call(this, match);
   let validVc;
   before(async function() {
@@ -182,7 +182,7 @@ describe('Algorithms - Proof Configuration (eddsa-rdfc-2022)', function() {
   }
 });
 
-describe('Algorithms - Proof Serialization (eddsa-rdfc-2022)', function() {
+describe('eddsa-rdfc-2022 - Algorithms - Proof Serialization', function() {
   setupMatrix.call(this, match);
   let validVc;
   before(async function() {
