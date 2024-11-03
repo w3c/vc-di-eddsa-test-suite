@@ -20,7 +20,7 @@ const {
 const v2Ctx = v2Context['@context'];
 const diCtx = _dataIntegrityCtx['@context'];
 // add UnknownProofType to local context for test data
-diCtx.UnknownProofType =
+v2Ctx.UnknownProofType = diCtx.UnknownProofType =
   structuredClone(_dataIntegrityCtx['@context'].DataIntegrityProof);
 // add invalidPurpose to context for test data
 diCtx.DataIntegrityProof['@context'].proofPurpose['@context'].invalidPurpose =
