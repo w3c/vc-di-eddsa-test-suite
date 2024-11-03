@@ -7,16 +7,15 @@ import {
 } from '@digitalbazaar/credentials-context';
 import dataIntegrityCtx from '@digitalbazaar/data-integrity-context';
 import didCtx from '@digitalcredentials/did-context';
-import {klona} from 'klona';
 import multikeyCtx from '@digitalbazaar/multikey-context';
 
 const contextMap = new Map(credentialsContexts);
 
-const _dataIntegrityCtx = klona(dataIntegrityCtx.CONTEXT);
+const _dataIntegrityCtx = structuredClone(dataIntegrityCtx.CONTEXT);
 const diCtx = _dataIntegrityCtx['@context'];
 // add UnknownProofType to local context for test data
 diCtx.UnknownProofType =
-  klona(_dataIntegrityCtx['@context'].DataIntegrityProof);
+  structuredClone(_dataIntegrityCtx['@context'].DataIntegrityProof);
 // add invalidPurpose to context for test data
 diCtx.DataIntegrityProof['@context'].proofPurpose['@context'].invalidPurpose = {
   '@id': 'https://w3id.org/security#invalidPurpose',

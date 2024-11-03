@@ -7,7 +7,6 @@ import * as Ed25519Multikey from '@digitalbazaar/ed25519-multikey';
 import {IdDecoder, IdEncoder} from 'bnid';
 import {documentLoader} from './documentLoader.js';
 import {isUtf8} from 'node:buffer';
-import {klona} from 'klona';
 import {readFileSync} from 'fs';
 import {v4 as uuidv4} from 'uuid';
 import varint from 'varint';
@@ -69,7 +68,7 @@ export async function getVerificationMethodDocuments(proofs) {
 
 export const createInitialVc = async ({issuer, vc}) => {
   const {settings: {id: issuerId, options}} = issuer;
-  const credential = klona(vc);
+  const credential = structuredClone(vc);
   credential.id = `urn:uuid:${uuidv4()}`;
   credential.issuer = issuerId;
   const body = {credential, options};
