@@ -13,7 +13,6 @@ import {
   cryptosuite as eddsaRdfc2022CryptoSuite
 } from '@digitalbazaar/eddsa-rdfc-2022-cryptosuite';
 import jcsCanonicalize from 'canonicalize';
-import {klona} from 'klona';
 
 export const vcGenerators = new Map([
   ['issuedVc', _issuedVc],
@@ -122,7 +121,7 @@ function _createEddsa2022Suite({signer}) {
 
 async function _issueCloned({suite, credential, loader = documentLoader}) {
   return vc.issue({
-    credential: klona(credential),
+    credential: structuredClone(credential),
     suite,
     documentLoader: loader
   });

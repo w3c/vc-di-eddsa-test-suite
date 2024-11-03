@@ -43,7 +43,6 @@
     "chai": "^4.3.6",
     "data-integrity-test-suite-assertion": "github:w3c-ccg/data-integrity-test-suite-assertion",
     "jsonld-document-loader": "^2.0.0",
-    "klona": "^2.0.5",
     "mocha": "^10.0.0",
     "uuid": "^9.0.0",
     "varint": "^6.0.0",

@@ -3,13 +3,12 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 import {getMultikey} from './helpers.js';
-import {klona} from 'klona';
 import {validVc} from './validVc.js';
 import {vcGenerators} from './generators.js';
 
 // cache test data for a single run
 const vcCache = new Map([
-  ['validVc', klona(validVc)]
+  ['validVc', structuredClone(validVc)]
 ]);
 
 /**
@@ -23,7 +22,7 @@ export async function generateTestData() {
     seedMultibase: (process.env?.KEY_SEED_DB ||
       process.env?.CLIENT_SECRET_DB)
   });
-  const credential = klona(validVc);
+  const credential = structuredClone(validVc);
   credential.issuer = issuer;
   for(const [id, generator] of vcGenerators) {
     if(vcCache.get(id)) {
@@ -34,7 +33,7 @@ export async function generateTestData() {
   }
   return {
     clone(key) {
-      return klona(vcCache.get(key));
+      return structuredClone(vcCache.get(key));
     }
   };
 }
