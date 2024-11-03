@@ -174,13 +174,13 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-      Tests passed 397/540 73%
+      Tests passed 390/540 72%
       </p>
       <p>
-      Tests failed 144/540 27%
+      Tests failed 151/540 28%
       </p>
       <p>
-      Failures 144
+      Failures 151
       </p>
       <p>
       Tests skipped 26
@@ -189,7 +189,7 @@
       Total tests 566
       </p>
       <p>
-        These tests were run on <time>31 October 2024 at 4:01 am UTC</time>
+        These tests were run on <time>3 November 2024 at 5:06 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -938,8 +938,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected issuer to error when VC has an undefined type.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/ld+json&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;da63809407650b098332d67efe3d17b7&#x27;, date: &#x27;Thu, 31 Oct 2024 04:00:45 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;805&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Expected issuer to error when VC has an undefined type.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/ld+json&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;da63809407650b098332d67efe3d17b7&#x27;, date: &#x27;Thu, 31 Oct 2024 04:00:45 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;805&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected issuer to error when VC has an undefined type.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/ld+json&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;0c0f03f54a2af4ab7230715d7df18d29&#x27;, date: &#x27;Sun, 03 Nov 2024 05:05:32 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;805&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Expected issuer to error when VC has an undefined type.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/ld+json&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;0c0f03f54a2af4ab7230715d7df18d29&#x27;, date: &#x27;Sun, 03 Nov 2024 05:05:32 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;805&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at shouldFailIssuance (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:105:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -976,8 +976,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected issuer to error when VC has an undefined type.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Thu, 31 Oct 2024 04:00:52 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;31&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;%2FHiEVmgb8xtKy8Il1iVVOEnxOjADX7h3%2B1dcw7awbAHpezKxaFIztyU0%2FeEAPmD7rphkhRIuqS4Nwj7QKLQYgJDUQohU0F%2B2Occ3PyM35RhfEZUjBfKtVONzJHw6WLqXAyYw2IJ4NVNa250BAhet&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8db0bd970be828c2-IAD&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Expected issuer to error when VC has an undefined type.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Thu, 31 Oct 2024 04:00:52 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;31&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;%2FHiEVmgb8xtKy8Il1iVVOEnxOjADX7h3%2B1dcw7awbAHpezKxaFIztyU0%2FeEAPmD7rphkhRIuqS4Nwj7QKLQYgJDUQohU0F%2B2Occ3PyM35RhfEZUjBfKtVONzJHw6WLqXAyYw2IJ4NVNa250BAhet&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8db0bd970be828c2-IAD&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected issuer to error when VC has an undefined type.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 03 Nov 2024 05:05:39 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;40&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;9LA6d0tjxm9VpD84Na%2BHZgFR%2FXG%2Frzkxk%2FCFBmRXMYJIhZDbqUJ0Rl5qO47PdyL%2FjO0ljPmg9qFZMmiDOG%2FAfYsLFKSHyCV55uAMVlicZMEcO9ZQEpBaoy1H2XE5wJfECn6cMUv8S2i9zUNNdIhC&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8dc9d49bcbc52519-SJC&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;1869&amp;sent&#x3D;9&amp;recv&#x3D;7&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;4584&amp;recv_bytes&#x3D;1922&amp;delivery_rate&#x3D;2973451&amp;cwnd&#x3D;255&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;8c40ff2cfc4293a8&amp;ts&#x3D;731&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Expected issuer to error when VC has an undefined type.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { date: &#x27;Sun, 03 Nov 2024 05:05:39 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;cache-control&#x27;: &#x27;no-cache,no-store&#x27;, expires: &#x27;-1&#x27;, pragma: &#x27;no-cache&#x27;, &#x27;x-envoy-upstream-service-time&#x27;: &#x27;40&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s&#x3D;9LA6d0tjxm9VpD84Na%2BHZgFR%2FXG%2Frzkxk%2FCFBmRXMYJIhZDbqUJ0Rl5qO47PdyL%2FjO0ljPmg9qFZMmiDOG%2FAfYsLFKSHyCV55uAMVlicZMEcO9ZQEpBaoy1H2XE5wJfECn6cMUv8S2i9zUNNdIhC&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, nel: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8dc9d49bcbc52519-SJC&#x27;, &#x27;content-encoding&#x27;: &#x27;br&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc&#x3D;&quot;?proto&#x3D;TCP&amp;rtt&#x3D;1869&amp;sent&#x3D;9&amp;recv&#x3D;7&amp;lost&#x3D;0&amp;retrans&#x3D;0&amp;sent_bytes&#x3D;4584&amp;recv_bytes&#x3D;1922&amp;delivery_rate&#x3D;2973451&amp;cwnd&#x3D;255&amp;unsent_bytes&#x3D;0&amp;cid&#x3D;8c40ff2cfc4293a8&amp;ts&#x3D;731&amp;x&#x3D;0&quot;&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at shouldFailIssuance (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:105:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -989,8 +989,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected issuer to error when VC has an undefined type.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Thu, 31 Oct 2024 04:00:52 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Expected issuer to error when VC has an undefined type.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Thu, 31 Oct 2024 04:00:52 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected issuer to error when VC has an undefined type.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 03 Nov 2024 05:05:40 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Expected issuer to error when VC has an undefined type.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 03 Nov 2024 05:05:40 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at shouldFailIssuance (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:105:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -1040,8 +1040,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected issuer to error when VC has no credentialSubject.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { date: &#x27;Thu, 31 Oct 2024 04:00:51 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;content-length&#x27;: &#x27;658&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8db0bd94be1e590e-IAD&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Expected issuer to error when VC has no credentialSubject.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { date: &#x27;Thu, 31 Oct 2024 04:00:51 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;content-length&#x27;: &#x27;658&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8db0bd94be1e590e-IAD&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected issuer to error when VC has no credentialSubject.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { date: &#x27;Sun, 03 Nov 2024 05:05:38 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;content-length&#x27;: &#x27;658&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8dc9d4972c6acefd-SJC&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Expected issuer to error when VC has no credentialSubject.: expected Response { status: 201, statusText: &#x27;Created&#x27;, headers: Headers { date: &#x27;Sun, 03 Nov 2024 05:05:38 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;content-length&#x27;: &#x27;658&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, server: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8dc9d4972c6acefd-SJC&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at shouldFailIssuance (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:105:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -1058,8 +1058,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected issuer to error when VC has no credentialSubject.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Thu, 31 Oct 2024 04:00:53 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Expected issuer to error when VC has no credentialSubject.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Thu, 31 Oct 2024 04:00:53 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Expected issuer to error when VC has no credentialSubject.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 03 Nov 2024 05:05:40 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Expected issuer to error when VC has no credentialSubject.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 03 Nov 2024 05:05:40 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, connection: &#x27;keep-alive&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at shouldFailIssuance (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:105:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -1252,17 +1252,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]
-                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:278:28)
-                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:85:3)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:39:7)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1650,17 +1642,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]
-                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:278:28)
-                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:85:3)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async shouldBeProofValue (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:311:3)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1723,17 +1707,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]
-                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:278:28)
-                        at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:85:3)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async shouldBeProofValue (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:311:3)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1795,8 +1771,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Should fail to verify VC if an undefined term is added after issuance.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, vary: &#x27;Accept-Encoding&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;69c0284fb684eeacf8ae6093dce2665c&#x27;, date: &#x27;Thu, 31 Oct 2024 04:00:58 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;cache-control&#x27;: &#x27;private&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Should fail to verify VC if an undefined term is added after issuance.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, vary: &#x27;Accept-Encoding&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;69c0284fb684eeacf8ae6093dce2665c&#x27;, date: &#x27;Thu, 31 Oct 2024 04:00:58 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;cache-control&#x27;: &#x27;private&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Should fail to verify VC if an undefined term is added after issuance.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, vary: &#x27;Accept-Encoding&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;eac4e152f3fb01c814c6203b790adc43&#x27;, date: &#x27;Sun, 03 Nov 2024 05:05:44 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;cache-control&#x27;: &#x27;private&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Should fail to verify VC if an undefined term is added after issuance.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, vary: &#x27;Accept-Encoding&#x27;, &#x27;content-encoding&#x27;: &#x27;gzip&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;eac4e152f3fb01c814c6203b790adc43&#x27;, date: &#x27;Sun, 03 Nov 2024 05:05:44 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;cache-control&#x27;: &#x27;private&#x27;, &#x27;transfer-encoding&#x27;: &#x27;chunked&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:83:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -1843,8 +1819,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Should fail to verify VC if an undefined term is added after issuance.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Thu, 31 Oct 2024 04:01:19 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;content-length&#x27;: &#x27;0&#x27;, connection: &#x27;keep-alive&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Should fail to verify VC if an undefined term is added after issuance.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Thu, 31 Oct 2024 04:01:19 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;content-length&#x27;: &#x27;0&#x27;, connection: &#x27;keep-alive&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Should fail to verify VC if an undefined term is added after issuance.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 03 Nov 2024 05:06:14 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;content-length&#x27;: &#x27;0&#x27;, connection: &#x27;keep-alive&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Should fail to verify VC if an undefined term is added after issuance.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { server: &#x27;nginx/1.18.0 (Ubuntu)&#x27;, date: &#x27;Sun, 03 Nov 2024 05:06:14 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/html; charset&#x3D;utf-8&#x27;, &#x27;content-length&#x27;: &#x27;0&#x27;, connection: &#x27;keep-alive&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: null, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:83:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -2730,9 +2706,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(6) } to not exist</summary>
+                        <pre>AssertionError: Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(6) } to not exist
+                        at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/30-rdfc-interop.js:56:20)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -2791,6 +2774,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="failed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
@@ -2801,16 +2794,6 @@
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/30-rdfc-interop.js:56:20)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
                       </details>
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -2853,18 +2836,6 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist</summary>
-                        <pre>AssertionError: Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist
-                        at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/30-rdfc-interop.js:56:20)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
-                      </details>
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <details class="err hide">
                         <summary>Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(6) } to not exist</summary>
                         <pre>AssertionError: Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(6) } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
@@ -2891,6 +2862,18 @@
                       <details class="err hide">
                         <summary>Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(6) } to not exist</summary>
                         <pre>AssertionError: Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(6) } to not exist
+                        at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/30-rdfc-interop.js:56:20)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                      </details>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected verifier to not error.: expected HTTPError: A validation error occured in … { …(6) } to not exist</summary>
+                        <pre>AssertionError: Expected verifier to not error.: expected HTTPError: A validation error occured in … { …(6) } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/30-rdfc-interop.js:56:20)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
@@ -3010,6 +2993,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="failed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
@@ -3020,16 +3013,6 @@
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/30-rdfc-interop.js:56:20)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
                       </details>
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -3572,9 +3555,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected eddsa-jcs-2022 or eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1</summary>
+                        <pre>AssertionError: Expected eddsa-jcs-2022 or eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1
+                        at commonAssert (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/data-model.js:142:46)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/data-model.js:148:15)
+                        at process.processImmediate (node:internal/timers:483:21)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -3639,9 +3629,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected eddsa-jcs-2022 or eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1</summary>
+                        <pre>AssertionError: Expected eddsa-jcs-2022 or eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1
+                        at commonAssert (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/data-model.js:142:46)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/data-model.js:160:13)
+                        at process.processImmediate (node:internal/timers:483:21)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -3706,9 +3703,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected eddsa-jcs-2022 or eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1</summary>
+                        <pre>AssertionError: Expected eddsa-jcs-2022 or eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1
+                        at commonAssert (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/data-model.js:142:46)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/data-model.js:174:13)
+                        at process.processImmediate (node:internal/timers:483:21)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -3809,9 +3813,15 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected at least one &quot;verificationMethodDocument&quot;.: expected [] to not deeply equal []</summary>
+                        <pre>AssertionError: Expected at least one &quot;verificationMethodDocument&quot;.: expected [] to not deeply equal []
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/data-model.js:57:52)
+                        at process.processImmediate (node:internal/timers:483:21)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -3869,9 +3879,15 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected at least one &quot;verificationMethodDocument&quot;.: expected [] to not deeply equal []</summary>
+                        <pre>AssertionError: Expected at least one &quot;verificationMethodDocument&quot;.: expected [] to not deeply equal []
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/data-model.js:76:52)
+                        at process.processImmediate (node:internal/timers:483:21)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -4953,9 +4969,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected at least one eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1</summary>
+                        <pre>AssertionError: Expected at least one eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1
+                        at assertBefore (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/80-algorithms-rdfc.js:133:42)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/80-algorithms-rdfc.js:142:9)
+                        at process.processImmediate (node:internal/timers:483:21)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -5020,9 +5043,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected at least one eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1</summary>
+                        <pre>AssertionError: Expected at least one eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1
+                        at assertBefore (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/80-algorithms-rdfc.js:133:42)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/80-algorithms-rdfc.js:157:9)
+                        at process.processImmediate (node:internal/timers:483:21)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -5087,9 +5117,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected at least one eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1</summary>
+                        <pre>AssertionError: Expected at least one eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1
+                        at assertBefore (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/80-algorithms-rdfc.js:133:42)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/80-algorithms-rdfc.js:171:9)
+                        at process.processImmediate (node:internal/timers:483:21)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -5190,9 +5227,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected at least one eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1</summary>
+                        <pre>AssertionError: Expected at least one eddsa-rdfc-2022 cryptosuite.: expected +0 to be at least 1
+                        at assertBefore (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/80-algorithms-rdfc.js:211:42)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/80-algorithms-rdfc.js:220:9)
+                        at process.processImmediate (node:internal/timers:483:21)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
