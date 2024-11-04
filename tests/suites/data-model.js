@@ -89,6 +89,7 @@ export function verificationMethods({suiteName, match}) {
               );
             }
           });
+          /*
           it('The secretKeyMultibase value of the verification method ' +
             'MUST start with the base-58-btc prefix (z), as defined in the ' +
             'Multibase section of Controller Documents 1.0.',
@@ -104,6 +105,7 @@ export function verificationMethods({suiteName, match}) {
                 'Testing secret keys is out of scope.';
               this.skip();
             });
+        */
         });
       }
     });
