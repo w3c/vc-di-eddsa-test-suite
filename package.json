@@ -9,6 +9,7 @@
   },
   "scripts": {
     "test": "mocha tests/ --reporter @digitalbazaar/mocha-w3c-interop-reporter --reporter-options abstract=\"$PWD/config/abstract.hbs\",reportDir=\"$PWD/reports\",respec=\"$PWD/config/respec.json\",suiteLog='./suite.log',templateData=\"$PWD/reports/index.json\",title=\"Data Integrity eddsa 2022 Interoperability Report 1.0\" --timeout 15000 --preserve-symlinks",
+    "test-allure": "npx mocha tests/ -R allure-mocha -O 'resultsDir=allure-results'",
     "lint": "eslint ."
   },
   "author": {
@@ -43,16 +44,17 @@
     "chai": "^4.3.6",
     "data-integrity-test-suite-assertion": "github:w3c-ccg/data-integrity-test-suite-assertion",
     "jsonld-document-loader": "^2.0.0",
-    "mocha": "^10.0.0",
     "uuid": "^9.0.0",
     "varint": "^6.0.0",
     "vc-test-suite-implementations": "github:w3c/vc-test-suite-implementations"
   },
   "devDependencies": {
+    "allure-mocha": "^3.0.6",
     "eslint": "^8.52.0",
     "eslint-config-digitalbazaar": "^5.0.1",
     "eslint-plugin-jsdoc": "^46.8.2",
-    "eslint-plugin-unicorn": "^48.0.1"
+    "eslint-plugin-unicorn": "^48.0.1",
+    "mocha": "^11.0.1"
   },
   "license": "BSD-3-Clause"
 }
