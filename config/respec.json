@@ -1,4 +1,5 @@
 {
+  "group": "vc",
   "specStatus": "base",
   "shortName": "vc-di-eddsa-test-suite",
   "subtitle": "Interoperability test suite for EdDSA Data Integrity cryptosuites.",
@@ -6,17 +7,10 @@
   "edDraftURI": "https://w3c.github.io/vc-di-eddsa-test-suite",
   "doJsonLd": true,
   "includePermalinks": false,
-  "editors": [
-    { "name": "Andrew Jones", "url": "https://github.com/aljones15",
-      "company": "Digital Bazaar", "companyURL": "http://digitalbazaar.com/"
-    }
-  ],
   "authors": [
     { "name": "Andrew Jones", "url": "https://github.com/aljones15",
-      "company": "Digital Bazaar", "companyURL": "http://digitalbazaar.com/"
-    },
-    { "name": "Manu Sporny", "url": "http://manu.sporny.org/",
-      "company": "Digital Bazaar", "companyURL": "http://digitalbazaar.com/ "
-    }
+      "company": "Digital Bazaar, Inc.", "companyURL": "https://digitalbazaar.com/" },
+    { "name": "Tashi D. Gyeltshen", "url": "https://github.com/jsAssassin",
+      "company": "Digital Bazaar, Inc.", "companyURL": "https://digitalbazaar.com/" }
     ]
 }
