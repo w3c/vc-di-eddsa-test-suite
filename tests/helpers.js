@@ -24,14 +24,14 @@ const decoder = new IdDecoder({
   multibase: true
 });
 
-export function setupMatrix(match) {
+export function setupMatrix(match, columnLabel) {
   // this will tell the report
   // to make an interop matrix with this suite
   this.matrix = true;
   this.report = true;
   this.implemented = [...match.keys()];
   this.rowLabel = 'Test Name';
-  this.columnLabel = 'Implementer';
+  this.columnLabel = columnLabel || 'Implementation';
 }
 
 export function setupRow() {

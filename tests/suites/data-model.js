@@ -19,7 +19,7 @@ const should = chai.should();
 export function verificationMethods({suiteName, match}) {
   return describe(
     `${suiteName} - Data Model - Verification Methods`, function() {
-      setupMatrix.call(this, match);
+      setupMatrix.call(this, match, 'Issuer');
       let validVc;
       before(async function() {
         const credentials = await generateTestData();
@@ -115,7 +115,7 @@ export function diProofs({suiteName, match, cryptosuites}) {
   return describe(
     `${suiteName} - Data Model - Proof Representations`,
     function() {
-      setupMatrix.call(this, match);
+      setupMatrix.call(this, match, 'Issuer');
       let validVc;
       before(async function() {
         const credentials = await generateTestData();
