@@ -27,7 +27,7 @@ export function jcs() {
   const should = chai.should();
 
   describe('eddsa-jcs-2022 - Algorithms - Transformation', function() {
-    setupMatrix.call(this, match);
+    setupMatrix.call(this, match, 'Issuer');
     let validVc;
     before(async function() {
       const credentials = await generateTestData();
@@ -104,7 +104,7 @@ export function jcs() {
   });
 
   describe('eddsa-jcs-2022 - Algorithms - Proof Configuration', function() {
-    setupMatrix.call(this, match);
+    setupMatrix.call(this, match, 'Issuer');
     let validVc;
     before(async function() {
       const credentials = await generateTestData();
@@ -178,7 +178,7 @@ export function jcs() {
   });
 
   describe('eddsa-jcs-2022 - Algorithms - Proof Serialization', function() {
-    setupMatrix.call(this, match);
+    setupMatrix.call(this, match, 'Issuer');
     let validVc;
     before(async function() {
       const credentials = await generateTestData();
@@ -235,7 +235,7 @@ export function rdfc() {
   const should = chai.should();
 
   describe('eddsa-rdfc-2022 - Algorithms - Transformation', function() {
-    setupMatrix.call(this, match);
+    setupMatrix.call(this, match, 'Issuer');
     let validVc;
     before(async function() {
       const credentials = await generateTestData();
@@ -314,7 +314,7 @@ export function rdfc() {
   });
 
   describe('eddsa-rdfc-2022 - Algorithms - Proof Configuration', function() {
-    setupMatrix.call(this, match);
+    setupMatrix.call(this, match, 'Issuer');
     let validVc;
     before(async function() {
       const credentials = await generateTestData();
@@ -392,7 +392,7 @@ export function rdfc() {
   });
 
   describe('eddsa-rdfc-2022 - Algorithms - Proof Serialization', function() {
-    setupMatrix.call(this, match);
+    setupMatrix.call(this, match, 'Issuer');
     let validVc;
     before(async function() {
       const credentials = await generateTestData();
