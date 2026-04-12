@@ -167,7 +167,7 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-        These tests were run on <time>5 April 2026 at 5:43 am UTC</time>
+        These tests were run on <time>12 April 2026 at 5:48 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -1117,8 +1117,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Should not verify VC with invalid base URL: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, date: &#x27;Sun, 05 Apr 2026 05:37:57 GMT&#x27;, &#x27;content-length&#x27;: &#x27;34&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Should not verify VC with invalid base URL: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, date: &#x27;Sun, 05 Apr 2026 05:37:57 GMT&#x27;, &#x27;content-length&#x27;: &#x27;34&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Should not verify VC with invalid base URL: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, date: &#x27;Sun, 12 Apr 2026 05:42:42 GMT&#x27;, &#x27;content-length&#x27;: &#x27;34&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Should not verify VC with invalid base URL: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, date: &#x27;Sun, 12 Apr 2026 05:42:42 GMT&#x27;, &#x27;content-length&#x27;: &#x27;34&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:83:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -1620,7 +1620,10 @@
                         at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
                         at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:274:10)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:85:3)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at runNextTicks (node:internal/process/task_queues:64:3)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)
                         at async shouldBeProofValue (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:311:3)</pre>
                       </details>
                     </div>
@@ -1697,7 +1700,10 @@
                         at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
                         at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:274:10)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:85:3)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at runNextTicks (node:internal/process/task_queues:64:3)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)
                         at async shouldBeProofValue (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:311:3)</pre>
                       </details>
                     </div>
@@ -1726,8 +1732,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Should fail to verify VC if an undefined type is added after issuance.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;3e6f5b4241d75518e77bb74892608265&#x27;, date: &#x27;Sun, 05 Apr 2026 05:37:48 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;271&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Should fail to verify VC if an undefined type is added after issuance.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;3e6f5b4241d75518e77bb74892608265&#x27;, date: &#x27;Sun, 05 Apr 2026 05:37:48 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;271&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Should fail to verify VC if an undefined type is added after issuance.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;c61acdd0bddb96024c7805e079390a51&#x27;, date: &#x27;Sun, 12 Apr 2026 05:42:32 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;271&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Should fail to verify VC if an undefined type is added after issuance.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;c61acdd0bddb96024c7805e079390a51&#x27;, date: &#x27;Sun, 12 Apr 2026 05:42:32 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;271&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:83:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -1749,8 +1755,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Should fail to verify VC when data is dropped by JSON-LD: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, date: &#x27;Sun, 05 Apr 2026 05:37:58 GMT&#x27;, &#x27;content-length&#x27;: &#x27;34&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Should fail to verify VC when data is dropped by JSON-LD: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, date: &#x27;Sun, 05 Apr 2026 05:37:58 GMT&#x27;, &#x27;content-length&#x27;: &#x27;34&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Should fail to verify VC when data is dropped by JSON-LD: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, date: &#x27;Sun, 12 Apr 2026 05:42:43 GMT&#x27;, &#x27;content-length&#x27;: &#x27;34&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Should fail to verify VC when data is dropped by JSON-LD: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, date: &#x27;Sun, 12 Apr 2026 05:42:43 GMT&#x27;, &#x27;content-length&#x27;: &#x27;34&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:83:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -2898,16 +2904,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Expected verifier to not error.: expected HTTPError: invalid proof { …(6) } to not exist</summary>
-                        <pre>AssertionError: Expected verifier to not error.: expected HTTPError: invalid proof { …(6) } to not exist
-                        at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/30-rdfc-interop.js:56:20)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -4099,9 +4098,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Issuer OpSecId failed to issue VC: expected undefined to exist</summary>
+                        <pre>AssertionError: Issuer OpSecId failed to issue VC: expected undefined to exist
+                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
+                        at assertBefore (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/data-model.js:42:20)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/data-model.js:56:13)
+                        at process.processImmediate (node:internal/timers:483:21)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -4139,9 +4146,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Issuer OpSecId failed to issue VC: expected undefined to exist</summary>
+                        <pre>AssertionError: Issuer OpSecId failed to issue VC: expected undefined to exist
+                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
+                        at assertBefore (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/data-model.js:42:20)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/data-model.js:75:13)
+                        at process.processImmediate (node:internal/timers:483:21)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -4211,9 +4226,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected issuer to have issued a credential.: expected undefined to exist</summary>
+                        <pre>AssertionError: Expected issuer to have issued a credential.: expected undefined to exist
+                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
+                        at assertBefore (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/algorithms.js:52:18)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/algorithms.js:63:11)
+                        at process.processImmediate (node:internal/timers:483:21)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -4251,9 +4274,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected issuer to have issued a credential.: expected undefined to exist</summary>
+                        <pre>AssertionError: Expected issuer to have issued a credential.: expected undefined to exist
+                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
+                        at assertBefore (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/algorithms.js:52:18)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/algorithms.js:74:11)
+                        at process.processImmediate (node:internal/timers:483:21)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -4291,9 +4322,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Expected issuer to have issued a credential.: expected undefined to exist</summary>
+                        <pre>AssertionError: Expected issuer to have issued a credential.: expected undefined to exist
+                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
+                        at assertBefore (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/algorithms.js:52:18)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/algorithms.js:90:11)
+                        at process.processImmediate (node:internal/timers:483:21)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
