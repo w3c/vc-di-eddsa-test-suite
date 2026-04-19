@@ -167,7 +167,7 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-        These tests were run on <time>12 April 2026 at 5:48 am UTC</time>
+        These tests were run on <time>19 April 2026 at 5:57 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -1117,8 +1117,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Should not verify VC with invalid base URL: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, date: &#x27;Sun, 12 Apr 2026 05:42:42 GMT&#x27;, &#x27;content-length&#x27;: &#x27;34&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Should not verify VC with invalid base URL: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, date: &#x27;Sun, 12 Apr 2026 05:42:42 GMT&#x27;, &#x27;content-length&#x27;: &#x27;34&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Should not verify VC with invalid base URL: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, date: &#x27;Sun, 19 Apr 2026 05:46:07 GMT&#x27;, &#x27;content-length&#x27;: &#x27;34&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Should not verify VC with invalid base URL: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, date: &#x27;Sun, 19 Apr 2026 05:46:07 GMT&#x27;, &#x27;content-length&#x27;: &#x27;34&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:83:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -1167,11 +1167,14 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]
-                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:278:28)
+                        <summary>Should not verify VC with invalid base URL: expected undefined to exist</summary>
+                        <pre>AssertionError: Should not verify VC with invalid base URL: expected undefined to exist
+                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
+                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:274:10)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:85:3)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:39:7)</pre>
                       </details>
                     </div>
@@ -1244,11 +1247,14 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]
-                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:278:28)
+                        <summary>Should not verify VC with invalid &quot;proof.type&quot;: expected undefined to exist</summary>
+                        <pre>AssertionError: Should not verify VC with invalid &quot;proof.type&quot;: expected undefined to exist
+                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
+                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:274:10)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:85:3)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:51:7)</pre>
                       </details>
                     </div>
@@ -1321,11 +1327,14 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]
-                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:278:28)
+                        <summary>MUST not verify VC with proof that is not a map.: expected undefined to exist</summary>
+                        <pre>AssertionError: MUST not verify VC with proof that is not a map.: expected undefined to exist
+                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
+                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:274:10)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:85:3)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:63:7)</pre>
                       </details>
                     </div>
@@ -1398,11 +1407,14 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]
-                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:278:28)
+                        <summary>MUST not verify VC w/o a proof: expected undefined to exist</summary>
+                        <pre>AssertionError: MUST not verify VC w/o a proof: expected undefined to exist
+                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
+                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:274:10)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:85:3)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:82:7)</pre>
                       </details>
                     </div>
@@ -1475,11 +1487,14 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]
-                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:278:28)
+                        <summary>Should not verify VC with invalid &quot;proof.type&quot;: expected undefined to exist</summary>
+                        <pre>AssertionError: Should not verify VC with invalid &quot;proof.type&quot;: expected undefined to exist
+                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
+                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:274:10)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:85:3)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:113:11)</pre>
                       </details>
                     </div>
@@ -1552,11 +1567,14 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]
-                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:278:28)
+                        <summary>Verifier should reject VC with invalid proof purpose.: expected undefined to exist</summary>
+                        <pre>AssertionError: Verifier should reject VC with invalid proof purpose.: expected undefined to exist
+                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
+                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:274:10)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:85:3)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:139:7)</pre>
                       </details>
                     </div>
@@ -1620,10 +1638,7 @@
                         at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
                         at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:274:10)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:85:3)
-                        at processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at runNextTicks (node:internal/process/task_queues:64:3)
-                        at listOnTimeout (node:internal/timers:545:9)
-                        at process.processTimers (node:internal/timers:519:7)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async shouldBeProofValue (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:311:3)</pre>
                       </details>
                     </div>
@@ -1632,11 +1647,14 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]
-                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:278:28)
+                        <summary>MUST not verify VC with no &quot;proofValue&quot;.: expected undefined to exist</summary>
+                        <pre>AssertionError: MUST not verify VC with no &quot;proofValue&quot;.: expected undefined to exist
+                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
+                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:274:10)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:85:3)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)
                         at async shouldBeProofValue (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:311:3)</pre>
                       </details>
                     </div>
@@ -1700,10 +1718,7 @@
                         at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
                         at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:274:10)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:85:3)
-                        at processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at runNextTicks (node:internal/process/task_queues:64:3)
-                        at listOnTimeout (node:internal/timers:545:9)
-                        at process.processTimers (node:internal/timers:519:7)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async shouldBeProofValue (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:311:3)</pre>
                       </details>
                     </div>
@@ -1712,11 +1727,14 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]
-                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:278:28)
+                        <summary>MUST not verify VC with no &quot;proofValue&quot;.: expected undefined to exist</summary>
+                        <pre>AssertionError: MUST not verify VC with no &quot;proofValue&quot;.: expected undefined to exist
+                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
+                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:274:10)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:85:3)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)
                         at async shouldBeProofValue (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:311:3)</pre>
                       </details>
                     </div>
@@ -1732,8 +1750,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Should fail to verify VC if an undefined type is added after issuance.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;c61acdd0bddb96024c7805e079390a51&#x27;, date: &#x27;Sun, 12 Apr 2026 05:42:32 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;271&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Should fail to verify VC if an undefined type is added after issuance.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;c61acdd0bddb96024c7805e079390a51&#x27;, date: &#x27;Sun, 12 Apr 2026 05:42:32 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;271&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Should fail to verify VC if an undefined type is added after issuance.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;e64943676daa3080803188676b38511f&#x27;, date: &#x27;Sun, 19 Apr 2026 05:45:58 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;271&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Should fail to verify VC if an undefined type is added after issuance.: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;content-type&#x27;: &#x27;application/json&#x27;, &#x27;x-cloud-trace-context&#x27;: &#x27;e64943676daa3080803188676b38511f&#x27;, date: &#x27;Sun, 19 Apr 2026 05:45:58 GMT&#x27;, server: &#x27;Google Frontend&#x27;, &#x27;content-length&#x27;: &#x27;271&#x27;, &#x27;alt-svc&#x27;: &#x27;h3&#x3D;&quot;:443&quot;; ma&#x3D;2592000,h3-29&#x3D;&quot;:443&quot;; ma&#x3D;2592000&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:83:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -1755,8 +1773,8 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Should fail to verify VC when data is dropped by JSON-LD: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, date: &#x27;Sun, 12 Apr 2026 05:42:43 GMT&#x27;, &#x27;content-length&#x27;: &#x27;34&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
-                        <pre>AssertionError: Should fail to verify VC when data is dropped by JSON-LD: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, date: &#x27;Sun, 12 Apr 2026 05:42:43 GMT&#x27;, &#x27;content-length&#x27;: &#x27;34&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
+                        <summary>Should fail to verify VC when data is dropped by JSON-LD: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, date: &#x27;Sun, 19 Apr 2026 05:46:09 GMT&#x27;, &#x27;content-length&#x27;: &#x27;34&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist</summary>
+                        <pre>AssertionError: Should fail to verify VC when data is dropped by JSON-LD: expected Response { status: 200, statusText: &#x27;OK&#x27;, headers: Headers { &#x27;content-type&#x27;: &#x27;application/json&#x27;, date: &#x27;Sun, 19 Apr 2026 05:46:09 GMT&#x27;, &#x27;content-length&#x27;: &#x27;34&#x27;, Authorization: &#x27;sanitized to prevent exposure of secrets&#x27; }, body: ReadableStream { locked: false, state: &#x27;readable&#x27;, supportsBYOB: true }, bodyUsed: false, ok: true, redirected: false, type: &#x27;default&#x27;, url: &#x27;&#x27; } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:83:14)
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -1805,11 +1823,14 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]
-                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:278:28)
+                        <summary>Should fail to verify VC when data is dropped by JSON-LD: expected undefined to exist</summary>
+                        <pre>AssertionError: Should fail to verify VC when data is dropped by JSON-LD: expected undefined to exist
+                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
+                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:274:10)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:85:3)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:165:7)</pre>
                       </details>
                     </div>
@@ -1882,11 +1903,14 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]
-                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:278:28)
+                        <summary>Expected &quot;errorResponse.status&quot; to exist.: expected undefined to exist</summary>
+                        <pre>AssertionError: Expected &quot;errorResponse.status&quot; to exist.: expected undefined to exist
+                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
+                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:274:10)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:85:3)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:194:7)</pre>
                       </details>
                     </div>
@@ -1982,11 +2006,13 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Should verify VC with a string &quot;proof.previousProof&quot;.: expected HTTPError: Request failed with status cod… { …(5) } to not exist</summary>
-                        <pre>AssertionError: Should verify VC with a string &quot;proof.previousProof&quot;.: expected HTTPError: Request failed with status cod… { …(5) } to not exist
+                        <summary>Should verify VC with a string &quot;proof.previousProof&quot;.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist</summary>
+                        <pre>AssertionError: Should verify VC with a string &quot;proof.previousProof&quot;.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at verificationSuccess (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:50:14)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:271:9)</pre>
                       </details>
                     </div>
@@ -2058,11 +2084,13 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Should verify VC with multiple proofs.: expected HTTPError: Request failed with status cod… { …(5) } to not exist</summary>
-                        <pre>AssertionError: Should verify VC with multiple proofs.: expected HTTPError: Request failed with status cod… { …(5) } to not exist
+                        <summary>Should verify VC with multiple proofs.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist</summary>
+                        <pre>AssertionError: Should verify VC with multiple proofs.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at verificationSuccess (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:50:14)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:285:9)</pre>
                       </details>
                     </div>
@@ -2135,11 +2163,14 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]
-                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:278:28)
+                        <summary>Should not verify VC with invalid &quot;proof.previousProof&quot;.: expected undefined to exist</summary>
+                        <pre>AssertionError: Should not verify VC with invalid &quot;proof.previousProof&quot;.: expected undefined to exist
+                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
+                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:274:10)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:85:3)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:295:9)</pre>
                       </details>
                     </div>
@@ -2212,11 +2243,14 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]
-                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:278:28)
+                        <summary>Should not verify VC with invalid &quot;proof.previousProof&quot;.: expected undefined to exist</summary>
+                        <pre>AssertionError: Should not verify VC with invalid &quot;proof.previousProof&quot;.: expected undefined to exist
+                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
+                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:274:10)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:85:3)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:306:9)</pre>
                       </details>
                     </div>
@@ -2289,11 +2323,14 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]</summary>
-                        <pre>AssertionError: received HTTP status ${status}: expected 502 to be one of [ 400, 422 ]
-                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:278:28)
+                        <summary>Should not verify VC with a &quot;previousProof&quot; that does not verify.: expected undefined to exist</summary>
+                        <pre>AssertionError: Should not verify VC with a &quot;previousProof&quot; that does not verify.: expected undefined to exist
+                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
+                        at shouldBeErrorResponse (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:274:10)
                         at verificationFail (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/assertions.js:85:3)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/node_modules/data-integrity-test-suite-assertion/suites/verify.js:316:9)</pre>
                       </details>
                     </div>
@@ -2427,11 +2464,13 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist</summary>
-                        <pre>AssertionError: Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist
+                        <summary>Expected verifier to not error.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist</summary>
+                        <pre>AssertionError: Expected verifier to not error.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/30-rdfc-interop.js:56:20)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)</pre>
                       </details>
                     </div>
                   </td>
@@ -2507,11 +2546,13 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist</summary>
-                        <pre>AssertionError: Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist
+                        <summary>Expected verifier to not error.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist</summary>
+                        <pre>AssertionError: Expected verifier to not error.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/30-rdfc-interop.js:56:20)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)</pre>
                       </details>
                     </div>
                   </td>
@@ -2622,11 +2663,13 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist</summary>
-                        <pre>AssertionError: Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist
+                        <summary>Expected verifier to not error.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist</summary>
+                        <pre>AssertionError: Expected verifier to not error.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/30-rdfc-interop.js:56:20)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)</pre>
                       </details>
                     </div>
                   </td>
@@ -2845,11 +2888,13 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist</summary>
-                        <pre>AssertionError: Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist
+                        <summary>Expected verifier to not error.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist</summary>
+                        <pre>AssertionError: Expected verifier to not error.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/30-rdfc-interop.js:56:20)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)</pre>
                       </details>
                     </div>
                   </td>
@@ -2925,11 +2970,13 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist</summary>
-                        <pre>AssertionError: Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist
+                        <summary>Expected verifier to not error.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist</summary>
+                        <pre>AssertionError: Expected verifier to not error.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/30-rdfc-interop.js:56:20)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)</pre>
                       </details>
                     </div>
                   </td>
@@ -3247,11 +3294,13 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist</summary>
-                        <pre>AssertionError: Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist
+                        <summary>Expected verifier to not error.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist</summary>
+                        <pre>AssertionError: Expected verifier to not error.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/60-jcs-interop.js:56:20)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)</pre>
                       </details>
                     </div>
                   </td>
@@ -3293,11 +3342,13 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist</summary>
-                        <pre>AssertionError: Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist
+                        <summary>Expected verifier to not error.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist</summary>
+                        <pre>AssertionError: Expected verifier to not error.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/60-jcs-interop.js:56:20)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)</pre>
                       </details>
                     </div>
                   </td>
@@ -3339,11 +3390,13 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist</summary>
-                        <pre>AssertionError: Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist
+                        <summary>Expected verifier to not error.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist</summary>
+                        <pre>AssertionError: Expected verifier to not error.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/60-jcs-interop.js:56:20)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)</pre>
                       </details>
                     </div>
                   </td>
@@ -3392,11 +3445,13 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist</summary>
-                        <pre>AssertionError: Expected verifier to not error.: expected HTTPError: Request failed with status cod… { …(5) } to not exist
+                        <summary>Expected verifier to not error.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist</summary>
+                        <pre>AssertionError: Expected verifier to not error.: expected TimeoutError: Request to &quot;https://bovine.… { …(2) } to not exist
                         at should.not.exist (node_modules/chai/lib/chai/interface/should.js:208:38)
                         at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/60-jcs-interop.js:56:20)
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)</pre>
+                        at runNextTicks (node:internal/process/task_queues:60:5)
+                        at listOnTimeout (node:internal/timers:545:9)
+                        at process.processTimers (node:internal/timers:519:7)</pre>
                       </details>
                     </div>
                   </td>
@@ -4098,17 +4153,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Issuer OpSecId failed to issue VC: expected undefined to exist</summary>
-                        <pre>AssertionError: Issuer OpSecId failed to issue VC: expected undefined to exist
-                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
-                        at assertBefore (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/data-model.js:42:20)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/data-model.js:56:13)
-                        at process.processImmediate (node:internal/timers:483:21)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -4146,17 +4193,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Issuer OpSecId failed to issue VC: expected undefined to exist</summary>
-                        <pre>AssertionError: Issuer OpSecId failed to issue VC: expected undefined to exist
-                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
-                        at assertBefore (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/data-model.js:42:20)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/data-model.js:75:13)
-                        at process.processImmediate (node:internal/timers:483:21)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -4226,17 +4265,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Expected issuer to have issued a credential.: expected undefined to exist</summary>
-                        <pre>AssertionError: Expected issuer to have issued a credential.: expected undefined to exist
-                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
-                        at assertBefore (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/algorithms.js:52:18)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/algorithms.js:63:11)
-                        at process.processImmediate (node:internal/timers:483:21)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -4274,17 +4305,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Expected issuer to have issued a credential.: expected undefined to exist</summary>
-                        <pre>AssertionError: Expected issuer to have issued a credential.: expected undefined to exist
-                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
-                        at assertBefore (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/algorithms.js:52:18)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/algorithms.js:74:11)
-                        at process.processImmediate (node:internal/timers:483:21)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -4322,17 +4345,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Expected issuer to have issued a credential.: expected undefined to exist</summary>
-                        <pre>AssertionError: Expected issuer to have issued a credential.: expected undefined to exist
-                        at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)
-                        at assertBefore (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/algorithms.js:52:18)
-                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-di-eddsa-test-suite/vc-di-eddsa-test-suite/tests/suites/algorithms.js:90:11)
-                        at process.processImmediate (node:internal/timers:483:21)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
