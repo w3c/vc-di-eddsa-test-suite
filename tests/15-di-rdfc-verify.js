@@ -11,6 +11,7 @@ import {
 } from '@digitalbazaar/eddsa-rdfc-2022-cryptosuite';
 import {endpoints} from 'vc-test-suite-implementations';
 import {getMultikey} from './vc-generator/helpers.js';
+import {validVc} from './vc-generator/validVc.js';
 
 // only use implementations with `eddsa-rdfc-2022` verifiers.
 const {tags} = config.suites['eddsa-rdfc-2022'];
@@ -23,7 +24,8 @@ const {key} = await getMultikey();
 const testDataOptions = {
   suiteName: 'eddsa-rdfc-2022',
   cryptosuite: eddsaRdfc2022CryptoSuite,
-  key
+  key,
+  testVector: structuredClone(validVc)
 };
 const optionalTests = {
   proofChain: true
