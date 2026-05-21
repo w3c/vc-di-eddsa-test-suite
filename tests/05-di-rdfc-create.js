@@ -7,6 +7,7 @@ import {
 } from 'data-integrity-test-suite-assertion';
 import {config} from './helpers.js';
 import {endpoints} from 'vc-test-suite-implementations';
+import {validVc} from './vc-generator/validVc.js';
 
 const cryptosuite = 'eddsa-rdfc-2022';
 const {tags} = config.suites[cryptosuite];
@@ -18,5 +19,6 @@ const {match} = endpoints.filterByTag({
 checkDataIntegrityProofFormat({
   implemented: match,
   testDescription: 'Data Integrity (eddsa-rdfc-2022 issuers)',
-  cryptosuiteName: 'eddsa-rdfc-2022'
+  cryptosuiteName: 'eddsa-rdfc-2022',
+  credential: structuredClone(validVc)
 });
