@@ -13,10 +13,10 @@ import multikeyCtx from '@digitalbazaar/multikey-context';
 const contextMap = new Map(credentialsContexts);
 
 const _dataIntegrityCtx = structuredClone(dataIntegrityCtx.CONTEXT);
-const {
-  id: v2ContextUrl,
-  context: v2Context
-} = structuredClone(namedCredentialsContexts.get('v2'));
+// destructure before cloning; the entry's `url` property is a URL
+// instance, which structuredClone cannot handle
+const {id: v2ContextUrl, context} = namedCredentialsContexts.get('v2');
+const v2Context = structuredClone(context);
 const v2Ctx = v2Context['@context'];
 const diCtx = _dataIntegrityCtx['@context'];
 // add UnknownProofType to local context for test data
