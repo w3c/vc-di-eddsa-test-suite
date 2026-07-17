@@ -44,7 +44,6 @@
     "data-integrity-test-suite-assertion": "github:w3c-ccg/data-integrity-test-suite-assertion",
     "jsonld-document-loader": "^2.0.0",
     "mocha": "^11.7.6",
-    "uuid": "^14.0.1",
     "varint": "^6.0.0",
     "vc-test-suite-implementations": "github:w3c/vc-test-suite-implementations"
   },
