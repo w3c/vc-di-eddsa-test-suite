@@ -20,6 +20,11 @@ npm i
 
 ## Usage
 
+Tests always run against the tip of `vc-test-suite-implementations`'s
+`main` branch (see `pretest` in `package.json`); the commit pinned for it
+in `package-lock.json` is a stale snapshot, not what tests actually run
+against.
+
 To generate test data for `eddsa-jcs-2022` tests, testers can specify the
 issuer name using the environment variable `ISSUER_NAME_JCS`.
 
